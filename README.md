@@ -5,7 +5,7 @@ support more widely used database, now it support manage a lot of common used
 databases. All current supported databases are listed in this section.
 
 
-
+![image](https://github.com/fuqifacai/DBStudio/tree/master/readme_images/1.png)
 
  
 
