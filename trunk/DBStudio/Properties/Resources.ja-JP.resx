@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CurDbMode" xml:space="preserve">
+    <value>これで（）のデータベースを0を使用して</value>
+  </data>
+  <data name="Entry_Friebird_Tooltip" xml:space="preserve">
+    <value>Firebirdは/ Interbaseのは、ここをクリックして下さい</value>
+  </data>
+  <data name="Entry_MySql_Tooltip" xml:space="preserve">
+    <value>MySQL 5.0の以上については、ここをクリックしてください。</value>
+  </data>
+  <data name="Entry_Oledb_Tooltip" xml:space="preserve">
+    <value>OLEDBはアクセス、エクセル、CSVファイルなど、ここをクリックしてくださいデータベースについて</value>
+  </data>
+  <data name="Entry_Oracle_Tooltip" xml:space="preserve">
+    <value>Oracleの9またはそれ以上については、ここをクリックしてください。</value>
+  </data>
+  <data name="Entry_Sqlite_Tooltip" xml:space="preserve">
+    <value>SQLiteのは、ここをクリックしてください。</value>
+  </data>
+  <data name="Entry_SqlServer_Tooltip" xml:space="preserve">
+    <value>SQL Server 2000または上記については、ここをクリックしてください。</value>
+  </data>
+  <data name="Entry_SSCE_Tooltip" xml:space="preserve">
+    <value>マイクロソフトのSQL Server 2005 Compact Editionは、急速にネイティブとマネージデスクトップアプリケーション、エンタープライズデータ管理機能を拡張する環境でアプリケーションを開発するためのコンパクトなデータベースである</value>
+  </data>
+  <data name="NotCompletedFeatureNotifyMsg" xml:space="preserve">
+    <value>この機能は、完全ではありません次のリリースを待つしてください。</value>
+  </data>
+  <data name="CannotParseSqlCmdNotifyMsg" xml:space="preserve">
+    <value>このSQLコマンドを解析できません。</value>
+  </data>
+  <data name="ColumnItemUsage" xml:space="preserve">
+    <value>ここでは列の項目は、することができますを右クリックすると[列の挿入]、[変更列]など、いくつかの関数を呼び出すことです</value>
+  </data>
+  <data name="ColumnsName" xml:space="preserve">
+    <value>コラム</value>
+  </data>
+  <data name="ExeCmdOKNotifyMsg" xml:space="preserve">
+    <value>実行コマンドの成功の</value>
+  </data>
+  <data name="GenerateCoreEAError" xml:space="preserve">
+    <value>ご以前のデータベースの管理ページを閉じるし、もう一度やり直してください</value>
+  </data>
+  <data name="IndexesName" xml:space="preserve">
+    <value>インデックス</value>
+  </data>
+  <data name="IndexItemUsage" xml:space="preserve">
+    <value>ここではインデックス項目は、することができますを右クリックすると[列の挿入]、[インデックスの作成]など、いくつかの関数を呼び出すことです</value>
+  </data>
+  <data name="InputSqlCommandNotifyMsg" xml:space="preserve">
+    <value>入力してくださいSQLコマンドの最初</value>
+  </data>
+  <data name="InvalidSqlCmdNotifyMsg" xml:space="preserve">
+    <value>無効なSQLコマンド</value>
+  </data>
+  <data name="QueryWithNoDataResultNotifyMsg" xml:space="preserve">
+    <value>データなし</value>
+  </data>
+  <data name="SpName" xml:space="preserve">
+    <value>ストアドプロシージャ</value>
+  </data>
+  <data name="SysSchemaViews" xml:space="preserve">
+    <value>システムビューア</value>
+  </data>
+  <data name="TableItemUsage" xml:space="preserve">
+    <value>これは、テーブルの項目は、[列の挿入]、[テーブルの作成]など、いくつかの関数を呼び出すには、することができますを右クリックして</value>
+  </data>
+  <data name="TriggerName" xml:space="preserve">
+    <value>トリガ</value>
+  </data>
+  <data name="CannotCloseTabItemNotifyMsg" xml:space="preserve">
+    <value>これは最後のタブは、それを閉じることができないです</value>
+  </data>
+  <data name="NewTabItemHeader" xml:space="preserve">
+    <value>検索結果を見る</value>
+  </data>
+  <data name="OnlineRequestMsg_ForSqlServer" xml:space="preserve">
+    <value>あなたは、オンラインSQL Serverのフォーラムページを参照しますか？</value>
+  </data>
+  <data name="OnlineRequestMsg_MySql" xml:space="preserve">
+    <value>あなたは、オンラインのMySQLフォーラムページを参照しますか？</value>
+  </data>
+  <data name="OnlineRequestMsg_Sqlite" xml:space="preserve">
+    <value>あなたは、オンラインのSQLiteフォーラムページを参照しますか？</value>
+  </data>
+  <data name="OnlineRequestMsg_SSCE" xml:space="preserve">
+    <value>あなたがオンラインSQLCEフォーラムページを参照しますか？</value>
+  </data>
+  <data name="SchemaResultInfoHeader" xml:space="preserve">
+    <value>スキーマ結果情報</value>
+  </data>
+  <data name="LanguageSelection_AutoDetect" xml:space="preserve">
+    <value>自動検出</value>
+  </data>
+  <data name="CreateTableSchmea_CreateTableOkMsg" xml:space="preserve">
+    <value>テーブル成功の作成</value>
+  </data>
+  <data name="CreatTableDialogTitle" xml:space="preserve">
+    <value>テーブルを作成する</value>
+  </data>
+  <data name="CreatTableSchema_NeedTableName" xml:space="preserve">
+    <value>入力してくださいテーブル名</value>
+  </data>
+  <data name="ErrorInfo_CreateTableSchemaDialog" xml:space="preserve">
+    <value>エラーがロウ（0）が発生、インデックス（1）</value>
+  </data>
+  <data name="ErrorMsg_InvalidType" xml:space="preserve">
+    <value>無効なタイプ</value>
+  </data>
+  <data name="ModifyTableDialogTitle" xml:space="preserve">
+    <value>変更表</value>
+  </data>
+  <data name="DataExchangeButtonContent" xml:space="preserve">
+    <value>データ転送</value>
+  </data>
+  <data name="ErrorMsg_InvalidTypeOfTreeItem" xml:space="preserve">
+    <value>TreeItemの無効なタイプ</value>
+  </data>
+  <data name="DataTransferConfrimMsg" xml:space="preserve">
+    <value>あなたはデータ転送を行うことを確認か？これは、いくつかの時間をデータ量に基づいて必要になります。</value>
+  </data>
+  <data name="DataTransferNoTableMsg" xml:space="preserve">
+    <value>いいえの表は、処理するために</value>
+  </data>
+  <data name="DataTransferSelectTableMsg" xml:space="preserve">
+    <value>少なくとも1つのテーブルを選択します</value>
+  </data>
+  <data name="DataTransfer_ConfirmViewReport" xml:space="preserve">
+    <value>あなたはデータ転送のレポートを表示しますか？</value>
+  </data>
+  <data name="DataTransfer_NotSupportDBType" xml:space="preserve">
+    <value>現在、このタイプはサポートされません</value>
+  </data>
+  <data name="ErrorMsg_CannotConnectToSource" xml:space="preserve">
+    <value>ソースデータベースに接続できません</value>
+  </data>
+  <data name="ErrorMsg_CannotConnectToTarget" xml:space="preserve">
+    <value>ターゲットデータベースに接続できません</value>
+  </data>
+  <data name="ChangePwdOK" xml:space="preserve">
+    <value>パスワードが正常に変更</value>
+  </data>
+  <data name="ErrorMsg_CannotParseSqlCmd" xml:space="preserve">
+    <value>ことができますSQLコマンドを解析できない、それを確認してください。</value>
+  </data>
+  <data name="ExitAppConfirmMsg" xml:space="preserve">
+    <value>あなたは完全にアプリケーションを終了しますか？</value>
+  </data>
+  <data name="PwdNotEqual" xml:space="preserve">
+    <value>2つのパスワードが一致しない確認して再度試してください。</value>
+  </data>
+  <data name="ImportAccess_DoOK" xml:space="preserve">
+    <value>\ r \ nを（0）\ rを\ ninto \ rをする\ n（1 \ rの\はnsuccessful）からデータをインポート。</value>
+  </data>
+  <data name="ImportAccess_SelectFile" xml:space="preserve">
+    <value>してくださいとターゲットファイルの両方のソースファイルを選択します</value>
+  </data>
+  <data name="ImportEachElement" xml:space="preserve">
+    <value>入力してください各要素を</value>
+  </data>
+  <data name="ImportNeedSelectTables" xml:space="preserve">
+    <value>テーブルの一覧を見てくださいを選択してアイテムを最初に</value>
+  </data>
+  <data name="ImportData_CreateSSCEFileFailure" xml:space="preserve">
+    <value>SQLCEデータベースの作成は、このアクションがキャンセルをされるに失敗しました</value>
+  </data>
+  <data name="ImportData_FileNotFound" xml:space="preserve">
+    <value>ターゲットファイルは、このアクションがキャンセルされます既存されていません</value>
+  </data>
+  <data name="ImportData_NoTable" xml:space="preserve">
+    <value>このアクセスデータベースはテーブルを持って、このアクションがキャンセルされます</value>
+  </data>
+  <data name="ImportData_ReadError" xml:space="preserve">
+    <value>アクセスデータベースの読み込みに失敗、このアクションがキャンセルされます</value>
+  </data>
+  <data name="GenerateTableSchemaOK" xml:space="preserve">
+    <value>生成されたテーブルのスキーマに成功しました。</value>
+  </data>
+  <data name="GenerateLinqFileConfrimMsg_ForCurrent" xml:space="preserve">
+    <value>あなたは本当に現在開いているデータベースのLINQのデータコンテキストを生成するか？</value>
+  </data>
+  <data name="OverrideFileConfrmMsg" xml:space="preserve">
+    <value>出力ファイルは（0）はすでに存在しているが。\ r \ nこの場合は、それを削除してもう一度生成したいですか？</value>
+  </data>
+  <data name="ResetDataConfrimMsg" xml:space="preserve">
+    <value>あなたは本当に（[リセット]にクリア/削除のすべてのデータなど）の現在開いているデータベースをしたいですか？\ r \ nこのアクションはリスクかもしれませんが、あなたは本当にそれをやりたいですか？</value>
+  </data>
+  <data name="ResetDataOK" xml:space="preserve">
+    <value>データが正常にリセットします。</value>
+  </data>
+  <data name="SelectSSCEFileMsg" xml:space="preserve">
+    <value>してください最初のファイルSQLCE DBを選択</value>
+  </data>
+  <data name="SelectTargetMsg" xml:space="preserve">
+    <value>ターゲットファイルの入力してください場所を</value>
+  </data>
+  <data name="SelectToaDirConfirmMsg" xml:space="preserve">
+    <value>なお、ターゲットの場所は、既存のディレクトリであることを確認</value>
+  </data>
+  <data name="SqlMetalFileLost" xml:space="preserve">
+    <value>エンジンの実行ファイルは、インストールしてください欠けている</value>
+  </data>
+  <data name="ConnectionStringHelperButtonContent" xml:space="preserve">
+    <value>接続文字列</value>
+  </data>
+  <data name="DocumentingDbButtonContent" xml:space="preserve">
+    <value>文書化データベース</value>
+  </data>
+  <data name="ExecuteCmdWithResultOK" xml:space="preserve">
+    <value>実行コマンドの[OK]を</value>
+  </data>
+  <data name="ExecuteCmdWithNoResult" xml:space="preserve">
+    <value>結果がないと実行SQLコマンド。</value>
+  </data>
+  <data name="NewSqlCommandTabHeader" xml:space="preserve">
+    <value>新しいSQLコマンド</value>
+  </data>
+  <data name="OpenLatestSqlCEDb" xml:space="preserve">
+    <value>オープン新着ファイル</value>
+  </data>
+  <data name="GenerateLinqFileConfrimMsg" xml:space="preserve">
+    <value>あなたが本当にLINQのデータコンテキストを生成するか？</value>
+  </data>
+  <data name="GettingStartButtonContent" xml:space="preserve">
+    <value>はじめに</value>
+  </data>
+  <data name="VisitOnlineWebsiteButtonContent" xml:space="preserve">
+    <value>ウェブサイトを</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SeasonStarデータベース管理</value>
+  </data>
+  <data name="NotifyWhenExitMode" xml:space="preserve">
+    <value>あなたはこのモードを終了しますか？</value>
+  </data>
+  <data name="ResChooseLanguage" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="ResChooseSkin" xml:space="preserve">
+    <value>皮膚</value>
+  </data>
+  <data name="NotifyWhenThisFeatureNotCompleted" xml:space="preserve">
+    <value>この機能は、完全ではありません次のリリースを待つしてください。</value>
+  </data>
+  <data name="ResChooseQuickFuncation" xml:space="preserve">
+    <value>ショートカット</value>
+  </data>
+  <data name="ClearedOpendHistoryInfo" xml:space="preserve">
+    <value>正常に開かデータベースの歴史をクリア</value>
+  </data>
+  <data name="BackButtonText" xml:space="preserve">
+    <value>バック</value>
+  </data>
+  <data name="CreateDatabaseNotifyMsg" xml:space="preserve">
+    <value>あなたはこのデータベースを作成することを確認か？</value>
+  </data>
+  <data name="DeleteDatabaseNofityMsg" xml:space="preserve">
+    <value>あなたはこのデータベースを削除することを確認か？</value>
+  </data>
+  <data name="CreateDatabaseOkMsg" xml:space="preserve">
+    <value>データベースの成功の作成</value>
+  </data>
+  <data name="DeleteDatabaseOkMsg" xml:space="preserve">
+    <value>データベースの成功の削除</value>
+  </data>
+  <data name="Entry_Elliproz_Tooltip" xml:space="preserve">
+    <value>7。NETで、Silverlightの電話は、Windows。NETでコンパクト。フレームワークのデータベースエンジンの機能が含まれますACIDに準拠して取引をインメモリモードでは、SQLは/ PSMのストアドプロシージャをご利用いただけますEffiProzですEffiProz、軽量は組み込みデータベース書き込ま完全に＃のC Silverlightの分離ストレージのサポートと永続的なメモリストレージ層で。</value>
+  </data>
+  <data name="SubmitChangesOK" xml:space="preserve">
+    <value>送信します</value>
+  </data>
+  <data name="NotifyMsgBeforeExit" xml:space="preserve">
+    <value>変更を行うに提出せずに終了する場合は、確認できますか？Effiprozが変更された場合は、必要なデータを保存するために呼び出す変更を送信します。</value>
+  </data>
+  <data name="EmergencyMode" xml:space="preserve">
+    <value>緊急モード</value>
+  </data>
+  <data name="CSVTooltip" xml:space="preserve">
+    <value>CSVまたはテキストファイルは、ここをクリックしてください。</value>
+  </data>
+  <data name="ExcelTooltip" xml:space="preserve">
+    <value>Excelの場合、ここをクリックしてください。</value>
+  </data>
+  <data name="FirebirdTooltip" xml:space="preserve">
+    <value>Firebirdは、リレーショナルデータベースを提供するLinuxでは、Windows、およびUnixのさまざまなプラットフォームで実行される多くのANSI SQLの標準機能です。 Firebirdは、優れた同時実行、高いパフォーマンスとストアドプロシージャの強力な言語サポートとトリガを提供します。これは、生産システムでは、様々な名前の下で、1981年から使用されています。</value>
+  </data>
+  <data name="MySqlTooltip" xml:space="preserve">
+    <value>MySQL 5.0の以上については、ここをクリックしてください。</value>
+  </data>
+  <data name="OleDBTooltip" xml:space="preserve">
+    <value>するOleDbベースの種類については、AccessまたはExcelのCのような、してください、ここをクリック</value>
+  </data>
+  <data name="OracleTooltip" xml:space="preserve">
+    <value>Oracleの9またはそれ以上については、ここをクリックしてください。</value>
+  </data>
+  <data name="SqliteTooltip" xml:space="preserve">
+    <value>SQLiteは実装するソフトウェアライブラリです自己サーバーレス含まれている、ゼロ構成、トランザクションのSQLデータベースエンジンです。 SQLiteは、世界で最も広く普及してSQLデータベースエンジンです</value>
+  </data>
+  <data name="SqlServerTooltip" xml:space="preserve">
+    <value>SQL Server 2000または上記については、ここをクリックしてください。</value>
+  </data>
+  <data name="ButtonChangePassword" xml:space="preserve">
+    <value>パスワードの変更</value>
+  </data>
+  <data name="ButtonCreate" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="ButtonOpen" xml:space="preserve">
+    <value>オープン</value>
+  </data>
+  <data name="ButtonOpenExample" xml:space="preserve">
+    <value>サンプルを開く</value>
+  </data>
+  <data name="ButtonOpenHistory" xml:space="preserve">
+    <value>オープンの歴史</value>
+  </data>
+  <data name="ButtonSync" xml:space="preserve">
+    <value>同期する</value>
+  </data>
+  <data name="CheckBoxConnectReadOnly" xml:space="preserve">
+    <value>接続読み取り専用モードで</value>
+  </data>
+  <data name="CheckBoxEncrypt" xml:space="preserve">
+    <value>暗号化はありますか</value>
+  </data>
+  <data name="CheckBoxIsUnicode" xml:space="preserve">
+    <value>Unicodeとは</value>
+  </data>
+  <data name="LabelDatabase" xml:space="preserve">
+    <value>データベース</value>
+  </data>
+  <data name="LabelEncrypt" xml:space="preserve">
+    <value>暗号化する</value>
+  </data>
+  <data name="LabelOpenMode" xml:space="preserve">
+    <value>オープンモード</value>
+  </data>
+  <data name="LabelOpenSqliteFile" xml:space="preserve">
+    <value>選択してSQLiteのファイル</value>
+  </data>
+  <data name="LabelPassword" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="TooltipDetectVersion" xml:space="preserve">
+    <value>検出はSQLCEデータの作成バージョンをファイル</value>
+  </data>
+  <data name="TooltipDragFile" xml:space="preserve">
+    <value>あなたは直接、このテキストにボックスファイルをドラッグすることができます</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="LabelCharset" xml:space="preserve">
+    <value>文字セット</value>
+  </data>
+  <data name="LabelOpenCSVFile" xml:space="preserve">
+    <value>オープンCSVファイル</value>
+  </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="LabelSelectAccessFile" xml:space="preserve">
+    <value>選択してアクセスファイル</value>
+  </data>
+  <data name="LabelServerAddress" xml:space="preserve">
+    <value>サーバーアドレス</value>
+  </data>
+  <data name="LabelServerIpOrHost" xml:space="preserve">
+    <value>IPアドレス（ホスト名）</value>
+  </data>
+  <data name="LabelSID" xml:space="preserve">
+    <value>SIDは</value>
+  </data>
+  <data name="LabelUsername" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="LabelConnectionString" xml:space="preserve">
+    <value>接続文字列</value>
+  </data>
+  <data name="LabelDatabaseFullPath" xml:space="preserve">
+    <value>DBのフルパス</value>
+  </data>
+  <data name="LabelDatabaseType" xml:space="preserve">
+    <value>DBのタイプ</value>
+  </data>
+  <data name="LabelSelectExcelFile" xml:space="preserve">
+    <value>を選択してExcelファイル</value>
+  </data>
+  <data name="LabelUseConnectionStringDirectly" xml:space="preserve">
+    <value>直接接続文字列を使用して</value>
+  </data>
+  <data name="CmdHelpDocument" xml:space="preserve">
+    <value>ドキュメントヘルプ</value>
+  </data>
+  <data name="CmdOnlineSqliteForum" xml:space="preserve">
+    <value>公式SQLiteのフォーラム</value>
+  </data>
+  <data name="CmdOnlinMySqlForum" xml:space="preserve">
+    <value>公式のMySQLフォーラム</value>
+  </data>
+  <data name="CmdOnlinSSCEForum" xml:space="preserve">
+    <value>公式SQLCEフォーラム</value>
+  </data>
+  <data name="TextQueryCostTime" xml:space="preserve">
+    <value>クエリ時間：</value>
+  </data>
+  <data name="TooltipDataPreviewRegion" xml:space="preserve">
+    <value>データのプレビュー領域</value>
+  </data>
+  <data name="CmdAboutUs" xml:space="preserve">
+    <value>私たちについて</value>
+  </data>
+  <data name="CmdChangeDbPwd" xml:space="preserve">
+    <value>変更データベースのパスワード</value>
+  </data>
+  <data name="CmdClose" xml:space="preserve">
+    <value>クローズ</value>
+  </data>
+  <data name="CmdConvertExcel2Access" xml:space="preserve">
+    <value>変換は、アクセスするためのExcelの</value>
+  </data>
+  <data name="CmdDownloadDbFile" xml:space="preserve">
+    <value>ダウンロードインターネットからデータベースファイル</value>
+  </data>
+  <data name="CmdEffiprozHomepage" xml:space="preserve">
+    <value>公式Effiprozのホームページに戻る</value>
+  </data>
+  <data name="CmdExecute" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="CmdExportSelectedTableSchema" xml:space="preserve">
+    <value>エクスポート選択したテーブルのスキーマ</value>
+  </data>
+  <data name="CmdGenerateBusinessEntity" xml:space="preserve">
+    <value>生成ビジネスエンティティを自動的に</value>
+  </data>
+  <data name="CmdGenerateColumnSchema" xml:space="preserve">
+    <value>生成列のスキーマ</value>
+  </data>
+  <data name="CmdGenerateLinqOrMap" xml:space="preserve">
+    <value>生成LINQのは、O / RマッピングオブジェクトをSQL Serverに</value>
+  </data>
+  <data name="CmdGetCurrentDbInfo" xml:space="preserve">
+    <value>現在のデータベースに関する情報を取得</value>
+  </data>
+  <data name="CmdGetServerInformation" xml:space="preserve">
+    <value>現在のサーバーに関する情報を取得</value>
+  </data>
+  <data name="CmdLastCommand" xml:space="preserve">
+    <value>最後の命令</value>
+  </data>
+  <data name="CmdNextCommand" xml:space="preserve">
+    <value>次のコマンド</value>
+  </data>
+  <data name="CmdOpenScript" xml:space="preserve">
+    <value>オープンスクリプトファイル</value>
+  </data>
+  <data name="CmdOption" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="CmdResetDb" xml:space="preserve">
+    <value>リセットデータベース</value>
+  </data>
+  <data name="CmdSaveResult" xml:space="preserve">
+    <value>実行したコマンドの結果を保存</value>
+  </data>
+  <data name="CmdSaveScript" xml:space="preserve">
+    <value>スクリプトを保存ファイルに</value>
+  </data>
+  <data name="CmdSqlServerForum" xml:space="preserve">
+    <value>公式SQL Serverのフォーラム</value>
+  </data>
+  <data name="CmdSubmitChanges" xml:space="preserve">
+    <value>変更の送信</value>
+  </data>
+  <data name="CmdTransferDataFromAccess" xml:space="preserve">
+    <value>Accessからデータを転送するファイルを</value>
+  </data>
+  <data name="CmdTransferDataFromCSV" xml:space="preserve">
+    <value>CSVファイルからデータを転送するファイルを</value>
+  </data>
+  <data name="CmdTransferDataFromExcel" xml:space="preserve">
+    <value>Excelからデータを転送するファイルを</value>
+  </data>
+  <data name="CmdTransferDataFromMysql" xml:space="preserve">
+    <value>mysqlデータベースからデータを転送する</value>
+  </data>
+  <data name="CmdTransferDataFromSqlServer" xml:space="preserve">
+    <value>SQL Serverからデータを転送する</value>
+  </data>
+  <data name="CmdTransferDataFromSSCE2SqlServer" xml:space="preserve">
+    <value>SQL ServerへのSQLCEからTransfterデータ</value>
+  </data>
+  <data name="ErrorInfo_GetSPListError" xml:space="preserve">
+    <value>ストアドプロシージャ内のエラーのリストを取得：</value>
+  </data>
+  <data name="ErrorInfo_GetTriggerListError" xml:space="preserve">
+    <value>トリガエラーのリストを取得します：</value>
+  </data>
+  <data name="ErrorInfo_GetViewListError" xml:space="preserve">
+    <value>表示エラーのリストを取得します：</value>
+  </data>
+  <data name="LabelCollapseTreeView" xml:space="preserve">
+    <value>折りたたみツリービュー</value>
+  </data>
+  <data name="LabelDataExchange" xml:space="preserve">
+    <value>データ交換</value>
+  </data>
+  <data name="LabelDefaultView" xml:space="preserve">
+    <value>既定のビュー</value>
+  </data>
+  <data name="LabelExpandTreeView" xml:space="preserve">
+    <value>ツリーを展開表示</value>
+  </data>
+  <data name="LabelGeneral" xml:space="preserve">
+    <value>一般的な</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="LabelSpecial" xml:space="preserve">
+    <value>特別な</value>
+  </data>
+  <data name="LabelTool" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="LabelView" xml:space="preserve">
+    <value>ビュー</value>
+  </data>
+  <data name="TooltipRightClick" xml:space="preserve">
+    <value>右クリックし、ツリービューをより多くの機能を取得する</value>
+  </data>
+  <data name="ButtonCreateSimpleTable" xml:space="preserve">
+    <value>SQLスクリプトで作成するテーブル</value>
+  </data>
+  <data name="ButtonCreateTableWithUI" xml:space="preserve">
+    <value>を作成テーブルのUI</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="DocumentingDbButtonContentDescription" xml:space="preserve">
+    <value>ExcelにエクスポートまたはXMLドキュメントをデータベーススキーマに多くの時間を節約します。</value>
+  </data>
+  <data name="EmergencyModeAgain" xml:space="preserve">
+    <value>あなたはすでに緊急モードになって</value>
+  </data>
+  <data name="EmergencyModeConfirm" xml:space="preserve">
+    <value>あなたが緊急モードに切り替えることを確認ください</value>
+  </data>
+  <data name="EmergencyModeTooltip" xml:space="preserve">
+    <value>あなたが左側に、通常のリストボックスが表示されない場合はスイッチが緊急モードに：あなたはこのモードを試すことができます</value>
+  </data>
+  <data name="FinishButtonText" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="LabelCoordinator" xml:space="preserve">
+    <value>コーディネーター</value>
+  </data>
+  <data name="LabelDataExchangeWizard" xml:space="preserve">
+    <value>データ交換ウィザード</value>
+  </data>
+  <data name="LabelDeveloper" xml:space="preserve">
+    <value>開発者</value>
+  </data>
+  <data name="LabelDevTeam" xml:space="preserve">
+    <value>開発チーム</value>
+  </data>
+  <data name="LabelGraphicDesigner" xml:space="preserve">
+    <value>グラフィックデザイナー</value>
+  </data>
+  <data name="NextButtonText" xml:space="preserve">
+    <value>次の</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>[OK]を</value>
+  </data>
+  <data name="TitleSelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="TitleSelectSrcData" xml:space="preserve">
+    <value>選択してソースデータベースまたはファイル</value>
+  </data>
+  <data name="TitleSelectSrcDataType" xml:space="preserve">
+    <value>選択してソースデータベースの種類</value>
+  </data>
+  <data name="TitleSelectSrcTabels" xml:space="preserve">
+    <value>を選択し、ソーステーブル</value>
+  </data>
+  <data name="TitleSelectTargetData" xml:space="preserve">
+    <value>選択してターゲットデータベースまたはファイル</value>
+  </data>
+  <data name="TitleSelectTargetDataType" xml:space="preserve">
+    <value>選択してターゲットデータベースタイプ</value>
+  </data>
+  <data name="TitleSrcDataFileIs" xml:space="preserve">
+    <value>ソースデータベースまたはファイルが</value>
+  </data>
+  <data name="TitleTargetDataFileIs" xml:space="preserve">
+    <value>ターゲットデータベースまたはファイルが</value>
+  </data>
+  <data name="EndButtonText" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="TextDbLocation" xml:space="preserve">
+    <value>DBの場所</value>
+  </data>
+  <data name="TextDbName" xml:space="preserve">
+    <value>DB名</value>
+  </data>
+  <data name="TilteUpdate" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="TitleAddColumn" xml:space="preserve">
+    <value>列を追加する</value>
+  </data>
+  <data name="TitleCopyColumnName" xml:space="preserve">
+    <value>コピー列名</value>
+  </data>
+  <data name="TitleCopyTableName" xml:space="preserve">
+    <value>コピーテーブル名</value>
+  </data>
+  <data name="TitleCreateIndex" xml:space="preserve">
+    <value>インデックスを作る</value>
+  </data>
+  <data name="TitleDelete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="TitleDropColumn" xml:space="preserve">
+    <value>ドロップ列</value>
+  </data>
+  <data name="TitleDropIndex" xml:space="preserve">
+    <value>ドロップインデックス</value>
+  </data>
+  <data name="TitleDropTable" xml:space="preserve">
+    <value>ドロップテーブル</value>
+  </data>
+  <data name="TitleGenerateCreateScript" xml:space="preserve">
+    <value>生成は、スクリプトを作成する</value>
+  </data>
+  <data name="TitleGenerateCreateScriptAll" xml:space="preserve">
+    <value>生成すべてのテーブルのスクリプトを作成する</value>
+  </data>
+  <data name="TitleGenerateScript" xml:space="preserve">
+    <value>生成スクリプト</value>
+  </data>
+  <data name="TitleGetColumnInfo" xml:space="preserve">
+    <value>すべての列に関する情報を取得する</value>
+  </data>
+  <data name="TitleGetIndexesInfo" xml:space="preserve">
+    <value>すべてのインデックスについての情報を取得する</value>
+  </data>
+  <data name="TitleGetSupportedType" xml:space="preserve">
+    <value>サポートされるタイプを取得する</value>
+  </data>
+  <data name="TitleInsert" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="TitleInsertARow" xml:space="preserve">
+    <value>行を挿入</value>
+  </data>
+  <data name="TitleModifyColumn" xml:space="preserve">
+    <value>変更列</value>
+  </data>
+  <data name="TitleModifyTableSchema" xml:space="preserve">
+    <value>変更テーブルのスキーマ</value>
+  </data>
+  <data name="TitleRefreshColumn" xml:space="preserve">
+    <value>リフレッシュ列</value>
+  </data>
+  <data name="TitleRefreshIndex" xml:space="preserve">
+    <value>インデックスの更新</value>
+  </data>
+  <data name="TitleRefreshSystemView" xml:space="preserve">
+    <value>更新システムビュー</value>
+  </data>
+  <data name="TitleRenameColumn" xml:space="preserve">
+    <value>名前を変更する列</value>
+  </data>
+  <data name="TitleRenameTable" xml:space="preserve">
+    <value>名前の変更表</value>
+  </data>
+  <data name="TitleResetIdentityColumn" xml:space="preserve">
+    <value>リセットID列</value>
+  </data>
+  <data name="TitleSelect" xml:space="preserve">
+    <value>を選択し....</value>
+  </data>
+  <data name="TitleSelectWithUI" xml:space="preserve">
+    <value>選択してUIを</value>
+  </data>
+  <data name="TitleShowSystemViewData" xml:space="preserve">
+    <value>表示システムの表示データ</value>
+  </data>
+  <data name="TitleTableTab" xml:space="preserve">
+    <value>表関数</value>
+  </data>
+  <data name="TitleNewPwd" xml:space="preserve">
+    <value>新しいパスワード</value>
+  </data>
+  <data name="TitleChangePasswordFailed" xml:space="preserve">
+    <value>パスワードを変更するに失敗しました。</value>
+  </data>
+  <data name="TitleChangePasswordSuccessful" xml:space="preserve">
+    <value>正常にパスワードを変更</value>
+  </data>
+  <data name="TitleInputDbFile" xml:space="preserve">
+    <value>入力してくださいデータベースを</value>
+  </data>
+  <data name="ChkIsAutoCommit" xml:space="preserve">
+    <value>自動的に変更をコミットする</value>
+  </data>
+  <data name="ChkIsAutoShutdown" xml:space="preserve">
+    <value>自動的にシャットダウン</value>
+  </data>
+  <data name="ChkIsReadonly" xml:space="preserve">
+    <value>読み取り専用</value>
+  </data>
+  <data name="TitleCompleteDocDbOK" xml:space="preserve">
+    <value>文書化データベースが正常に完了</value>
+  </data>
+  <data name="TitleExecuteSP" xml:space="preserve">
+    <value>を実行してストアドプロシージャを</value>
+  </data>
+  <data name="TitleQuickLink" xml:space="preserve">
+    <value>クイックリンク</value>
+  </data>
+  <data name="ConfirmTextDropColumn" xml:space="preserve">
+    <value>あなたはこの列を削除することを確認か？</value>
+  </data>
+  <data name="ConfirmTextDropIndex" xml:space="preserve">
+    <value>あなたはこのインデックスを削除することを確認か？</value>
+  </data>
+  <data name="ConfirmTextDropTable" xml:space="preserve">
+    <value>あなたはこのテーブルを削除することを確認か？</value>
+  </data>
+  <data name="ConfirmTextDropTableWithCascade" xml:space="preserve">
+    <value>あなたはcascadinglyテーブルを削除しますか？</value>
+  </data>
+  <data name="ErrorExampleDataLost" xml:space="preserve">
+    <value>例のデータが不足しているファイルは、アプリケーションまたは発行元に問い合わせを再インストールしてください。</value>
+  </data>
+  <data name="ErrorNoIdentityColumnToReset" xml:space="preserve">
+    <value>このテーブルは、ID列をリセットする必要があります</value>
+  </data>
+  <data name="TitleViewSP" xml:space="preserve">
+    <value>プロフィールストアドプロシージャのコード</value>
+  </data>
+  <data name="ButtonBackupDatabase" xml:space="preserve">
+    <value>データベースのバックアップ</value>
+  </data>
+  <data name="ButtonCreateDatabase" xml:space="preserve">
+    <value>データベースの作成</value>
+  </data>
+  <data name="TitlePopulateSqlServerInstance" xml:space="preserve">
+    <value>読み込むSQL Serverのインスタンス</value>
+  </data>
+  <data name="TitleCanNotEmptyNewTableName" xml:space="preserve">
+    <value>新しいテーブル名は空にすることはできません</value>
+  </data>
+  <data name="TitleCopyTable" xml:space="preserve">
+    <value>コピーテーブル</value>
+  </data>
+  <data name="InfoTableNameExisted" xml:space="preserve">
+    <value>この名前を持つテーブルが既に存在しているそれは、もう一度やり直して変更してください</value>
+  </data>
+  <data name="TitleCopyDataSuccessful" xml:space="preserve">
+    <value>正常にテーブルとデータをコピーされます。</value>
+  </data>
+  <data name="InfoBackupDb" xml:space="preserve">
+    <value>データベースをバックアップすることを確認か？このアクションは、データベースのサイズに応じて多くの時間がかかる場合があります。</value>
+  </data>
+  <data name="InfoBackupSuccesful" xml:space="preserve">
+    <value>データベースのバックアップに成功しました。</value>
+  </data>
+  <data name="TitleFunctionList" xml:space="preserve">
+    <value>機能一覧</value>
+  </data>
+  <data name="ResetDataCurrentFileConfrimMsg" xml:space="preserve">
+    <value>あなたは本当に（[リセット]にクリア/削除のすべてのデータなど）の現在開いているデータベースをしたいですか？\ r \ nこのアクションはリスクかもしれませんが、あなたは本当にそれをやりたいですか？</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>ファイルが見つかりません</value>
+  </data>
+  <data name="NoDataToProcess" xml:space="preserve">
+    <value>いいえ、ID列をリセットする</value>
+  </data>
+  <data name="TitleNewSqliteFile" xml:space="preserve">
+    <value>新しいSQLiteのファイル</value>
+  </data>
+  <data name="TitleFirstRowIsColumnName" xml:space="preserve">
+    <value>最初の行は列名です</value>
+  </data>
+  <data name="ButtonDetect" xml:space="preserve">
+    <value>検出...</value>
+  </data>
+  <data name="TitileNoSqlServerInstanceName" xml:space="preserve">
+    <value>いいえSQL Serverのインスタンスが検出されました</value>
+  </data>
+  <data name="TitleBkDbAuto" xml:space="preserve">
+    <value>自動的に古いDBファイルのバージョンをアップグレードする前に（SQLCEのみ）バックアップ</value>
+  </data>
+  <data name="TiTleOpenSqlServerInstanceWay" xml:space="preserve">
+    <value>することができますダブルクリックして項目は以下のSQL ServerのエントリのUIを開くに記載</value>
+  </data>
+  <data name="TitleRemoteAddressOrName" xml:space="preserve">
+    <value>入力してくださいIPアドレスまたはサーバーの名前を検索する</value>
+  </data>
+  <data name="TitleSearchSqlServerInstance" xml:space="preserve">
+    <value>検索SQL Serverのインスタンス</value>
+  </data>
+  <data name="TitleSqlTextFontSize" xml:space="preserve">
+    <value>SQLコマンドのテキストのフォントサイズ</value>
+  </data>
+  <data name="TitleUseVoiceToNotify" xml:space="preserve">
+    <value>使用して音の代わりに通知するメッセージを表示</value>
+  </data>
+  <data name="TitleOleDBVersion" xml:space="preserve">
+    <value>Office 2007の形式</value>
+  </data>
+  <data name="TitleClearDBOpendHistoryInfo" xml:space="preserve">
+    <value>クリア開いているデータベースの履歴情報</value>
+  </data>
+  <data name="TitleReset" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="Language_AutoDetect" xml:space="preserve">
+    <value>自動検出</value>
+  </data>
+  <data name="Language_Chinese" xml:space="preserve">
+    <value>中国語</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="Language_German" xml:space="preserve">
+    <value>ドイツ語</value>
+  </data>
+  <data name="TitleColumnTab" xml:space="preserve">
+    <value>列関数</value>
+  </data>
+  <data name="TitleIndexTab" xml:space="preserve">
+    <value>インデックス機能</value>
+  </data>
+  <data name="TitleSpTab" xml:space="preserve">
+    <value>SPの関数</value>
+  </data>
+  <data name="Language_Dutch" xml:space="preserve">
+    <value>オランダ語</value>
+  </data>
+  <data name="Language_French" xml:space="preserve">
+    <value>フランス語</value>
+  </data>
+  <data name="Language_Italy" xml:space="preserve">
+    <value>イタリア</value>
+  </data>
+  <data name="Language_Japanese" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="Language_Russian" xml:space="preserve">
+    <value>ロシア</value>
+  </data>
+  <data name="Language_Spanish" xml:space="preserve">
+    <value>スペイン語</value>
+  </data>
+</root>

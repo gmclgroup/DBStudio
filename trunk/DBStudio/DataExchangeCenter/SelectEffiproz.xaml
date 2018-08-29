@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="DBStudio.DataExchangeCenter.SelectEffiproz"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                                         xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <DockPanel LastChildFill="True" Margin="5">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelDatabaseType}" Width="100"/>
+                <ComboBox x:Name="cmbDbType" SelectedIndex="0" Width="150" SelectionChanged="cmbDbType_SelectionChanged">
+                    <ComboBoxItem Content="File"/>
+                    <ComboBoxItem Content="Memory"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="panel1" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelDatabaseFullPath}" Width="100"/>
+                <TextBox x:Name="txtDbLocation" Width="200"/>
+                <Button Content="..." Width="30" x:Name="butSelectPath" Click="butSelectPath_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="panel2" Visibility="Collapsed" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate TextDbName}" Width="100"/>
+                <TextBox x:Name="txtDBName" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelUsername}" Width="100"/>
+                <TextBox x:Name="txtUserName" Width="200" Text="sa"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelPassword}" Width="100"/>
+                <PasswordBox x:Name="txtPwd" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4"></StackPanel>
+
+        </DockPanel>
+    </Grid>
+</UserControl>

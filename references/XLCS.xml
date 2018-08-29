@@ -1,0 +1,4448 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLCS</name>
+    </assembly>
+    <members>
+        <member name="T:XLCS.Audio.Native_Sound">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Audio.Native_Sound.mciSendString(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lpstrCommand"></param>
+            <param name="lpstrReturnstring"></param>
+            <param name="uReturnLength"></param>
+            <param name="hwndCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Audio.Native_Sound.PlaySound(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lpszName"></param>
+            <param name="hModule"></param>
+            <param name="dwFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Audio.Native_Sound.PlaySound(System.Byte@,System.IntPtr,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="snd"></param>
+            <param name="hmod"></param>
+            <param name="fdwSound"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.CLR.Common">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCLRVerisonListFromRegistry">
+            <summary>
+            Search CLR version from Registry
+            </summary>
+            <returns>The List of Current Installed CRL Version</returns>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCLRVersionFromRunTimeEnvironment">
+            <summary>
+            Get CLR Version Using BCL
+            </summary>
+            <returns>The List of Current CLR version in Current Environment</returns>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCurrentRuntimeVersion">
+            <summary>
+            Get the version of current runtime 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCLRSystemDirFromEnvironment">
+            <summary>
+            Get the clr installed directory
+            Notice :
+             This is the same code as GetCLRSystemDirViaWin32
+            From Rotor you could see the 
+            RuntimeEnvironment.GetRuntimeDirectory method call the GetCLRSystemDirViaWin32 what do.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCLRSystemDirViaWin32">
+            <summary>
+            Get CLR System Dir Using Native API
+            </summary>
+            <returns>The Path of CLR SystemDir </returns>
+        </member>
+        <member name="M:XLCS.CLR.Common.GetCORSystemDirectory(System.Text.StringBuilder,System.Int32,System.Int32@)">
+            <summary>
+            This is the Native API 
+            </summary>
+            <param name="Buffer">the return value's buffer (need stringbuilder type)</param>
+            <param name="BufferLength">the lenght of up buffer</param>
+            <param name="Length">No need ,just give 0</param>
+        </member>
+        <member name="T:XLCS.Common.CharExchange">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.CharExchange.IsHasChineseChar(System.String)">
+            <summary>
+            Indicate whether the string has contain Chinese Code or not 
+            </summary>
+            <param name="inputStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.CharExchange.GetBytes(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.CharExchange.GetString(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Common.Self_DateTime">
+            <summary>
+            DateTime Transform
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.Self_DateTime.CreateStringFromDateTime(System.DateTime,System.String@)">
+            <summary>
+            Convert to  NATO style DateTime String From DateTime
+            </summary>
+            <param name="dataTime">Source DateTime</param>
+            <param name="result">converted string</param>
+        </member>
+        <member name="M:XLCS.Common.Self_DateTime.CreateDateTimeFromString(System.String,System.DateTime@)">
+            <summary>
+            Convert to DateTime from NATO style time string 
+            </summary>
+            <param name="NATOStyleTime">NATO Style DateTime</param>
+            <param name="resultDateTime">Standard DateTime</param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Common.EventManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.EventManager.Register(System.String,System.Object,System.String)">
+            <summary>
+            注册事件
+            </summary>
+            <param name="registerName">事件注册名</param>
+            <param name="obj">事件源对象</param>
+            <param name="eventName">事件名称</param>
+        </member>
+        <member name="M:XLCS.Common.EventManager.Handle(System.String,System.Delegate)">
+            <summary>
+            捕捉事件
+            </summary>
+            <param name="registerName">事件注册名</param>
+            <param name="eventHandler">事件触发方法的委托</param>
+        </member>
+        <member name="M:XLCS.Common.EventManager.Remove(System.String,System.Delegate)">
+            <summary>
+            从事件列表中移除注册事件
+            </summary>
+            <param name="registerName">事件注册名</param>
+            <param name="eventHandler"></param>
+            
+        </member>
+        <member name="T:XLCS.Common.FlushMemory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.FlushMemory.SetProcessWorkingSetSize(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="proc"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.FlushMemory.DoFlushMemory">
+            <summary>
+            Clean the memory
+            </summary>
+        </member>
+        <member name="T:XLCS.Common.GlobalDefine">
+            <summary>
+            Global Definitions
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.GlobalDefine.NotDoSuccessful">
+            <summary>
+            For Debug Runtime Using
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.GlobalDefine.NotUsed">
+            <summary>
+            For Debug Runtime Using
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.GlobalDefine.NotSupport">
+            <summary>
+            For Debug Runtime Using
+            </summary>
+        </member>
+        <member name="T:XLCS.Common.ImageProcess">
+            <summary>
+            Image Relevant Class
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.ConvertImageToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            
+            </summary>
+            <param name="imageToConvert"></param>
+            <param name="formatOfImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.ConvertToImageFromByteArray(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="myByteArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.IsGDIPlusSupportedImageFile(System.String)">
+            <summary>
+            Is GDI+ Supported Image File Type
+            </summary>
+            <param name="filename">Full path image file name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.GetAdjustThumbnail(System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Get the thumbnail with specified size
+            </summary>
+            <param name="bitmap"></param>
+            <param name="thumbWidth"></param>
+            <param name="thumbHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.GetAdjustThumbnailEx(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            Get the thumbnail with specified size
+            </summary>
+            <param name="bitmap"></param>
+            <param name="thumbWidth"></param>
+            <param name="thumbHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.MatchImageFormat(System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            
+            </summary>
+            <param name="bmpFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ImageProcess.GetColorImage(System.Drawing.Color,System.Int32,System.Int32)">
+            <summary>
+            Get temporary image object used in GetMousePositionRGB Color Method
+            </summary>
+            <param name="cColor"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Common.IO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.IO.GetFileCountInDirectory(System.String,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="dir"></param>
+            <param name="fileList"></param>
+            <param name="IsRecurise"></param>
+        </member>
+        <member name="M:XLCS.Common.IO.PushData(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:XLCS.Common.IO.GetAllFile(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="searchPattern">
+            Like *.* 
+            </param>
+            <param name="t"></param>
+        </member>
+        <member name="M:XLCS.Common.IO.GetParentDirName(System.String)">
+            <summary>
+            Get the Folder name according to the file full path
+            </summary>
+            <param name="fileFullPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.IO.GetFolderName(System.String)">
+            <summary>
+            Get the Folder name form the folder(Directory) full path
+            </summary>
+            <param name="dirPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.IO.FileCopy(System.String,System.String,System.Boolean)">
+            <summary>
+            Copy files in a Directory if recursive is true it will also copy sub-directory and its' files
+            need System.IO namespace
+            </summary>
+            <param name="SrcDir">source dir (string type)</param>
+            <param name="DestDir">destination directory (string type)</param>
+            <param name="Recursive">Judge if it will copy sub-directory or not (true -->copy)</param>
+        </member>
+        <member name="M:XLCS.Common.IO.FileCopy(System.String,System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Copy files in a Directory if recursive is true it will also copy sub-directory and its' files
+            need System.IO namespace
+            </summary>
+            <param name="SrcDir">source dir (string type)</param>
+            <param name="DestDir">destination directory (string type)</param>
+            <param name="Recursive">Judge if it will copy sub-directory or not (true -->copy)</param>
+            <param name="withPattern"></param>
+            <param name="patternName"></param>
+        </member>
+        <member name="M:XLCS.Common.IO.GetFileNameFromAbsPath(System.String)">
+            <summary>
+            Get File name From abs path(full name)
+            </summary>
+            <param name="fullname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.IO.IsDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Common.KeyBoardFunc">
+            <summary>
+            Keyboards Functions Collection
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.KeyBoardFunc.IsPressedNumericalKey(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Is the input key is number or not 
+            </summary>
+            <param name="e">Keys enum </param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Common.MyEventArgs">
+            <summary>
+            Make a common eventargs class
+            </summary>
+        </member>
+        <member name="P:XLCS.Common.MyEventArgs.MyText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Common.MyEventArgs.MyObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Common.MyEventArgs.MyIntValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Common.Net">
+            <summary>
+            Network Basic Collection
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.Net.StartService(System.String)">
+            <summary>
+            Start Windows Service
+            </summary>
+            <param name="serviceName"></param>
+        </member>
+        <member name="M:XLCS.Common.Net.StopService(System.String)">
+            <summary>
+            Stop Windows Services
+            </summary>
+            <param name="serviceName"></param>
+        </member>
+        <member name="M:XLCS.Common.Net.SwitchToDhcp">
+            <summary>
+            Switch To Dhcp for local host
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.Net.SwitchToStatic(System.String,System.String)">
+            <summary>
+            Switch Static IP for localhost
+            </summary>
+            <param name="ip"></param>
+            <param name="subnetMask"></param>
+        </member>
+        <member name="T:XLCS.Common.Pi">
+            <summary>
+            Calculation of PI using the BBP (Bailey-Borwein-Plouffe) formula.
+            </summary>
+        </member>
+        <member name="F:XLCS.Common.Pi.s_powsOf2">
+            <summary>
+            Powers of two. Used in the binary exponentiation algorithm (Knuth Vol II - 4.6.3).
+            </summary>
+        </member>
+        <member name="F:XLCS.Common.Pi.HEX">
+            <summary>
+            Hexadecimal characters.
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.Pi.#cctor">
+            <summary>
+            public static constructor.
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.Pi.Calculate(System.Int32,System.Int32)">
+            <summary>
+            Calculates a given number of hexadecimal digits of PI from the given start position.
+            </summary>
+            <param name="start">Hexadecimal position to start calculating hexadecimal digits from.</param>
+            <param name="length">Number of hexadecimal digits to calculate. Needs to be multiple of 10.</param>
+            <returns>Requested hexadecimal digits of PI.</returns>
+        </member>
+        <member name="M:XLCS.Common.Pi.Sum(System.Int32,System.Int32)">
+            <summary>
+            This method calculates the fractional part of SUM[i = 0..+INF](1 / (16^i * (8 * i + j))).
+            </summary>
+            <param name="j">See formula.</param>
+            <param name="pos">Starting position for requested hexadecimal part of PI's fraction.</param>
+            <returns>See formula.</returns>
+        </member>
+        <member name="M:XLCS.Common.Pi.PowMod(System.Double,System.Double,System.Double)">
+            <summary>
+            Returns a specified number raised to the specified power, module the given modulus.
+            </summary>
+            <param name="x">A double-precision floating-point number to be raised to a power.</param>
+            <param name="y">A double-precision floating-point number that specifies a power.</param>
+            <param name="m">A double-precision floating-point number that specified the modulus.</param>
+            <returns>x^y mod m</returns>
+        </member>
+        <member name="M:XLCS.Common.Pi.ToHex(System.Double)">
+             <summary>
+             Converts the fractional part of the specified double-precision floating-point number
+             to hexadecimal representation.
+             </summary>
+             <param name="d">Double-precision floating-point number in base 10.</param>
+             <returns>String representation of the number's fractional part in base 16.</returns>
+             <example>
+             Sample: d := 0.14159265358979334
+            
+                f := (d - (int)d )   16 * f               Hex((int)(16 * f))
+                -------------------  -------------------  ------------------
+             0. 0.14159265358979334   2.2654824574366934  2
+             1. 0.26548245743669340   4.2477193189870945  4
+             2. 0.24771931898709450   3.9635091037935126  3
+             3. 0.96350910379351260  15.4161456606962020  F
+             4. 0.41614566069620200   6.6583305711392313  6
+             5. 0.65833057113923130  10.5332891382277010  A
+             6. 0.53328913822770100   8.5326262116432190  8
+             7. 0.53262621164321900   8.5220193862915039  8
+             8. 0.52201938629150390   8.3523101806640625  8
+             9. 0.35231018066406250   5.6369628906250000  5
+            
+             Reverse: h := 0.243F6A8885
+            
+                Weight       Value
+                -----------  ----------- 
+             0. 2 * 16^-1    0.12500000000000000000
+             1. 4 * 16^-2    0.01562500000000000000
+             2. 3 * 16^-3    0.00073242187500000000
+             3. F * 16^-4    0.00022888183593750000
+             4. 6 * 16^-5    0.00000572204589843750
+             5. A * 16^-6    0.00000059604644775391
+             6. 8 * 16^-7    0.00000002980232238770
+             7. 8 * 16^-8    0.00000000186264514923
+             8. 8 * 16^-9    0.00000000011641532183
+             9. 5 * 16^-10   0.00000000000454747351
+                            +----------------------
+                             0.14159265358921400000
+                               ^^^^^^^^^^^^
+             </example>
+        </member>
+        <member name="T:XLCS.Common.ProcessException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.ProcessException.DisplayErrors(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:XLCS.Common.ProcessException.GetExceptionDetailInfo(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Common.ProcessException.DisplayErrors(System.Exception,System.String)">
+            <summary>
+            Display Error msg with format
+            Currently Only Do Abort
+            </summary>
+            <param name="msgTitle">some extra info of exception</param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:XLCS.Common.PropForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.PropForm.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="title"></param>
+        </member>
+        <member name="M:XLCS.Common.PropForm.#ctor(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="title"></param>
+            <param name="target"></param>
+        </member>
+        <member name="F:XLCS.Common.PropForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:XLCS.Common.PropForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:XLCS.Common.PropForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:XLCS.Common.PropForm.propertyGrid1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Db.DbConnectionString">
+            <summary>
+            Database connection string library
+            </summary>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetMySqlConnectionString(System.String,System.String,System.String)">
+            <summary>
+            MySql server 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetOledbConnectionString_NoTrust(System.String,System.String,System.String,System.String)">
+            <summary>
+            This oledb connection is test passed to the online databases
+            </summary>
+            <param name="server"></param>
+            <param name="uid"></param>
+            <param name="pwd"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.SqlServerConnectionString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sql server
+            </summary>
+            <param name="server"></param>
+            <param name="uid"></param>
+            <param name="pwd"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetConnectionString(System.String,System.String,System.String,System.String)">
+            <summary>
+            data source may be:IP ADDRESS (such as :192.122.122.122:1433,)noticed 1433 it the por (by default)
+            In fact sqlConnectionWay in not very well,compare with accessConnectionWay
+            so,It maybe overrided any time if necessary
+            </summary>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetOledbConnectionString_Trust(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get OleDb Connection To sql server
+            </summary>
+            <param name="server"></param>
+            <param name="uid"></param>
+            <param name="pwd"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetOdbcConnectionString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get odbc to sql server
+            </summary>
+            <param name="server"></param>
+            <param name="uid"></param>
+            <param name="pwd"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetConnectionString(System.String)">
+            <summary>
+            Get Connection String To Excel
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetOdbcAccess(System.String,System.String,System.String)">
+            <summary>
+            return Acess ODBC string
+            </summary>
+            <param name="database"></param>
+            <param name="senduid"></param>
+            <param name="sendpwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Db.DbConnectionString.GetOledbAccess(System.String,System.String,System.String)">
+            <summary>
+            return Acess OLEDB connection string
+            </summary>
+            <param name="database"></param>
+            <param name="senduid"></param>
+            <param name="sendpwd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Db.DSNAdmin">
+            <summary>
+            Admin-Class for DSN connections.
+            </summary>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.AddUserDSN(System.String,System.String)">
+            <summary>
+            Creates a User DSN.
+            </summary>
+            <param name="DSName">Name of the DSN</param>
+            <param name="DBPath">Path to database</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.EditUserDSN(System.String,System.String)">
+            <summary>
+            Modify a User DSN.
+            </summary>
+            <param name="DSName">Name of the DSN</param>
+            <param name="DBPath">Path to database</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.RemoveUserDSN(System.String)">
+            <summary>
+            Remove a User DSN.
+            </summary>
+            <param name="DSName">Name of the DSN</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.AddSystemDSN(System.String,System.String)">
+            <summary>
+            Add a System DSN.
+            </summary>
+            <param name="DSName">Name of the DSN</param>
+            <param name="DBPath">Path to database</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.EditSystemDSN(System.String,System.String)">
+            <summary>
+            Modify a System DSN
+            </summary>
+            <param name="DSName">Name of DSN</param>
+            <param name="DBPath">Path to database</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.RemoveSystemDSN(System.String)">
+            <summary>
+            Remove a System DSN
+            </summary>
+            <param name="DSName">Name of DSN</param>
+            <returns>True if successfull</returns>
+        </member>
+        <member name="M:XLCS.Db.DSNAdmin.SQLConfigDataSource(System.IntPtr,System.Int32,System.String,System.String)">
+            <summary>
+            Win32 API Import
+            </summary>
+        </member>
+        <member name="T:XLCS.Db.SqlLocator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Db.SqlLocator.GetServers">
+            <summary>
+            Get Sql Server Online List
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.DesignPatterns.Singleton`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:XLCS.DesignPatterns.Singleton`1.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.DesignPatterns.Singleton`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.DesignPatterns.ThreadSafeSingleton`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XLCS.DesignPatterns.ThreadSafeSingleton`1.Initialize">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.DesignPatterns.ThreadSafeSingleton`1.Instance">
+            <summary>
+            The one and only instance
+            </summary>
+        </member>
+        <member name="T:XLCS.Emit.EmitDyncModule">
+            <summary>
+            Emit Library
+            </summary>
+        </member>
+        <member name="M:XLCS.Emit.EmitDyncModule.CreateCallee(System.AppDomain,System.Reflection.Emit.AssemblyBuilderAccess)">
+            <summary>
+            Create the type (callee)
+            </summary>
+            <param name="appDomain"></param>
+            <param name="access"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Emit.EmitDyncModule.test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.IPathFinder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.IPathFinder.FindPath(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.IPathFinder.FindPathStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.Diagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.Formula">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.HeavyDiagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.HeuristicEstimate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.SearchLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.Stopped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.IPathFinder.TieBreaker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.IPriorityQueue`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XLCS.FindPath.IPriorityQueue`1.Peek">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.IPriorityQueue`1.Pop">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.IPriorityQueue`1.Push(`0)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.IPriorityQueue`1.Update(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="T:XLCS.FindPath.PathFinder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinder.#ctor(System.Byte[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinder.FindPath(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinder.FindPathStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinder.ZeroMemory(System.Byte*,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="destination"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.Diagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.Formula">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.HeavyDiagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.HeuristicEstimate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.SearchLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.Stopped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinder.TieBreaker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.PathFinder.ComparePFNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.PathFinderFast">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinderFast.#ctor(System.Byte[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinderFast.FindPath(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinderFast.FindPathStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PathFinderFast.ZeroMemory(System.Byte*,System.Int32)">
+            <summary>
+            /
+            </summary>
+            <param name="destination"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.Diagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.Formula">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.HeavyDiagonals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.HeuristicEstimate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.SearchLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.Stopped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PathFinderFast.TieBreaker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.PathFinderNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.F">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.G">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.H">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.X">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.Y">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.PX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNode.PY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.HeuristicFormula">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.Custom1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.DiagonalShortCut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.Euclidean">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.EuclideanNoSQR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.Manhattan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.HeuristicFormula.MaxDXDY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.PathFinderNodeType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.Close">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.End">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.Open">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.Path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PathFinderNodeType.Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.FindPath.PriorityQueueB`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:XLCS.FindPath.PriorityQueueB`1.InnerList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.FindPath.PriorityQueueB`1.mComparer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.#ctor(System.Collections.Generic.IComparer{`0})">
+            <summary>
+            
+            </summary>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.#ctor(System.Collections.Generic.IComparer{`0},System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="comparer"></param>
+            <param name="capacity"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.OnCompare(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="i"></param>
+            <param name="j"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.Peek">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.Pop">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.Push(`0)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.RemoveLocation(`0)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.SwitchElements(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="i"></param>
+            <param name="j"></param>
+        </member>
+        <member name="M:XLCS.FindPath.PriorityQueueB`1.Update(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="P:XLCS.FindPath.PriorityQueueB`1.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.FindPath.PriorityQueueB`1.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.CaptureImage">
+            <summary>
+            Capture image class
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.CaptureImage.Control(System.Windows.Forms.Control,System.Boolean,System.Boolean)">
+            <summary>
+            Captures the specified area of the control or whats underneath
+            the control. If the argument flag client is true, only the client
+            area of the control is captured, otherwise the entire control is 
+            captured. If the argument flag under is true, the capture area under
+            the control is captured, otherwise the specified area on the control
+            is captured.
+            </summary>
+            <param name="ctl">Control to capture</param>
+            <param name="client">If true capture only client area else entire control.</param>
+            <param name="under">If true capture specified area underneath the control else whats on the control.</param>
+            <returns>bitmap image of the control or whats underneath the control</returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.CaptureImage.Window(System.IntPtr,System.Drawing.Rectangle)">
+            <summary>
+            Captures the specified window or part thereof to a bitmap image.
+            </summary>
+            <param name="handle">window handle</param>
+            <param name="r">capture rectangle</param>
+            <returns>bitmap image of the window</returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.CaptureImage.Window(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Captures the window or part thereof to a bitmap image.
+            </summary>
+            <param name="wndHWND">window handle</param>
+            <param name="x">x location in window</param>
+            <param name="y">y location in window</param>
+            <param name="width">width of capture area</param>
+            <param name="height">height of capture area</param>
+            <returns>window bitmap</returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI32">
+            <summary>
+            GDI32 dll access
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI32.SRCCOPY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.DeleteDC(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hDc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.DeleteObject(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hDc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.BitBlt(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdcDest"></param>
+            <param name="xDest"></param>
+            <param name="yDest"></param>
+            <param name="wDest"></param>
+            <param name="hDest"></param>
+            <param name="hdcSource"></param>
+            <param name="xSrc"></param>
+            <param name="ySrc"></param>
+            <param name="RasterOp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.CreateCompatibleBitmap(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="nWidth"></param>
+            <param name="nHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.CreateCompatibleDC(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI32.SelectObject(System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="bmp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.USER32">
+            <summary>
+            USER32 dll access
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.USER32.SM_CXSCREEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.USER32.SM_CYSCREEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.USER32.GetDesktopWindow">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.USER32.GetDC(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="ptr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.USER32.GetSystemMetrics(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="abc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.USER32.GetWindowDC(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ptr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.USER32.ReleaseDC(System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="hDc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.ColorTransform">
+            <summary>
+            Transfrom color from rgb to hsb ,or hsb to rgb
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.ColorTransform.HSBColor">
+            <summary>
+            Provides Round-trip conversion from RGB to HSB and back
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.#ctor(System.Int32,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.#ctor(System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="color"></param>
+        </member>
+        <member name="P:XLCS.GDIPlus.ColorTransform.HSBColor.H">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDIPlus.ColorTransform.HSBColor.S">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDIPlus.ColorTransform.HSBColor.B">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDIPlus.ColorTransform.HSBColor.A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDIPlus.ColorTransform.HSBColor.Color">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.ShiftHue(System.Drawing.Color,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="c"></param>
+            <param name="hueDelta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.ShiftSaturation(System.Drawing.Color,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="c"></param>
+            <param name="saturationDelta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.ShiftBrighness(System.Drawing.Color,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="c"></param>
+            <param name="brightnessDelta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.FromHSB(XLCS.GDIPlus.ColorTransform.HSBColor)">
+            <summary>
+            Convert hsbColor to ARGB Color
+            </summary>
+            <param name="hsbColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.ColorTransform.HSBColor.FromColor(System.Drawing.Color)">
+            <summary>
+            Convert ARGB Color to HSB Color
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.GdipCreateBitmapFromGdiDib(System.IntPtr,System.IntPtr,System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="pBIH"></param>
+            <param name="pPix"></param>
+            <param name="pBitmap"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.PointType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PointType.PT_CLOSEFIGURE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PointType.PT_LINETO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PointType.PT_BEZIERTO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PointType.PT_MOVETO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.PloyFillMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PloyFillMode.ALTERNATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PloyFillMode.WINDING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PloyFillMode.POLYFILL_LAST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.RECT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.RECT.left">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.RECT.top">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.RECT.right">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.RECT.bottom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.RECT.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.POINT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.POINT.x">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.POINT.y">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.SIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.SIZE.cx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.SIZE.cy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles.PS_SOLID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles.PS_DASH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles.PS_DOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles.PS_DASHDOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.PenStyles.PS_DASHDOTDOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.WHITE_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.LTGRAY_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.GRAY_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.DKGRAY_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.BLACK_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.NULL_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.HOLLOW_BRUSH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.WHITE_PEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.BLACK_PEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.NULL_PEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.OEM_FIXED_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.ANSI_FIXED_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.ANSI_VAR_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.SYSTEM_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.DEVICE_DEFAULT_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.DEFAULT_PALETTE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.Stock_GDI_Objects.SYSTEM_FIXED_FONT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_BLACK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOTMERGEPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MASKNOTPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOTCOPYPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MASKPENNOT">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_XORPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOTMASKPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MASKPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOTXORPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_NOP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MERGENOTPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_COPYPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MERGEPENNOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_MERGEPEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_WHITE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDIPlus.GDI_Plus_Interop.GDI_Binary_Raster_Ops.R2_LAST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.SetROP2(System.IntPtr,System.Int32)">
+            <summary>
+            Set XOR Operation
+            </summary>
+            <param name="hdc"></param>
+            <param name="enDrawMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.CreatePen(XLCS.GDIPlus.GDI_Plus_Interop.PenStyles,System.Int32,System.Int32)">
+            <summary>
+            Create Pen
+            </summary>
+            <param name="enPenStyle"></param>
+            <param name="nWidth"></param>
+            <param name="crColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.DeleteObject(System.IntPtr)">
+            <summary>
+            Delete GDI Object
+            </summary>
+            <param name="hObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.SelectObject(System.IntPtr,System.IntPtr)">
+            <summary>
+            Select GDI Object
+            </summary>
+            <param name="hdc"></param>
+            <param name="hObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.Polygon(System.Int32,XLCS.GDIPlus.GDI_Plus_Interop.POINT[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="lpPoints"></param>
+            <param name="nCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.Rectangle(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draw Rectangle,Logical Coordination
+            </summary>
+            <param name="hdc"></param>
+            <param name="X1"></param>
+            <param name="Y1"></param>
+            <param name="X2"></param>
+            <param name="Y2"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.Ellipse(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draw Ellipse
+            </summary>
+            <param name="hdc"></param>
+            <param name="X1"></param>
+            <param name="Y1"></param>
+            <param name="X2"></param>
+            <param name="Y2"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.GetStockObject(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="brStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.BeginPath(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.EndPath(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.StrokePath(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.PolyBezier(System.IntPtr,XLCS.GDIPlus.GDI_Plus_Interop.POINT[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="lpPOINT"></param>
+            <param name="nCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.RGB(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="R"></param>
+            <param name="G"></param>
+            <param name="B"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.RGB(System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="argbColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.MoveToEx(System.IntPtr,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="X"></param>
+            <param name="Y"></param>
+            <param name="lpPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.LineTo(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="nXEnd"></param>
+            <param name="nYEnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.SetMapMode(System.IntPtr,System.Int32)">
+            <summary>
+            Set map modd
+            </summary>
+            <param name="hdc"></param>
+            <param name="fnMapMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.PolyDraw(System.IntPtr,XLCS.GDIPlus.GDI_Plus_Interop.POINT[],System.Byte[],System.Int32)">
+            <summary>
+            Very usefull to parse data and type of each point to GDI 
+            </summary>
+            <param name="hdc"></param>
+            <param name="lppt"></param>
+            <param name="lpbTypes"></param>
+            <param name="cCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GDI_Plus_Interop.SetPolyFillMode(System.IntPtr,System.Int32)">
+            <summary>
+            Set Fill mode when Draw Poly
+            </summary>
+            <param name="hdc"></param>
+            <param name="iPolyFillMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDIPlus.Gdi_Plus">
+            <summary>
+            PickBox Method in GDI_Plus Scope
+            </summary>
+        </member>
+        <member name="T:XLCS.GDIPlus.Gdi_Plus.PickBox">
+            <summary>
+            This class implements sizing and moving functions for
+            runtime editing of graphic controls
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.PickBox.#ctor">
+            <summary>
+             Constructor creates 8 sizing handles wires mouse events
+            to each that implement sizing functions
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.PickBox.WireControl(System.Windows.Forms.Control)">
+            <summary>
+            Wire Control
+            </summary>
+            <param name="ctl"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.PickBox.SelectControl(System.Object,System.EventArgs)">
+            <summary>
+            Bind the pickbox to the control
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.PickBox.Remove">
+            <summary>
+            Remove Handles
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.GetRectFromTwoPoint(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Calc the rectangle according to two point
+            </summary>
+            <param name="t"></param>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.P2PSize(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Get the size(distance ) of two points
+            </summary>
+            <param name="startP">start point</param>
+            <param name="endP">end point</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.P2PLength(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Get The Leghth of two point
+            </summary>
+            <param name="startP">start point</param>
+            <param name="endP">end point</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.P2PLength(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Get The Leghth of two point
+            </summary>
+            <param name="startP">start point</param>
+            <param name="endP">end point</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.Gdi_Plus.SelfDefinedPaserPathToGDI(System.Drawing.Graphics,System.Drawing.Drawing2D.GraphicsPath,XLCS.GDIPlus.GDI_Plus_Interop.PenStyles,System.Int32,System.Drawing.Color)">
+            <summary>
+            Self Tracking using GDI xor
+            </summary>
+            <param name="graphics"></param>
+            <param name="path"></param>
+            <param name="penStyle"></param>
+            <param name="xorWidth"></param>
+            <param name="xorColor"></param>
+        </member>
+        <member name="T:XLCS.GDIPlus.GrahpicsTransform">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDIPlus.GrahpicsTransform.TransForm(System.Drawing.Graphics,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Rectangle)">
+            <summary>
+            
+            </summary>
+            <param name="graphics"></param>
+            <param name="dest"></param>
+            <param name="src"></param>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GrahpicsTransform.TransForm(System.Drawing.Graphics,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Size)">
+            <summary>
+            
+            </summary>
+            <param name="graphics"></param>
+            <param name="dest"></param>
+            <param name="src"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDIPlus.GrahpicsTransform.TransForm(System.Drawing.Graphics,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="graphics"></param>
+            <param name="dest"></param>
+            <param name="src"></param>
+            <param name="pt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDI.Common">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDI.Common.PixelToInch(System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="pixel"></param>
+            <param name="dpi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.PixelToMetirc(System.Single,System.Single)">
+            <summary>
+            Convert Pixel value to Metric
+            </summary>
+            <param name="pixel"></param>
+            <param name="dpi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.MetircToPixel(System.Single,System.Single)">
+            <summary>
+            Convert Metric to Pixel 
+            </summary>
+            <param name="metric"></param>
+            <param name="dpi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.ClearBitmapPixel(System.Drawing.Bitmap)">
+            <summary>
+            Clear the image to Pure Clear Bitmap 
+            with ARGB all 0
+            </summary>
+            <param name="bitmap"></param>
+        </member>
+        <member name="P:XLCS.GDI.Common.GetSelectedImageFileSingleMode">
+            <summary>
+            Get the Image filename which slected by user throught the user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.GetSavedAsImageFileNameEx(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.GDI.Common.GetSavedAsImageFileName">
+            <summary>
+            Get The Filename which want to SavedAs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.GetBitmapByUrl(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDI.Common.CompareResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDI.Common.CompareResult.X_ResultType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDI.Common.CompareResult.X_SrcValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.GDI.Common.CompareResult.X_DestValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.GDI.Common.CompareResultType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.GDI.Common.CompareResultType.InvalidResult">
+            <summary>
+            init value
+            </summary>
+        </member>
+        <member name="F:XLCS.GDI.Common.CompareResultType.ciCompareOk">
+            <summary>
+            Alll Same
+            </summary>
+        </member>
+        <member name="F:XLCS.GDI.Common.CompareResultType.ciPixelMismatch">
+            <summary>
+            Pixel Same
+            </summary>
+        </member>
+        <member name="F:XLCS.GDI.Common.CompareResultType.ciSizeMismatch">
+            <summary>
+            Size Same
+            </summary>
+        </member>
+        <member name="M:XLCS.GDI.Common.Compare(System.Drawing.Bitmap,System.Drawing.Bitmap)">
+            <summary>
+            Compare two Image
+            </summary>
+            <param name="bmp1"></param>
+            <param name="bmp2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.SaveImageToXML(System.String,System.Boolean)">
+            <summary>
+            Save Image to xml
+            </summary>
+            <param name="imageName"></param>
+            <param name="InnerUse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.SaveImageToXML(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcImageName"></param>
+            <param name="destStreamName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.SaveImageToXML(System.Drawing.Image,System.String)">
+            <summary>
+            Save Image to xml
+            </summary>
+            <param name="image"></param>
+            <param name="destStreamName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.RotateImage(System.Drawing.Image,System.Single)">
+            <summary>
+            Creates a new Image containing the same image only rotated
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> to rotate</param>
+            <param name="angle">The amount to rotate the image, clockwise, in degrees</param>
+            <returns>A new <see cref="T:System.Drawing.Bitmap"/> that is just large enough</returns>
+        </member>
+        <member name="M:XLCS.GDI.Common.BitmapFromDIB(System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="pDIB"></param>
+            <param name="pPix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.GDI.Gdi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDI.Gdi.CreateDC(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="DriveName"></param>
+            <param name="DeviceName"></param>
+            <param name="Output"></param>
+            <param name="others"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.GDI.Gdi.GetDisplayHandle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.GDI.Gdi.PutEnhMetafileOnClipboard(System.IntPtr,System.Drawing.Imaging.Metafile)">
+            <summary>
+            // Metafile mf is set to a state that is not valid inside this function.
+            </summary>
+            <param name="hWnd"></param>
+            <param name="mf"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Interop.Common">
+            <summary>
+            This attributre supress the security check when call unmanaged code
+            </summary>
+        </member>
+        <member name="F:XLCS.Interop.Common.WM_SYSCOMMAND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Interop.Common.SC_MONITORPOWER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Interop.Common.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="wMsg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.CloseLCD(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="M:XLCS.Interop.Common.OpenLCD(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="M:XLCS.Interop.Common.OutputDebugString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lpOutputString"></param>
+        </member>
+        <member name="M:XLCS.Interop.Common.GetTickCount">
+            <summary>
+            Get the Tick Time 
+            Like DateTime - DateTime
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.mciSendString(System.String,System.Text.StringBuilder,System.Int32,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpstrCommand"></param>
+            <param name="lpstrReturnString"></param>
+            <param name="uReturnLength"></param>
+            <param name="hwndCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.close_cdrom">
+            <summary>
+            Close CDROM
+            </summary>
+        </member>
+        <member name="M:XLCS.Interop.Common.open_cdrom">
+            <summary>
+            Open CDROM
+            </summary>
+        </member>
+        <member name="M:XLCS.Interop.Common.Beep(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="frequency"></param>
+            <param name="duration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.MessageBox(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="pText"></param>
+            <param name="pCaption"></param>
+            <param name="uType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.LockWorkStation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Interop.Common.CloseWindowStation(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hWinSta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.ExitWindowsEx(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="uFlags"></param>
+            <param name="dwReserved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.FindWindow(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lpClassName"></param>
+            <param name="lpWindowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.SendMessage(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd"></param>
+            <param name="wMsg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Interop.Common.InternetGetConnectedState(System.Int32@,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="connectionDescription"></param>
+            <param name="reservedValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Log.Logging">
+            <summary>
+            Provides centralized logging access.
+            </summary>
+        </member>
+        <member name="M:XLCS.Log.Logging.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pLogSource"></param>
+            <param name="pLogName"></param>
+        </member>
+        <member name="M:XLCS.Log.Logging.LogError(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:XLCS.Log.Logging.LogEventLog(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:XLCS.Log.Logging.LogEventLogError(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:XLCS.Log.Logging.LogEventLog(System.String,System.Diagnostics.EventLogEntryType)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="type"></param>
+        </member>
+        <member name="T:XLCS.MM.MoneyRefer">
+            <summary>
+            Money References
+            </summary>
+        </member>
+        <member name="M:XLCS.MM.MoneyRefer.AnimateWindow(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd"></param>
+            <param name="dwTime"></param>
+            <param name="dwFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Network.NetParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Network.NetParameters.GetTOSForIP(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="TOS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Network.NetParameters.GetTcpPorts(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Network.NetParameters.GetUdpPorts(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Network.NetParameters.GetTypeForIcmp(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Network.NetParameters.GetCodeForIcmp(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Network.NetworkUtility">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Network.NetworkUtility.IsConnectedToInternet">
+            <summary>
+            Detect the network to the internet is ok
+            Use google server and port 80 as Detect Gene
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.SelfReflect.AssemblyMemberInfoClass">
+            <summary>
+            Memeber Info Class (Use Reflect)
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeField(System.String,System.String)">
+            <summary>
+            Get Fields of Type
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeMethod(System.String,System.String)">
+            <summary>
+            Get Methods of Type
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeProperty(System.String,System.String)">
+            <summary>
+            Get Properties of Type
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeConstructor(System.String,System.String)">
+            <summary>
+            Get Constructors of Type
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeEvent(System.String,System.String)">
+            <summary>
+            Get Events of Type
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeField(System.String,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Get Fields of Type using External Flag
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <param name="flag">Binding Flag</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeMethod(System.String,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Get Methods of Type using External Flag
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <param name="flag">Binding Flag</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeProperty(System.String,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Get Properties of Type using External Flag
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <param name="flag">Binding Flag</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeConstructor(System.String,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Get Constructors of Type using External Flag
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <param name="flag">Binding Flag</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.AssemblyMemberInfoClass.getTypeEvent(System.String,System.String,System.Reflection.BindingFlags)">
+            <summary>
+            Get Events of Type using External Flag
+            </summary>
+            <param name="assemblyName">Assembly File Name</param>
+            <param name="detailType">Type name ,include namespace and type name</param>
+            <param name="flag">Binding Flag</param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.SelfReflect.CallMethodFromAssemblyClass">
+            <summary>
+            Call Method From Assembly Class (Use Reflect)
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.CallMethodFromAssemblyClass.CallMethodFromAssembly(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            Call Method from Assembly Dynamical 
+            
+            The Method include "Static " and "Instance" type
+            
+            </summary>
+            <param name="assemblyName">Assembly Name (Abs path with filename)</param>
+            <param name="detailType">The string of Namespace and ClassName(Not include methodname)</param>
+            <param name="methodName">Method Name which called</param>
+            <param name="paras">parameters of the Method which called</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.CallMethodFromAssemblyClass.CallMethodFromAssembly_2(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            Call Method from Assembly Dynamical 
+            
+            The Method include "Static " and "Instance" type
+            
+            </summary>
+            <param name="assemblyName">Assembly Name (Abs path with filename)</param>
+            <param name="detailType">The string of Namespace and ClassName(Not include methodname)</param>
+            <param name="methodName">Method Name which called</param>
+            <param name="paras">parameters of the Method which called</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.CallMethodFromAssemblyClass.CallMethodFromAssemblyUseExternalTarget(System.String,System.String,System.String,System.Object[],System.Object)">
+            <summary>
+            Call Method from Assembly Dynamical 
+            
+            The Method include "Static " and "Instance" type
+            
+            </summary>
+            <param name="assemblyName">Assembly Name (Abs path with filename)</param>
+            <param name="detailType">The string of Namespace and ClassName(Not include methodname)</param>
+            <param name="methodName">Method Name which called</param>
+            <param name="paras">parameters of the Method which called</param>
+            <param name="SpecfiedTarget">The Instance Target (User can specfy this object to external using)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.CallMethodFromAssemblyClass.CallMethodFromAssemblyUseExternalTarget_2(System.String,System.String,System.String,System.Object[],System.Object)">
+            <summary>
+            Call Method from Assembly Dynamical 
+            
+            The Method include "Static " and "Instance" type
+            
+            </summary>
+            <param name="assemblyName">Assembly Name (Abs path with filename)</param>
+            <param name="detailType">The string of Namespace and ClassName(Not include methodname)</param>
+            <param name="methodName">Method Name which called</param>
+            <param name="paras">parameters of the Method which called</param>
+            <param name="SpecfiedTarget">The Instance Target (User can specfy this object to external using)</param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.SelfReflect.ModuleInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.SelfReflect.ModuleInfo.ModuleFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.SelfReflect.ModuleInfo.ModuleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.SelfReflect.ModuleInfo.BaseAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.ModuleInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filename"></param>
+            <param name="baseAdd"></param>
+            <param name="name"></param>
+        </member>
+        <member name="T:XLCS.SelfReflect.Common">
+            <summary>
+            The Old Method to Reflect Class
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.Common.CallMdiClildFormFromModule(System.String,System.String,System.Windows.Forms.Form,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="moduleFileWithABSPath"></param>
+            <param name="moduleName"></param>
+            <param name="mForm">MDI Parent Form object</param>
+            <param name="mdiChildFormName"></param>
+        </member>
+        <member name="M:XLCS.SelfReflect.Common.IsAssembly(System.String)">
+            <summary>
+            Judge the file is the managed assembly
+            </summary>
+            <param name="moduleFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.Common.GetAssembliesForProcess(System.Int32)">
+            <summary>
+            Get Assembly infos by given the process id
+            </summary>
+            <param name="processId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.Common.GetLoadedModuleInfoFromProcess(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="processId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.Common.GetTypeByTypeName(System.String,System.String)">
+            <summary>
+            Get the type from a Assembly by given a detailTypeName
+            </summary>
+            <param name="asmFile"></param>
+            <param name="typeName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass">
+            <summary>
+            Set and Get Property From Assembly Class(Use Reflect)
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.GetTypeSelfProperty(System.String,System.String)">
+            <summary>
+            Get the DetailType 's property
+            These property are the property of the Type (such as a class , a interface,it is system defined)
+            Not The property in the type(such as user defined)
+            </summary>
+            <param name="assemblyName"></param>
+            <param name="detailType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.GetTypeAllProperty(System.String,System.String)">
+            <summary>
+            Get all properties of type
+            Notice : 
+            1)This method is different from 'GetTypeSelfProperty
+            2)
+            </summary>
+            <param name="assemblyName">Assembly ABS Path and filename</param>
+            <param name="detailType">Detail Type </param>
+            <returns>hashtable info (null indicate failure)</returns>
+        </member>
+        <member name="F:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.lastTarget">
+            <summary>
+            To keep the last used Target(Instance object of mainType)
+            1:)here give the ability to get property from assembly
+            </summary>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.SetPropertyFromAssembly(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Set Property From assembly 
+            </summary>
+            <param name="assemblyName">Abs assembly file name</param>
+            <param name="detailType">namespace and class name</param>
+            <param name="propertyName">property name</param>
+            <param name="propertyValue">the value which set to the property</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.GetPropertyFromAssembly(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Get Property Value From Assembly 
+            </summary>
+            <param name="assemblyName">Abs assembly file name</param>
+            <param name="detailType">namespace and class name</param>
+            <param name="propertyName">property name</param>
+            <param name="useLastTarget">Indicate whether use last target object(Last Used Instance of mainType)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.SetPropertyFromAssemblyUseExternalTarget(System.String,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Set Property From assembly 
+            </summary>
+            <param name="assemblyName">Abs assembly file name</param>
+            <param name="detailType">namespace and class name</param>
+            <param name="propertyName">property name</param>
+            <param name="propertyValue">the value which set to the property</param>
+            <param name="SpecfiedTarget">The Instance Target (User can specfy this object to external using)</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SelfReflect.SetAndGetPropertyFromAssemblyClass.GetPropertyFromAssemblyUseExternalTarget(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Get Property Value From Assembly 
+            </summary>
+            <param name="assemblyName">Abs assembly file name</param>
+            <param name="detailType">namespace and class name</param>
+            <param name="propertyName">property name</param>
+            <param name="SpecfiedTarget">The Instance Target (User can specfy this object to external using)</param>
+            <returns>property value(if is null it will throw exception</returns>
+        </member>
+        <member name="T:XLCS.Reflect.CommonReflect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Reflect.CommonReflect.CopyFrom(System.Object,System.Object)">
+            <summary>
+            Copy object 
+            
+            </summary>
+            <param name="target"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Reflect.CommonReflect.ShowDialogInTab(System.Reflection.Assembly,System.String,System.String)">
+            <summary>
+            Show the dynamical modules in mdi tabs
+            </summary>
+            <param name="asm"></param>
+            <param name="className"></param>
+            <param name="typeNamespace"></param>
+        </member>
+        <member name="T:XLCS.Reflect.DelegateUtil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Reflect.DelegateUtil.RemoveClickEvent(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Example 
+            
+            </summary>
+            <param name="targetControl">
+            Target UserControl,Winform Control
+            Such as "Button" ,"TextBox"
+            
+            </param>
+            <param name="eventName">
+            Example:
+            Click
+            DoubleClick
+            </param>
+        </member>
+        <member name="T:XLCS.RegularCommand.RegularCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsEmail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsValidLengthEnglishChar(System.String,System.Int32,System.Int32)">
+            <summary>
+            Judge the input with length limited
+            </summary>
+            <param name="input"></param>
+            <param name="small"></param>
+            <param name="big"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsNumber(System.String)">
+            <summary>
+            Judge the input string is number it will return true,otherwise false;
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsChineseChar(System.String)">
+            <summary>
+            judge the input string is chinese unicode or not .
+            </summary>
+            <param name="input"></param>
+            <returns>if yes return true</returns>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsEnglishChar(System.String)">
+            <summary>
+            From a to z , and A to Z
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RegularCommand.RegularCommand.IsEnglishCharOrNumber(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Resources.GetImage">
+            <summary>
+            Get Image Class
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.New">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Open">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Save">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Cut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Copy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Paste">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Properties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Undo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Redo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Preview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Print">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Search">
+            <summary>
+            
+            </summary>
+            
+        </member>
+        <member name="P:XLCS.Resources.GetImage.ReSearch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Help">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.ZoomIn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.ZoomOut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Back">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Forward">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Favorites">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.AddToFavorites">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Stop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Refresh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Home">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Edit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Tools">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Tiles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Icons">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.List">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Details">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Pane">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Culture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Languages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.History">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Mail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.Parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Resources.GetImage.FolderProperties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Resources.ReadResource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Resources.ReadResource.GetString_FromResource(System.String,System.String)">
+             <summary>
+            Get SP String from resources file
+             </summary>
+             <param name="resFile"></param>
+             <param name="ObjectName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:XLCS.Resources.ReadResource.GetObject_FromResource(System.String,System.String)">
+            <summary>
+            Get SP Object from resources file
+            </summary>
+            <param name="resFile"></param>
+            <param name="ObjectName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.RotorRefer.GC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.AddMemoryPressure(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="bytesAllocated"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.RemoveMemoryPressure(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="bytesAllocated"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.GetGeneration(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.Collect(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="generation"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.Collect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.CollectionCount(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="generation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.KeepAlive(System.Object)">
+            <summary>
+            Foo doesn't get finalized and the stream says open.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.GetGeneration(System.WeakReference)">
+            <summary>
+            
+            </summary>
+            <param name="wo"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XLCS.RotorRefer.GC.MaxGeneration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.WaitForPendingFinalizers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.SuppressFinalize(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.ReRegisterForFinalize(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XLCS.RotorRefer.GC.GetTotalMemory(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="forceFullCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.RotorRefer.Win32Native">
+            Win32 encapsulation for MSCORLIB.
+        </member>
+        <member name="T:XLCS.RSS.RssService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.RssService.TimeOut">
+            <summary>
+            Time out value for retrive data from rss 
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.RssService.CurrentTextEncoding">
+            <summary>
+            Encoding string when get data
+            </summary>
+        </member>
+        <member name="M:XLCS.RSS.RssService.CallRssService(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.RSS.RssService.CallRssService(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.RSS.ServiceResponseInfoItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.ServiceResponseInfoItem.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.ServiceResponseInfoItem.Link">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.ServiceResponseInfoItem.PubDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.RSS.ServiceResponseInfoItem.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.SAPLib.Invalidate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.SAPLib.Invalidate.InvalidateUsername(System.String)">
+            <summary>
+            Check the user name (Old Method)
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.Invalidate.checkPwd(System.String)">
+            <summary>
+            only a~z,A~Z,0~9 allowed
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.Invalidate.checkAllInvalidInput(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.Invalidate.checkSmallInvalidInput(System.String)">
+            <summary>
+            ' and " and \ are invalid
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.SAPLib.OldSapLibMethod">
+            <summary>
+            Summary description for Sec.
+            </summary>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.Encrypt(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="inPara"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.checkUserName(System.String)">
+            <summary>
+            refer to check invalid chars
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.checkPwd(System.String)">
+            <summary>
+            only a~z,A~Z,0~9 allowed
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.checkAllInvalidInput(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.checkCharOnlyForNumber(System.String)">
+            <summary>
+            0~9 are valid
+            </summary>
+            <param name="strIn">input string to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.SAPLib.OldSapLibMethod.checkSmallInvalidInput(System.String)">
+            <summary>
+            ' and " and \ are invalid
+            </summary>
+            <param name="strIn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Search.SearchDialog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Search.SearchDialog.X_IsIgnoreCase">
+            <summary>
+            Indicate whether ignore string case when search
+            </summary>
+            
+        </member>
+        <member name="M:XLCS.Search.SearchDialog.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Search.SearchDialog.#ctor(System.Collections.Generic.LinkedList{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="resultList"></param>
+        </member>
+        <member name="M:XLCS.Search.SearchDialog.textBox1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:XLCS.Search.SearchDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:XLCS.Search.SearchDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:XLCS.Search.SearchDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:XLCS.Security.Encrypt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.DoEncrypt_FromBase64String(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="key1"></param>
+            <param name="key2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.DOEncrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Value">Base64 string</param>
+            <param name="key1">byte[] converted from base64 string</param>
+            <param name="key2">byte[] converted from base64 string</param>
+            <returns>Base 64 string</returns>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.DeEncrypt_FromBase64String(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Value">Base64 String</param>
+            <param name="key1">byte[] converted from base64 string</param>
+            <param name="key2">byte[] converted from base64 string</param>
+            <returns>Base64 string</returns>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.EncryptFile(System.String,System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt File(Use Common Des)
+            </summary>
+            <param name="inFile">source file</param>
+            <param name="outFile">result file</param>
+            <param name="desKey"></param>
+            <param name="desIV"></param>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.DecryptFile(System.String,System.String,System.Byte[],System.Byte[])">
+            <summary>
+            Encrypt File(Use Common Des)
+            </summary>
+            <param name="inFile">source file</param>
+            <param name="outFile">result file</param>
+            <param name="desKey"></param>
+            <param name="desIV"></param>
+        </member>
+        <member name="T:XLCS.Security.Encrypt.OutputMode">
+            <summary>
+            Md5 output string style
+            </summary>
+        </member>
+        <member name="F:XLCS.Security.Encrypt.OutputMode.Hex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Security.Encrypt.OutputMode.Directly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Security.Encrypt.OutputMode.Bin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Security.Encrypt.OutputMode.Dec">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.Encrypt.GeneratedMD5Key(System.String,XLCS.Security.Encrypt.OutputMode)">
+            <summary>
+            
+            </summary>
+            <param name="src"></param>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Security.Filter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.Filter.filter(System.String)">
+            <summary>
+            过滤,符号,用于 log
+            </summary>
+            <param name="inPara"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Security.GetRadomData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.GetRadomData.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Security.GetRadomData.Current_KeyLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Security.GetRadomData.Current_Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.GetRadomData.GetRandomNumber">
+            <summary>
+            Get Random Number 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Security.SelfDefinedEncrypt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Security.SelfDefinedEncrypt.LastErrorMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.SelfDefinedEncrypt.SecStrBySelf(System.String,System.String,System.String,System.String@)">
+            <summary>
+            If you specfied the 2 mehtod,you should delcared sKey first 
+            </summary>
+            <param name="srcStr"></param>
+            <param name="secLevel"></param>
+            <param name="sKey"></param>
+            <param name="outPara"></param>
+            <returns>Action ok or no</returns>
+        </member>
+        <member name="M:XLCS.Security.SelfDefinedEncrypt.DeSecStrBySelf(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="srcStr"></param>
+            <param name="secLevel"></param>
+            <param name="sKey"></param>
+            <param name="outPara"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Security.SymmetircEncryptionMethodsFull">
+            <summary>
+            对称密码Full DotNet 端算法
+            </summary>
+        </member>
+        <member name="M:XLCS.Security.SymmetircEncryptionMethodsFull.Encrypt(System.String,System.String,System.String)">
+            <summary>
+            Base64 String
+            </summary>
+            <param name="input"></param>
+            <param name="generatePassword"> Base64 String</param>
+            <param name="saltData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Security.SymmetircEncryptionMethodsFull.Decrypt(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="base64Input"></param>
+            <param name="generatePassword"></param>
+            <param name="saltData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Serialize.SelfObjectClone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Serialize.SelfObjectClone.CloneEx(System.Object)">
+            <summary>
+            This method  no need mark source object with Serialize() attributs 
+            Use Xml Serializer
+            </summary>
+            <param name="sourceObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Serialize.SelfObjectClone.Clone(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="sourceObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Serialize.SelfObjectClone.CanBeCloned(System.Object)">
+            <summary>
+            Indicate whether the target object can be cloned(serilized) or not
+            </summary>
+            <param name="targetObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Serialize.SerializedFile">
+            <summary>
+            For Serialized relevant functions
+            </summary>
+        </member>
+        <member name="M:XLCS.Serialize.SerializedFile.OpenFile(System.String)">
+            <summary>
+            Get object by getting from Seized file
+            </summary>
+            <param name="fileFullPath">Full Path Project File name</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Serialize.SerializedFile.SaveFile(System.String,System.Object)">
+            <summary>
+            Save object to file using Binary Serized
+            </summary>
+            <param name="fileFullPath"></param>
+            <param name="targetNeedToSave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Serialize.SerializedFile.SaveXml(System.String,System.Object)">
+            <summary>
+            Serialized as xml format
+            </summary>
+            <param name="fileFullPath"></param>
+            <param name="targetObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Serialize.SerializedFile.OpenXml(System.String,System.Type)">
+            <summary>
+            Open Xml serialized file
+            </summary>
+            <param name="fileFullPath"></param>
+            <param name="targetObjectType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Services.service">
+            <summary>
+            Service class
+            </summary>
+        </member>
+        <member name="M:XLCS.Services.service.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Services.service.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="host"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:XLCS.Services.service.RemoteConnectValidate(System.String,System.String,System.String)">
+            <summary>
+             validation wether can connnect to remote machine
+            </summary>
+            <param name="host"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Services.service.GetServiceValue(System.String,System.String)">
+            <summary>
+             get speicfied service value
+            </summary>
+            <param name="serviceName"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Services.service.GetServiceList">
+            <summary>
+            get Service list 
+            </summary>
+            <returns>array detail of Service List</returns>
+        </member>
+        <member name="M:XLCS.Services.service.GetServiceList(System.String)">
+            <summary>
+            get all connection service list
+            </summary>
+            <param name="serverName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Services.service.GetServiceList(System.String[])">
+            <summary>
+            get specified service data
+            </summary>
+            <param name="serverNames">specfied service name</param>
+            <returns>error info</returns>
+        </member>
+        <member name="M:XLCS.Services.service.StartService(System.String)">
+            <summary>
+             start specfied service
+            </summary>
+            <param name="serviceName">specfied service name</param>
+            <returns>error info</returns>
+        </member>
+        <member name="M:XLCS.Services.service.PauseService(System.String)">
+            <summary>
+             pause specfied service
+            </summary>
+            <param name="serviceName">specfied service name</param>
+            <returns>error info</returns>
+        </member>
+        <member name="M:XLCS.Services.service.ResumeService(System.String)">
+            <summary>
+            resume specfied service
+            </summary>
+            <param name="serviceName">specfied service name</param>
+            <returns>error info</returns>
+        </member>
+        <member name="M:XLCS.Services.service.StopService(System.String)">
+            <summary>
+             stop specfied service
+            </summary>
+            <param name="serviceName">specfied service name</param>
+            <returns>error info</returns>
+        </member>
+        <member name="T:XLCS.Services.ServiceInfo">
+            <summary>
+            ServiceInfo 
+            </summary>
+            this class stored the information used in XD Season Star for ArrayList which need in ServiceController object
+            maybe has region permitted
+            
+        </member>
+        <member name="M:XLCS.Services.ServiceInfo.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Server info method for setting value
+            </summary>
+            <param name="sName"></param>
+            <param name="displayName"></param>
+            <param name="machine"></param>
+            <param name="sStatus"></param>
+        </member>
+        <member name="P:XLCS.Services.ServiceInfo.ServiceName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Services.ServiceInfo.ServiceStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Services.ServiceInfo.ServiceDisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Services.ServiceInfo.ServiceMachine">
+            
+        </member>
+        <member name="T:XLCS.Services.ServiceInstaller">
+            <summary>
+            Summary description for ServiceInstaller.
+            </summary>
+        </member>
+        <member name="M:XLCS.Services.ServiceInstaller.InstallService(System.String,System.String,System.String)">
+            <summary>
+            This method installs and runs the service in the service conrol manager.
+            </summary>
+            <param name="svcPath">The complete path of the service.</param>
+            <param name="svcName">Name of the service.</param>
+            <param name="svcDispName">Display name of the service.</param>
+            <returns>True if the process went thro successfully. False if there was any error.</returns>
+        </member>
+        <member name="M:XLCS.Services.ServiceInstaller.UnInstallService(System.String)">
+            <summary>
+            This method uninstalls the service from the service conrol manager.
+            </summary>
+            <param name="svcName">Name of the service to uninstall.</param>
+        </member>
+        <member name="T:XLCS.SP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.SP.DefaultGUIError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.SP.GUIException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Sqlce.UndocumentedFunctions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Sqlce.UndocumentedFunctions.GetCeVersion(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Standard.BaseDialog">
+            <summary>
+            Base standard dialog class
+            </summary>
+        </member>
+        <member name="M:XLCS.Standard.BaseDialog.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:XLCS.Standard.CalleeModule">
+            <summary>
+            This class define the standard of inheirt object . 
+            Such as :
+            if a module inherit from this standard , it will obey the rules defined in this interface
+            This is useful when control the later_binding or dynamical calling module .
+            Refer to MyIEHost 
+            </summary>
+        </member>
+        <member name="M:XLCS.Standard.CalleeModule.DoShow">
+            <summary>
+            Show Module
+            </summary>
+        </member>
+        <member name="T:XLCS.Standard.IHostIDE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Standard.IHostIDE.SetSubFormParent(XLCS.Standard.ISubForm,System.Windows.Forms.Form)">
+            <summary>
+            Set Parent Hoster of sub dock form  
+            </summary>
+            <param name="subForm">sub dock form </param>
+            <param name="parent"></param>
+        </member>
+        <member name="T:XLCS.Standard.ISubForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XLCS.Standard.ISubForm.HosterForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.UI.ApplyStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.ApplyStyle.ApplyFlatStyle(System.Windows.Forms.Control)">
+            <summary>
+            Apply the flat style on sub controls in parent control
+            </summary>
+            <param name="parentControl"></param>
+        </member>
+        <member name="T:XLCS.UI.ErrorListForm">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.ErrorListForm.#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="errorList"></param>
+        </member>
+        <member name="F:XLCS.UI.ErrorListForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.ErrorListForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:XLCS.UI.ErrorListForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:XLCS.UI.TaskbarNotifier">
+            <summary>
+            TaskbarNotifier allows to display MSN style/Skinned instant messaging popups
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TitleRectangle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.ContentRectangle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TitleClickable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.ContentClickable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.CloseClickable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.EnableSelectionRectangle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:XLCS.UI.TaskbarNotifier.CloseClick">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:XLCS.UI.TaskbarNotifier.TitleClick">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:XLCS.UI.TaskbarNotifier.ContentClick">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.UI.TaskbarNotifier.TaskbarStates">
+            <summary>
+            List of the different popup animation status
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TaskbarStates.hidden">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TaskbarStates.appearing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TaskbarStates.visible">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TaskbarNotifier.TaskbarStates.disappearing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.#ctor">
+            <summary>
+            The Constructor for TaskbarNotifier
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.TaskbarState">
+            <summary>
+            Get the current TaskbarState (hidden, showing, visible, hiding)
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.TitleText">
+            <summary>
+            Get/Set the popup Title Text
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.ContentText">
+            <summary>
+            Get/Set the popup Content Text
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.NormalTitleColor">
+            <summary>
+            Get/Set the Normal Title Color
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.HoverTitleColor">
+            <summary>
+            Get/Set the Hover Title Color
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.NormalContentColor">
+            <summary>
+            Get/Set the Normal Content Color
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.HoverContentColor">
+            <summary>
+            Get/Set the Hover Content Color
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.NormalTitleFont">
+            <summary>
+            Get/Set the Normal Title Font
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.HoverTitleFont">
+            <summary>
+            Get/Set the Hover Title Font
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.NormalContentFont">
+            <summary>
+            Get/Set the Normal Content Font
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.HoverContentFont">
+            <summary>
+            Get/Set the Hover Content Font
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.KeepVisibleOnMousOver">
+            <summary>
+            Indicates if the popup should remain visible when the mouse pointer is over it.
+            Added Rev 002
+            </summary>
+        </member>
+        <member name="P:XLCS.UI.TaskbarNotifier.ReShowOnMouseOver">
+            <summary>
+            Indicates if the popup should appear again when mouse moves over it while it's disappearing.
+            Added Rev 002
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.Show(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Displays the popup for a certain amount of time
+            </summary>
+            <param name="strTitle">The string which will be shown as the title of the popup</param>
+            <param name="strContent">The string which will be shown as the content of the popup</param>
+            <param name="nTimeToShow">Duration of the showing animation (in milliseconds)</param>
+            <param name="nTimeToStay">Duration of the visible state before collapsing (in milliseconds)</param>
+            <param name="nTimeToHide">Duration of the hiding animation (in milliseconds)</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.Hide">
+            <summary>
+            Hides the popup
+            </summary>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.SetBackgroundBitmap(System.String,System.Drawing.Color)">
+            <summary>
+            Sets the background bitmap and its transparency color
+            </summary>
+            <param name="strFilename">Path of the Background Bitmap on the disk</param>
+            <param name="transparencyColor">Color of the Bitmap which won't be visible</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.SetBackgroundBitmap(System.Drawing.Image,System.Drawing.Color)">
+            <summary>
+            Sets the background bitmap and its transparency color
+            </summary>
+            <param name="image">Image/Bitmap object which represents the Background Bitmap</param>
+            <param name="transparencyColor">Color of the Bitmap which won't be visible</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.SetCloseBitmap(System.String,System.Drawing.Color,System.Drawing.Point)">
+            <summary>
+            Sets the 3-State Close Button bitmap, its transparency color and its coordinates
+            </summary>
+            <param name="strFilename">Path of the 3-state Close button Bitmap on the disk (width must a multiple of 3)</param>
+            <param name="transparencyColor">Color of the Bitmap which won't be visible</param>
+            <param name="position">Location of the close button on the popup</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.SetCloseBitmap(System.Drawing.Image,System.Drawing.Color,System.Drawing.Point)">
+            <summary>
+            Sets the 3-State Close Button bitmap, its transparency color and its coordinates
+            </summary>
+            <param name="image">Image/Bitmap object which represents the 3-state Close button Bitmap (width must be a multiple of 3)</param>
+            <param name="transparencyColor">Color of the Bitmap which won't be visible</param>
+            /// <param name="position">Location of the close button on the popup</param>
+            <returns>Nothing</returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.DrawCloseButton(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="grfx"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.DrawText(System.Drawing.Graphics)">
+            <summary>
+            
+            </summary>
+            <param name="grfx"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.CalculateMouseRectangles">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.BitmapToRegion(System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            /
+            </summary>
+            <param name="bitmap"></param>
+            <param name="transparencyColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnTimer(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="ea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnMouseEnter(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnMouseLeave(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="mea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="mea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="mea"></param>
+        </member>
+        <member name="M:XLCS.UI.TaskbarNotifier.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="pea"></param>
+        </member>
+        <member name="T:XLCS.UI.DoTaskBar">
+            <summary>
+            Sample Clas
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.DoTaskBar.aboutUs(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="bg"></param>
+            <param name="closebmp"></param>
+            <param name="title"></param>
+            <param name="content"></param>
+        </member>
+        <member name="T:XLCS.UI.TempForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.TempForm.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TempForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:XLCS.UI.TempForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:XLCS.UI.TempForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:XLCS.UI.TempForm.imageList1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Webs.GetOnlineResources">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Webs.GetOnlineResources.DownloadFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="URI"></param>
+            <param name="downloadedFileFullname"></param>
+        </member>
+        <member name="M:XLCS.Webs.GetOnlineResources.GetOnlineHtmlFromURL(System.String)">
+            <summary>
+            Get the html pages from the URI
+            </summary>
+            <param name="URI"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Wmi.ControlPc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XLCS.Wmi.ControlPc.ShutdownMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.LogOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.Reboot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.ForcedLogOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.ForcedShutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.ForcedReboot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.PowerOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XLCS.Wmi.ControlPc.ShutdownMode.ForcedPowerOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Wmi.ControlPc.ControlLocalPc(XLCS.Wmi.ControlPc.ShutdownMode)">
+            <summary>
+            Control local pc
+            </summary>
+            <param name="mode"></param>
+        </member>
+        <member name="M:XLCS.Wmi.ControlPc.ShutDownEX(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUsername"></param>
+            <param name="strPassword"></param>
+            <param name="ipAddress"></param>
+        </member>
+        <member name="M:XLCS.Wmi.ControlPc.RebootEX(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUsername"></param>
+            <param name="strPassword"></param>
+            <param name="ipAddress"></param>
+        </member>
+        <member name="T:XLCS.Xml.OldSelfDefined">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.SaveWithChangeNodeValue(System.String,System.String,System.String)">
+            <summary>
+            Save Xml with changed one node 's text(InnerText)
+            </summary>
+            <param name="filename"></param>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.addNodeAndAttribute(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            不用创建父节点(置创建这样的一个节点)
+            </summary>
+            <param name="filename"></param>
+            <param name="nodeName"></param>
+            <param name="nodeInnerText"></param>
+            <param name="attributeName"></param>
+            <param name="attributeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.DeleteAllNodeByParentNodeAttribute(System.String,System.String,System.String,System.String)">
+            <summary>
+            删除指定属性的父结点下的所有子结点和父结点本身
+            </summary>
+            <param name="file"></param>
+            <param name="parentNode"></param>
+            <param name="parentAttName"></param>
+            <param name="parentAttValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.DeleteNode(System.String,System.String,System.String)">
+             <summary>
+            删除子节点的全部内容，
+            依据子节点中的InnerText
+             </summary>
+             <param name="filename"></param>
+             <param name="nodeName"></param>
+             <param name="nodeInnerText"></param>
+             <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.checkValueExist(System.String,System.String,System.String)">
+            <summary>
+            检查指定结点的值是否匹配
+            </summary>
+            <param name="filename">xml file</param>
+            <param name="node">node name</param>
+            <param name="nodeValue">node value</param>
+            <returns>status </returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.writeAttribute(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            写指定结点的指定位置的属性(这个方法不太常用，而且位置难准确确定，不建议使用)
+            </summary>
+            <param name="filename"></param>
+            <param name="inNode"></param>
+            <param name="attributeName"></param>
+            <param name="changedValue"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.GetAttributeWithNodeValue(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            根据给定节点的名称和值来确定所在点,然后取得给定属性名的属性值
+            </summary>
+            <param name="filename"></param>
+            <param name="inNode">节点</param>
+            <param name="inNodeValue">节点值</param>
+            <param name="attributeName">属性</param>
+            <param name="getAttributeValue">获取的属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.GetAttributeWithAllNode(System.String,System.String,System.String,System.String[]@)">
+            <summary>
+            获取对应节点值得属性值,重载上面的方法，
+            参数中不指定节点值（即取得所有）
+            </summary>
+            <param name="filename"></param>
+            <param name="inNode">节点</param>
+            <param name="attributeName">属性</param>
+            <param name="getAttributeValue">获取的属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.GetSubNodeValueByParentNodeValue(System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            通过父节点的一个属性来表示特定的父节点，然后在该节点中寻找特定子节点的值
+            </summary>
+            <param name="filename"></param>
+            <param name="parentNodeName"></param>
+            <param name="parentAttName"></param>
+            <param name="parentAttValue"></param>
+            <param name="subNodeName"></param>
+            <param name="subNodeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.GetSubNodeValueByParentNodeValue(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.LinkedList{System.String}@)">
+            <summary>
+            通过父节点的一个属性来表示特定的父节点，然后在该节点中寻找特定子节点的值
+            </summary>
+            <param name="filename"></param>
+            <param name="parentNodeName"></param>
+            <param name="parentAttName"></param>
+            <param name="parentAttValue"></param>
+            <param name="subNodeName"></param>
+            <param name="subNodeValueList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.FindALlNodeText(System.String,System.String,System.String[]@)">
+            <summary>
+            Use Old Method to Find all node text in xml file
+            </summary>
+            <param name="filename"></param>
+            <param name="nodeName"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.addNodeAndAttributeWithParentNode(System.String,System.String,System.String,System.String,System.String,System.String)">
+             <summary>
+             
+             <main>
+            <title value="test">text</title>
+            </main>
+             </summary>
+             <param name="filename"></param>
+             <param name="parentName"></param>
+             <param name="nodeName"></param>
+             <param name="nodeInnerText"></param>
+             <param name="attributeName"></param>
+             <param name="attributeValue"></param>
+             <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.addNodeAndAttributeWithoutParentNode(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filename"></param>
+            <param name="nodeName"></param>
+            <param name="nodeInnerText"></param>
+            <param name="attributeName"></param>
+            <param name="attributeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.retriveObjForFirst(System.String,System.String,System.String@)">
+            <summary>
+            search xml file for frist node which name in
+            </summary>
+            <param name="filename">xml file</param>
+            <param name="objName">destination node name</param>
+            <param name="result">return string </param>
+            <returns>processing result</returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.retriveObjForMulti(System.String,System.String,System.String[]@)">
+            <summary>
+            获取指定结点名的多个位置的值(位置的不准确确定性，影响了它的正确性，请谨慎使用)
+            </summary>
+            <param name="filename"></param>
+            <param name="objName"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLCS.Xml.OldSelfDefined.retriveObjForSpecfied(System.String,System.String,System.Int32,System.String@)">
+            <summary>
+            获取某一结点指定位置的值(这种比较老的方法， 不推荐使用，如使用，请多测试)
+            </summary>
+            <param name="filename"></param>
+            <param name="objName">结点</param>
+            <param name="position">位置</param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLCS.Xml.XmlUtility">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XLCS.Xml.XmlUtility.DynamicalGenForCombo(System.String,System.String,System.Windows.Forms.ComboBox)">
+            <summary>
+            Dynamiacl generate collection's deatil when use input data in dataview
+            using xdclass for write xml
+            </summary>
+            <param name="filename">filename</param>
+            <param name="nodename">nodename</param>
+            <param name="comboInstance">components name</param>
+        </member>
+        <member name="T:P2P.App2AppCoumnication.CopyDataStruct">
+             <summary>
+            WM_COPYDATA消息所要求的数据结构 
+             </summary>
+        </member>
+        <member name="F:P2P.App2AppCoumnication.CopyDataStruct.dwData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:P2P.App2AppCoumnication.CopyDataStruct.cbData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:P2P.App2AppCoumnication.CopyDataStruct.lpData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:P2P.App2AppCoumnication.App2AppCoumnication">
+            
+            本类封装了一些进程间通讯的细节
+            
+        </member>
+        <member name="F:P2P.App2AppCoumnication.App2AppCoumnication.WM_COPYDATA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:P2P.App2AppCoumnication.App2AppCoumnication.SendMessage(System.String,System.Int32,System.String)">
+            
+            发送消息，只能传递一个自定义的消息ID和消息字符串，想传一个结构，但没成功
+            
+            目标进程名称，如果有多个，则给每个都发送
+            自定义数据，可以通过这个来决定如何解析下面的strMsg
+            传递的消息，是一个字符串
+        </member>
+        <member name="M:P2P.App2AppCoumnication.App2AppCoumnication.ReceiveMessage(System.Windows.Forms.Message@)">
+            
+            接收消息，得到消息字符串
+            
+            System.Windows.Forms.Message m
+            接收到的消息字符串
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DBStudio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastestOpenedDb" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastestOpenedDbPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DbHistoryFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">History.xml</Value>
+    </Setting>
+    <Setting Name="StartMainIDEStep" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="MyXceedGridLisencer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DGF12-N1BDU-37875-DN2A</Value>
+    </Setting>
+    <Setting Name="HelpFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Help.xml</Value>
+    </Setting>
+    <Setting Name="IsUseOldStyleProcessBar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SQLCELicense" Type="System.String" Scope="User">
+      <Value Profile="(Default)">11e114111121111111</Value>
+    </Setting>
+    <Setting Name="MM_NamespaceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BusinessEntity</Value>
+    </Setting>
+    <Setting Name="FixBugMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoBackupOldVersionFileBeforeUpgrade" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WPFControlThemeName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ExpressionDark</Value>
+    </Setting>
+    <Setting Name="CmdTextFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="StartUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NewMain</Value>
+    </Setting>
+    <Setting Name="UseSpeakInsteadOfMsgBox" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ConnectionStringHelpFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Help\DBConnectionString.xps</Value>
+    </Setting>
+    <Setting Name="DialogAnimationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CurtainAnimation</Value>
+    </Setting>
+    <Setting Name="ReplaceTraditional2DTo3D" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UseRTFQueryTextor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SqlEditorFontName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Arial</Value>
+    </Setting>
+    <Setting Name="SqlEditorFontSize" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="IsUseAdvTextEditor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SourceForgeHomePgae" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://sourceforge.net/projects/sqlceviewer/</Value>
+    </Setting>
+    <Setting Name="LiveUpdateAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.seasonstar.net/misc/sqlceviewer/liveupdate.xml</Value>
+    </Setting>
+    <Setting Name="MaxSqlScriptContextLengthForSwitchTextEditor" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

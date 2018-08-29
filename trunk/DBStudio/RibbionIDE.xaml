@@ -1,0 +1,933 @@
+﻿<cx:BaseMainPage x:Class="DBStudio.RibbionIDE"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    mc:Ignorable="d"
+    xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+	xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:R="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+    xmlns:SelfControls="clr-namespace:DBStudio.CommonUI"
+    xmlns:TabControlLibrary="clr-namespace:Wpf.Controls;assembly=Wpf.TabControl"        
+    xmlns:MyPagedDataGridControl="clr-namespace:PagedDataGridControls;assembly=PagedDataGrid"
+    Height="451" Width="812" WindowState="Maximized">
+    <cx:BaseMainPage.Resources>
+        <R:RibbonCommand x:Key="CmdDocumentingDb"
+                           CanExecute="RibbonCommand_CanExecut_DocumentingDb"     
+                           Executed="RibbonCommand_Executed_DocumentingDb"   
+                           SmallImageSource="Images\CEImages\DocumentDB.png"
+                           LargeImageSource="Images\CEImages\DocumentDB.png"
+                           LabelTitle="{Localizer:Translate DocumentingDbButtonContent}"
+                           ToolTipTitle="{Localizer:Translate DocumentingDbButtonContent}"
+                           ToolTipDescription="{Localizer:Translate DocumentingDbButtonContent}" />
+        <R:RibbonCommand x:Key="CmdExportTableSchema"
+                           CanExecute="RibbonCommand_CanExecut_ExportTableSchema"     
+                           Executed="RibbonCommand_Executed_ExportTableSchema"   
+                           SmallImageSource="Images\CEImages\Export1.png"
+                           LargeImageSource="Images\CEImages\Export1.png"
+                           LabelTitle="{Localizer:Translate CmdExportSelectedTableSchema}"/>
+        <R:RibbonCommand x:Key="CmdConvertExcel2Access"
+                           Executed="RibbonCommand_Executed_ConverExcel2Access"     
+                           SmallImageSource="Images\CEImages\ConvertExcel2Access.png"
+                           LargeImageSource="Images\CEImages\ConvertExcel2Access.png"
+                           LabelTitle="{Localizer:Translate CmdConvertExcel2Access}"/>
+        <R:RibbonCommand x:Key="CmdChangeSSCEPwd"
+                           Executed="RibbonCommand_Executed_ChangeSSCEPwd"           
+                           SmallImageSource="Images\CEImages\ChangePwd.png"
+                           LargeImageSource="Images\CEImages\ChangePwd.png"
+                           LabelTitle="{Localizer:Translate CmdChangeDbPwd}"/>
+        <R:RibbonCommand x:Key="ChangeEffiprozDbPwd"
+                           Executed="RibbonCommand_Executed_ChangeEffiprozPassword"           
+                           SmallImageSource="Images\CEImages\ChangePwd.png"
+                           LargeImageSource="Images\CEImages\ChangePwd.png"
+                           LabelTitle="{Localizer:Translate CmdChangeDbPwd}"/>
+        <R:RibbonCommand x:Key="CmdImportFromSqlServer"
+                           Executed="RibbonCommand_Executed_ImportFromSqlServer"           
+                           SmallImageSource="Images\CEImages\SyncFromSqlServer.png"
+                           LargeImageSource="Images\CEImages\SyncFromSqlServer.png"
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromSqlServer}"/>
+        <R:RibbonCommand x:Key="CmdImportFromAcces"
+                           Executed="RibbonCommand_Executed_ImportFromAccess"                                             
+                           SmallImageSource="Images\CEImages\SyncFromAccess.png"
+                           LargeImageSource="Images\CEImages\SyncFromAccess.png"
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromAccess}"/>
+        <R:RibbonCommand x:Key="CmdImportFromExcel"
+                           SmallImageSource="Images\CEImages\SyncFromExcel.png"
+                           LargeImageSource="Images\CEImages\SyncFromExcel.png"
+                           Executed="RibbonCommand_Executed_ImportFromExcel"                                             
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromExcel}" />
+        <R:RibbonCommand x:Key="CmdImportFromCSV"
+                           SmallImageSource="Images\CEImages\SyncFromCSV.png"
+                           LargeImageSource="Images\CEImages\SyncFromCSV.png"
+                           Executed="RibbonCommand_Executed_ImportFromCSV"                                             
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromCSV}"/>
+        <R:RibbonCommand x:Key="CmdImportFromMySql" 
+                           Executed="RibbonCommand_Executed_ImportFromMySql"                                             
+                           
+                           SmallImageSource="Images\CEImages\SyncFromMySql.png"
+                           LargeImageSource="Images\CEImages\SyncFromMySql.png"
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromMysql}"/>
+        <R:RibbonCommand x:Key="CmdGenerateLinqMap" 
+                           SmallImageSource="Images\CEImages\GenerateLinqMap.png"
+                           LargeImageSource="Images\CEImages\GenerateLinqMap.png"
+                           Executed="RibbonCommand_Executed_GenerateLinqMap"                                             
+                           LabelTitle="{Localizer:Translate CmdGenerateLinqOrMap}"/>
+        <R:RibbonCommand x:Key="CmdGenerateSelfBussinessEntity" 
+                           SmallImageSource="Images\CEImages\GenerateMyBS.png"
+                           LargeImageSource="Images\CEImages\GenerateMyBS.png"
+                           Executed="RibbonCommand_Executed_GenerateSelfBussinessEntity"                                             
+                           LabelTitle="{Localizer:Translate CmdGenerateBusinessEntity}"/>
+        <R:RibbonCommand x:Key="CmdAboutUs"
+                           SmallImageSource="Images\CEImages\About.png"
+                           LargeImageSource="Images\CEImages\About.png"
+                           Executed="RibbonCommand_Executed_AboutUs"                                             
+                           LabelTitle="{Localizer:Translate CmdAboutUs}"/>
+        <R:RibbonCommand x:Key="CmdOption"
+                           SmallImageSource="Images\CEImages\Options.png"
+                           LargeImageSource="Images\CEImages\Options.png"
+                           Executed="RibbonCommand_Executed_Option"                                             
+                           LabelTitle="{Localizer:Translate CmdOption}" />
+        <R:RibbonCommand x:Key="ResetCeDb"
+                           SmallImageSource="Images\CEImages\Reset.png"
+                           LargeImageSource="Images\CEImages\Reset.png"
+                           Executed="RibbonCommand_Executed_ResetDb"                                             
+                           LabelTitle="{Localizer:Translate CmdResetDb}" />
+        <R:RibbonCommand x:Key="DownloadSdfFile"
+                           SmallImageSource="Images\CEImages\Download.png"
+                           LargeImageSource="Images\CEImages\Download.png"
+                           Executed="RibbonCommand_Executed_DownloadDbFile"                                             
+                           LabelTitle="{Localizer:Translate CmdDownloadDbFile}" />
+        <R:RibbonCommand x:Key="CmdHelpDoc"
+                           SmallImageSource="Images\CEImages\HelpDoc.png"
+                           LargeImageSource="Images\CEImages\HelpDoc.png"
+                           Executed="RibbonCommand_Executed_HelpDoc"                                             
+                           LabelTitle="{Localizer:Translate CmdHelpDocument}"
+                           ToolTipTitle="{Localizer:Translate CmdHelpDocument}"
+                           ToolTipDescription="{Localizer:Translate CmdHelpDocument}" />
+        <R:RibbonCommand x:Key="OpenOnlineCEForumnCommand"
+                            SmallImageSource="Images\CEImages\CeForum.png"
+                           LargeImageSource="Images\CEImages\CeForum.png"
+                           Executed="RibbonCommand_Executed_OpenOnlineCeForumn"
+                           LabelTitle="{Localizer:Translate CmdOnlinSSCEForum}"
+                           ToolTipTitle="{Localizer:Translate CmdOnlinSSCEForum}"
+                           ToolTipDescription="{Localizer:Translate CmdOnlinSSCEForum}" 
+                           />
+        <R:RibbonCommand x:Key="OpenOnlineMySqlForumnCommand"
+                            SmallImageSource="Images\CEImages\CeForum.png"
+                           LargeImageSource="Images\CEImages\CeForum.png"
+                           Executed="RibbonCommand_Executed_OpenOnlineMySqlForumn"
+                           LabelTitle="{Localizer:Translate CmdOnlinMySqlForum}"
+                           ToolTipTitle="{Localizer:Translate CmdOnlinMySqlForum}"
+                           ToolTipDescription="{Localizer:Translate CmdOnlinMySqlForum}" 
+                           />
+        <R:RibbonCommand x:Key="OpenOnlineSqliteForumnCommand"
+                            SmallImageSource="Images\CEImages\CeForum.png"
+                           LargeImageSource="Images\CEImages\CeForum.png"
+                           Executed="RibbonCommand_Executed_OpenOnlineSqliteForumn"
+                           LabelTitle="{Localizer:Translate CmdOnlinSqliteForum}"
+                           ToolTipTitle="{Localizer:Translate CmdOnlinSqliteForum}"
+                           ToolTipDescription="{Localizer:Translate CmdOnlinSqliteForum}" 
+                           />
+        <R:RibbonCommand x:Key="CmdUndo"
+                           CanExecute="RibbonCommand_CanExecute_ForUndo"
+                           SmallImageSource="Images\CEImages\undo.png"
+                           LargeImageSource="Images\CEImages\undo.png"
+                           Executed="RibbonCommand_Executed_undo"                                             
+                           LabelTitle="{Localizer:Translate CmdLastCommand}"
+                           />
+        <R:RibbonCommand x:Key="CmdRedo"
+                            SmallImageSource="Images\CEImages\redo.png"
+                           LargeImageSource="Images\CEImages\redo.png"
+                           CanExecute="RibbonCommand_CanExecuteForRedo"
+                           Executed="RibbonCommand_Executed_redo"   
+                           LabelTitle="{Localizer:Translate CmdNextCommand}"
+                           />
+        <R:RibbonCommand x:Key="CmdGenerateColumnSchema"
+                            SmallImageSource="Images\CEImages\GenerateSchema.png"
+                            LargeImageSource="Images\CEImages\GenerateSchema.png"
+                           Executed="RibbonCommand_Executed_GenerateColumnSchema"   
+                           LabelTitle="{Localizer:Translate CmdGenerateColumnSchema}"
+                           />
+        <R:RibbonCommand x:Key="CmdGetDataBaseInfomation"
+                            SmallImageSource="Images\CEImages\DBInfo.png"
+                            LargeImageSource="Images\CEImages\DBInfo.png"
+                           Executed="RibbonCommand_GetDataBaseInfomation"   
+                           LabelTitle="{Localizer:Translate CmdGetCurrentDbInfo}"
+                           />
+        <R:RibbonCommand   x:Key="exeMySqlCommandKeyName" x:Name="ExeMySqlCommand"
+                           CanExecute="RibbonCommand_CanExecute_ExeSqlCommand"
+                           Executed="RibbonCommand_Executed_ExeSqlCommand"
+                           SmallImageSource="Images\Execute.png"
+                           LargeImageSource="Images\Execute.png"
+                           LabelTitle="{Localizer:Translate CmdExecute}"
+                           />
+        <R:RibbonCommand x:Key="OpenSriptCommand"
+                           CanExecute="RibbonCommand_CanExecute_OpenScirpt"
+                           Executed="RibbonCommand_Executed_OpenScirpt"
+                                         SmallImageSource="Images\CEImages/Open.png"
+                                         LargeImageSource="Images\CEImages/Open.png"
+                           LabelTitle="{Localizer:Translate CmdOpenScript}" />
+        <R:RibbonCommand x:Key="SaveSriptCommand"
+                            SmallImageSource="Images\CEImages/Save.png"
+                            LargeImageSource="Images\CEImages/Save.png"
+                           CanExecute="RibbonCommand_CanExecute_SaveScript"
+                           Executed="RibbonCommand_Executed_SaveScript"                                             
+                           LabelTitle="{Localizer:Translate CmdSaveScript}"
+                            />
+        <R:RibbonCommand x:Key="SaveResultSriptCommand"
+                            SmallImageSource="Images\CEImages/Save.png"
+                            LargeImageSource="Images\CEImages/Save.png"
+                           CanExecute="RibbonCommand_CanExecute_SaveResult"
+                           Executed="RibbonCommand_Executed_SaveResult"                                             
+                           LabelTitle="{Localizer:Translate CmdSaveResult}"
+                            />
+        <R:RibbonCommand x:Key="CloseCommand"
+                            SmallImageSource="Images\CEImages/Close.png"
+                            LargeImageSource="Images\CEImages/Close.png"
+                           Executed="RibbonCommand_Executed_Close"                                             
+                           LabelTitle="{Localizer:Translate CmdClose}"
+                           />
+        <R:RibbonCommand x:Key="OpenOnlineSqlServerForumnCommand"
+                          LargeImageSource="Images\SqlServerImages\SqlServerForum.png"
+                          SmallImageSource="Images\SqlServerImages\SqlServerForum.png"
+                           Executed="RibbonCommand_Executed_OpenOnlineSqlServerForumn"
+                           LabelTitle="{Localizer:Translate CmdSqlserverForum}"
+                           />
+        <R:RibbonCommand x:Key="OpenOnlineEffiprozHomePageCommand"
+                          LargeImageSource="Images\SqlServerImages\SqlServerForum.png"
+                          SmallImageSource="Images\SqlServerImages\SqlServerForum.png"
+                           Executed="RibbonCommand_Executed_OpenOnlineEffiprozHomePageCommand"
+                           LabelTitle="{Localizer:Translate CmdEffiprozHomepage}"
+                           />
+        <R:RibbonCommand x:Key="CmdSyncFromSSCEToSS"
+                           Executed="RibbonCommand_Executed_SyncFromSSCEToSS"
+                           SmallImageSource="Images\CEImages/SyncFormCE.png"
+                           LargeImageSource="Images\CEImages/SyncFormCE.png"
+                           LabelTitle="{Localizer:Translate CmdTransferDataFromSSCE2SqlServer}"
+                           />
+        <R:RibbonCommand x:Key="CmdGetCurServerInfo"
+                           Executed="RibbonCommand_Executed_GetServerInfo"
+                           SmallImageSource="Images\CEImages/About.png"
+                           LargeImageSource="Images\CEImages/About.png"
+                           LabelTitle="{Localizer:Translate CmdGetServerInformation}"
+                           />
+        <R:RibbonCommand x:Key="SubmitChangesCommand"
+                           Executed="RibbonCommand_Executed_SubmitChangesCommand"
+                           SmallImageSource="Images\CEImages/sumbit.png"
+                           LargeImageSource="Images\CEImages/sumbit.png"
+                           LabelTitle="{Localizer:Translate CmdSubmitChanges}"
+                           />
+    </cx:BaseMainPage.Resources>
+    <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" >
+                <!--Ribbon SqlServer-->
+                <R:Ribbon x:Name="ribbionMenu_ForSqlServer" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:Ribbon.QuickAccessToolBar>
+                        <R:RibbonQuickAccessToolBar>
+                            <R:RibbonButton 
+                                ToolTip="{Localizer:Translate CmdOnlinSqlServerForum}"
+                                Command="{StaticResource OpenOnlineSqlServerForumnCommand}"
+                                R:RibbonQuickAccessToolBar.Placement="InCustomizeMenuAndToolBar"/>
+                        </R:RibbonQuickAccessToolBar>
+                    </R:Ribbon.QuickAccessToolBar>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate ButtonSync}" TabIndex="2">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdSyncFromSSCEToSS}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelSpecial}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateColumnSchema}"/>
+                            <R:RibbonButton Command="{StaticResource CmdDocumentingDb}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon MySql-->
+                <R:Ribbon x:Name="ribbionMenu_ForMySql" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:Ribbon.QuickAccessToolBar>
+                        <R:RibbonQuickAccessToolBar>
+                            <R:RibbonButton
+                                ToolTip="{Localizer:Translate CmdOnlineMySqlForum}"
+                                Command="{StaticResource OpenOnlineMySqlForumnCommand}"
+                                R:RibbonQuickAccessToolBar.Placement="InCustomizeMenuAndToolBar"/>
+                        </R:RibbonQuickAccessToolBar>
+                    </R:Ribbon.QuickAccessToolBar>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelSpeical}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateColumnSchema}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon SSCE-->
+                <R:Ribbon x:Name="ribbionMenu_ForSSCE" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            ToolTipTitle="Sql Server Compact Edition"
+                            ToolTipDescription="Sql Server Compact Edition" />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:Ribbon.QuickAccessToolBar>
+                        <R:RibbonQuickAccessToolBar>
+                            <R:RibbonButton
+                                    ToolTip="Open Online SqlCe Forum"
+                                Command="{StaticResource OpenOnlineCEForumnCommand}"
+                                R:RibbonQuickAccessToolBar.Placement="InCustomizeMenuAndToolBar"/>
+                        </R:RibbonQuickAccessToolBar>
+                    </R:Ribbon.QuickAccessToolBar>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelDataExchange}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdImportFromSqlServer}"/>
+                            <R:RibbonButton Command="{StaticResource CmdImportFromAcces}"/>
+                            <R:RibbonButton Command="{StaticResource CmdImportFromExcel}"/>
+                            <R:RibbonButton Command="{StaticResource CmdImportFromCSV}"/>
+                            <R:RibbonButton Command="{StaticResource CmdImportFromMySql}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateLinqMap}"/>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateSelfBussinessEntity}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelSpecial}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdExportTableSchema}"/>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateColumnSchema}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource DownloadSdfFile}"/>
+                            <R:RibbonButton Command="{StaticResource ResetCeDb}"/>
+                            <R:RibbonButton Command="{StaticResource CmdGetDataBaseInfomation}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdChangeSSCEPwd}"/>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon Sqlite-->
+                <R:Ribbon x:Name="ribbionMenu_ForSqlite" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:Ribbon.QuickAccessToolBar>
+                        <R:RibbonQuickAccessToolBar>
+                            <R:RibbonButton
+                                ToolTip="{Localizer:Translate CmdOnlineSqliteForum}"
+                                Command="{StaticResource OpenOnlineSqliteForumnCommand}"
+                                R:RibbonQuickAccessToolBar.Placement="InCustomizeMenuAndToolBar"/>
+                        </R:RibbonQuickAccessToolBar>
+                    </R:Ribbon.QuickAccessToolBar>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelSpecial}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateColumnSchema}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon OleDB-->
+                <R:Ribbon x:Name="ribbionMenu_ForOleDb" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelSpecial}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdGenerateColumnSchema}"/>
+                            <R:RibbonButton Command="{StaticResource CmdConvertExcel2Access}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon FireBird-->
+                <R:Ribbon x:Name="ribbionMenu_ForFirBird" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon Excel-->
+                <R:Ribbon x:Name="ribbionMenu_ForExcel" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon CSV-->
+                <R:Ribbon x:Name="ribbionMenu_ForCSV" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelHelp}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdAboutUs}"/>
+                            <R:RibbonButton Command="{StaticResource CmdHelpDoc}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon Oracle-->
+                <R:Ribbon x:Name="ribbionMenu_ForOracle" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+                <!--Ribbon Effiproz-->
+                <R:Ribbon x:Name="ribbionMenu_ForElliproz" Visibility="Collapsed">
+                    <R:Ribbon.ApplicationMenu>
+                        <R:RibbonApplicationMenu>
+                            <R:RibbonApplicationMenu.Command>
+                                <R:RibbonCommand 
+                            Executed="OnCloseApplication"
+                            LabelTitle="Application Button"
+                            LabelDescription="Close the current page."
+                            />
+                            </R:RibbonApplicationMenu.Command>
+                            <R:RibbonApplicationMenuItem>
+                                <R:RibbonApplicationMenuItem.Command>
+                                    <R:RibbonCommand 
+                                LabelTitle="{Localizer:Translate CmdClose}" 
+                                LabelDescription="Close the Current Page"
+                                Executed="OnCloseApplication" />
+                                </R:RibbonApplicationMenuItem.Command>
+                            </R:RibbonApplicationMenuItem>
+                        </R:RibbonApplicationMenu>
+                    </R:Ribbon.ApplicationMenu>
+                    <R:Ribbon.QuickAccessToolBar>
+                        <R:RibbonQuickAccessToolBar>
+                            <R:RibbonButton 
+                                ToolTip="{Localizer:Translate CmdEffiprozHomepage}"
+                                Command="{StaticResource OpenOnlineEffiprozHomePageCommand}"
+                                R:RibbonQuickAccessToolBar.Placement="InCustomizeMenuAndToolBar"/>
+                        </R:RibbonQuickAccessToolBar>
+                    </R:Ribbon.QuickAccessToolBar>
+                    <R:RibbonTab Label="{Localizer:Translate LabelGeneral}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource OpenSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource SaveSriptCommand}"/>
+                            <R:RibbonButton Command="{StaticResource CloseCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource exeMySqlCommandKeyName}"/>
+                            <!--Special Command For Effiproz type only-->
+                            <R:RibbonButton Command="{StaticResource SubmitChangesCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource SaveResultSriptCommand}"/>
+                        </R:RibbonGroup>
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource CmdRedo}"/>
+                            <R:RibbonButton Command="{StaticResource CmdUndo}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                    <R:RibbonTab Label="{Localizer:Translate LabelTool}">
+                        <R:RibbonGroup>
+                            <R:RibbonButton Command="{StaticResource ChangeEffiprozDbPwd}"/>
+                            <R:RibbonButton Command="{StaticResource CmdOption}"/>
+                        </R:RibbonGroup>
+                    </R:RibbonTab>
+                </R:Ribbon>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="100" MaxHeight="600" ></RowDefinition>
+                    <RowDefinition Height="3" MaxHeight="3" ></RowDefinition>
+                    <RowDefinition Height="4*" MinHeight="100"></RowDefinition>
+                    <!--This height should be same to status bars 's height-->
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.ColumnSpan="3" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" MinWidth="300"/>
+                        <ColumnDefinition Width="2"/>
+                        <ColumnDefinition Width="2*" MinWidth="200"/>
+                    </Grid.ColumnDefinitions>
+                    <TabControlLibrary:TabControl
+                    Margin="0,2,0,0" MinWidth="300" Grid.Column="0"
+                    x:Name="tabControl_ForSqlQuery" 
+                    TabItemAdded="tabControl_ForSqlQuery_TabItemAdded"
+                    TabItemClosing="tabControl_ForSqlQuery_TabItemClosing"
+                    SelectionChanged="tabControl_ForSqlQuery_SelectionChanged"
+                    />
+                    <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1"/>
+                    <DockPanel LastChildFill="True" Grid.Column="2">
+                        <TextBox x:Name="txtSqlQueryResultPanel" IsReadOnly="True" Margin="5 1 18 0"
+                                Foreground="Red" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"
+                             TextWrapping="WrapWithOverflow" FontSize="12">
+                            <TextBox.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Offset="0.0" Color="#CC99CCFF" />
+                                    <GradientStop Offset="1.0" Color="White" />
+                                </LinearGradientBrush>
+                            </TextBox.BorderBrush>
+                        </TextBox>
+                    </DockPanel>
+                </Grid>
+                <!--<StackPanel Grid.Column="2" Grid.Row="0">
+                    <TextBox x:Name="sqlQueryResult" Foreground="Red" TextWrapping="Wrap" ></TextBox>
+                </StackPanel>-->
+                <!--<GridSplitter Grid.Column="1" Background="LightCyan" Grid.Row="0" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch"></GridSplitter>-->
+                <GridSplitter Grid.ColumnSpan="3" Background="LightCyan" Grid.Row="1" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch"></GridSplitter>
+                <Grid VerticalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" MinWidth="20" MaxWidth="400"></ColumnDefinition>
+                        <ColumnDefinition Width="3"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel  Grid.Row="0" Grid.Column="0" MinWidth="100" MaxWidth="400" >
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+                            <Image Width="20" Height="20" PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown_Pinned"
+                               Source="Images\CEImages/pinned.png" Stretch="Fill">
+                                <Image.ToolTip>
+                                    <StackPanel>
+                                        <TextBlock Text="{Localizer:Translate LabelExpandTreeView}"></TextBlock>
+                                    </StackPanel>
+                                </Image.ToolTip>
+                            </Image>
+                            <Image Width="20" Height="20" PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown_UnPinned"
+                               Source="Images\CEImages/unpinned.png" Stretch="Fill">
+                                <Image.ToolTip>
+                                    <StackPanel>
+                                        <TextBlock Text=""></TextBlock>
+                                    </StackPanel>
+                                </Image.ToolTip>
+                            </Image> 
+                        </StackPanel>
+                        <TreeView ToolTip="{Localizer:Translate TooltipRightClick}"
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                  x:Name="mainTreeView" Height="{Binding ElementName=mainResultGrid,Path=ActualHeight}" />
+                    </StackPanel>
+                    <GridSplitter Grid.Column="1" Background="LightCyan" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch"></GridSplitter>
+                    <TabControlLibrary:TabControl Margin="0,2,0,0" 
+                                                  SelectionChanged="tabControl_ForSqlResult_SelectionChanged" 
+                                                  x:Name="tabControl_ForSqlResult" 
+                                                  TabItemClosing="tabControl_ForSqlResult_TabItemClosing"
+                                                  TabItemAdded="tabControl_ForSqlResult_TabItemAdded"
+                                                  Grid.Column="2" Grid.Row="0">
+                        <TabControlLibrary:TabItem Header="{Localizer:Translate LabelDefaultView}">
+               
+                            <!--<DataGrid
+                            CanUserAddRows="False"
+                            CanUserDeleteRows="False"
+                            CanUserReorderColumns="False"
+                            IsReadOnly="True"
+                            Visibility="Visible"
+                             Name="mainResultGrid"
+                             AutoGenerateColumns="True"
+                             ItemsSource="{Binding}">
+                                <DataGrid.ToolTip>
+                                    <StackPanel>
+                                        <TextBlock Text="{Localizer:Translate TooltipDataPreviewRegion}"/>
+                                    </StackPanel>
+                                </DataGrid.ToolTip>
+                            </DataGrid>-->
+                            <MyPagedDataGridControl:PagedDataGrid Name="mainResultGrid">
+                                
+                            </MyPagedDataGridControl:PagedDataGrid>
+                        </TabControlLibrary:TabItem>
+                    </TabControlLibrary:TabControl>
+                </Grid>
+                <StatusBar  Grid.Row="3" Grid.ColumnSpan="3" Height="30">
+                    <TextBlock x:Name="statusBarStatus" Foreground="Blue" Margin="10 0 10 0" Text="      "/>
+                    <Separator/>
+                    <TextBlock x:Name="statusBarNotify" Foreground="Red" Margin="10 0 10 0" Text="      "/>
+                    <Separator/>
+                    <ProgressBar x:Name="progressBar" Visibility="Collapsed" Height="20" IsIndeterminate="True" Width="200" Margin="10 0 10 0"/>
+
+                    <TextBlock x:Name="statusBarCostTimeTitle" Foreground="Black" Text="{Localizer:Translate TextQueryCostTime}" Margin="10 0 10 0"/>
+                    <TextBlock x:Name="statusBarCostTime" Foreground="Blue"/>
+                </StatusBar>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</cx:BaseMainPage>

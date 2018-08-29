@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="DBStudio.MySql.MySqlEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+             xmlns:MPL="clr-namespace:MPL.MyControls;assembly=MPL"
+             xmlns:MyConverter="clr-namespace:MPL.ValueConvertor;assembly=MPL"
+        xmlns:my="clr-namespace:WPFCommonControl;assembly=WPFCommonControl">
+    <UserControl.Resources>
+        <MyConverter:BoolToVisibilityCollapsedConverter x:Key="MyBoolConverter1"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="2,6,0,0">
+                    <Label Height="25" HorizontalAlignment="Right" Name="label1" VerticalAlignment="Bottom" Width="114"
+                           Content="{Localizer:Translate LabelServerAddress}"/>
+                    <ComboBox x:Name="txtServername" Width="264"  IsReadOnly="False" IsEditable="True"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2,6,0,0">
+                    <Label Height="25" HorizontalAlignment="Right" Name="labelPort" VerticalAlignment="Bottom" Width="114"
+                           Content="{Localizer:Translate LabelPort}"/>
+                    <MPL:MaskTextBox HorizontalAlignment="Right" Name="txtPort" Text="3306"  X_MaskType="Digits"
+                                     VerticalAlignment="Bottom" Width="265" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2,6,0,0">
+                    <Label HorizontalAlignment="Right"  Name="label2" VerticalAlignment="Bottom" Width="114" Content="{Localizer:Translate LabelUsername}"/>
+                    <TextBox HorizontalAlignment="Right"  Name="txtUsername" VerticalAlignment="Bottom" Width="267" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2,6,0,0">
+                    <Label Height="25" HorizontalAlignment="Right"  Name="label3" VerticalAlignment="Bottom" Width="114" Content="{Localizer:Translate LabelPassword}"/>
+                    <PasswordBox HorizontalAlignment="Right"  Name="passwordBox1" VerticalAlignment="Bottom" Width="268" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2,6,0,0">
+                    <Label Height="25" HorizontalAlignment="Right"  Name="label4" VerticalAlignment="Bottom" Width="114" Content="{Localizer:Translate LabelDatabase}"/>
+                    <ComboBox DropDownOpened="txtDbName_DropDownOpened"
+                              IsReadOnly="False" IsEditable="True"
+                              HorizontalAlignment="Right" Name="txtDbName"
+                              VerticalAlignment="Bottom" Width="199" />
+                    <Button x:Name="butCreateDB" Content="{Localizer:Translate ButtonCreate}" />
+                    <Button x:Name="butDeleteDB" Content="{Localizer:Translate ButtonDelete}" />
+                </StackPanel>
+                <!--
+                 Visibility="{Binding ElementName=butCreateDB,Path=IsEnable,Converter={StaticResource MyBoolConverter1}}"
+                -->
+                <StackPanel Orientation="Horizontal" x:Name="charsetLayer" Margin="2,6,0,0">
+                    <Label Height="25" HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom" Width="114" Content="{Localizer:Translate LabelCharset}"/>
+                    <ComboBox 
+                              IsReadOnly="True" IsEditable="False"
+                              HorizontalAlignment="Right" Name="txtCharset"
+                              VerticalAlignment="Bottom" Width="199" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="100,10,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="80" x:Name="butConnect" Content="{Localizer:Translate ButtonOpen}" HorizontalAlignment="Left"
+                                Margin="10 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

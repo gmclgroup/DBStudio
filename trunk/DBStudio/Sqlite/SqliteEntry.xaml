@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="DBStudio.Sqlite.SqliteEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:MyControl="clr-namespace:MPL.MyControls;assembly=MPL" Width="500">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <MyControl:FileInportBox x:Name="FilePicker" 
+                                 X_ButtonHeader="...."
+                                 X_IsOpenFileMode="True" 
+                                 X_TitleHeader="{Localizer:Translate LabelOpenSqliteFile}" Margin="10" Width="400"/>         
+            <StackPanel Orientation="Horizontal" Margin="10" >
+                <TextBlock Width="100" Text="{Localizer:Translate LabelPassword}"></TextBlock>
+                <PasswordBox Width="166" x:Name="txtPwd" ></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="115,5,0,0">
+                <CheckBox x:Name="chkIsReadOnly"  Content="{Localizer:Translate CheckBoxConnectReadOnly}" Margin="5"/>
+                <CheckBox x:Name="chkIsUnicode"  Content="{Localizer:Translate CheckBoxIsUnicode}" Margin="5"/>
+            </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="butOpenExample" Content="{Localizer:Translate ButtonOpenExample}" Height="25" Margin="5" Click="butOpenExample_Click" />
+                <Button x:Name="butOpen" Content="{Localizer:Translate ButtonOpen}" Width="80" Height="30" Margin="5"/>
+                <Button x:Name="butCreate" Margin="5" Click="butCreate_Click" Height="25"
+                        Content="{Localizer:Translate ButtonCreate}" Width="80"></Button>
+            </StackPanel>
+            </StackPanel>
+    </Grid>
+</UserControl>

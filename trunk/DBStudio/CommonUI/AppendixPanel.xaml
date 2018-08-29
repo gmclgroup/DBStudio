@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="DBStudio.CommonUI.AppendixPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    >
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="10" >
+            <Label Content="Please choose language" Width="150"></Label>
+            <ComboBox x:Name="cmbLanguages" MinWidth="150"></ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0,10,0,0" >
+            <Button x:Name="butExchnageData" Width="110" Height="28" Margin="2" 
+                    Content="{Localizer:Translate DataExchangeButtonContent}" Click="butExchnageData_Click"/>
+            <Button x:Name="butDocumentDb" Width="130" Margin="2" Height="28" 
+                    Content="{Localizer:Translate DocumentingDbButtonContent}" Click="butDocumentDb_Click"/>
+            <Button x:Name="butConnectionStringHelper" Margin="2" Width="150" Height="28" 
+                    Content="{Localizer:Translate ConnectionStringHelperButtonContent}" Click="butConnectionStringHelper_Click" />
+            
+            <Button x:Name="butGetStart" Margin="2" Width="100" Height="28" 
+                    Content="Getting Start" Click="butGetStart_Click" />
+            <Button x:Name="butGoToOnline" Margin="2" Width="100" Height="28" 
+                    Content="Visit Website " Click="butGoToOnlineSite_CLick" />
+        </StackPanel>
+        <TextBlock x:Name="txtVersion" HorizontalAlignment="Right" Margin="5,0,0,5"/>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,125 @@
+﻿<Window x:Class="DBStudio.NewPortal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MyControl="clr-namespace:MPL.MyControls;assembly=MPL"
+    xmlns:MPL="clr-namespace:MPL;assembly=MPL"
+    x:Name="MySelf" WindowStartupLocation="CenterScreen"
+    ShowInTaskbar="True" SizeToContent="WidthAndHeight"
+    xmlns:CommonControl="clr-namespace:DBStudio.CommonUI"   
+    xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    ResizeMode="NoResize"
+    Title="{Localizer:Translate AppName}">
+    <Window.Resources>
+        <Storyboard x:Key="MaskLayerFadeStory_Start" x:Name="MaskLayerFadeStory_Start">
+            <DoubleAnimation By="0.95" From="0.1" Duration="00:00:00.5"
+                Storyboard.TargetProperty="(FrameworkElement.Opacity)" Storyboard.TargetName="maskLayer"
+                />
+        </Storyboard>
+        <Storyboard x:Key="MaskLayerFadeStory_End" x:Name="MaskLayerFadeStory_End">
+            <DoubleAnimation From="0.95" To="0" Duration="00:00:01"
+                Storyboard.TargetProperty="(FrameworkElement.Opacity)" Storyboard.TargetName="maskLayer"
+                />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <DockPanel Panel.ZIndex="1" x:Name="rootDockPanel" LastChildFill="False">
+                <MyControl:ScrollableListBox DockPanel.Dock="Top" Visibility="Visible"
+                    Panel.ZIndex="1" Width="Auto"
+                                          ScrollViewer.IsDeferredScrollingEnabled="False"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                     ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderThickness="5,20,5,2"
+                ItemsSource="{Binding}"  x:Name="DbCollectionList" >
+                    <MyControl:ScrollableListBox.BitmapEffect>
+                        <BlurBitmapEffect Radius="0.5" KernelType="Box" />
+                    </MyControl:ScrollableListBox.BitmapEffect>
+                    <MyControl:ScrollableListBox.BorderBrush>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="Transparent" Offset="0.0" />
+                            <GradientStop Color="SkyBlue" Offset="0.25" />
+                            <GradientStop Color="SkyBlue" Offset="0.75" />
+                            <GradientStop Color="Transparent" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </MyControl:ScrollableListBox.BorderBrush>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Width="60" Height="Auto"
+                            Tag="{Binding Path=NewURL}"
+                                    MouseLeftButtonDown="Border_MouseLeftButtonDown"
+                                    MouseEnter="Border_MouseEnter"
+                                    MouseLeave="Border_MouseLeave"
+                        Margin="10">
+                                <StackPanel>
+                                    <Image Source="{Binding Path=LogoImage}" 
+                                       PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown_ForEntry"
+                                       Tag="{Binding Path=NewURL}" Height="48">
+                                        <Image.ToolTip>
+                                            <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                                           MaxWidth="600" MaxHeight="480" TextWrapping="Wrap" Text="{Binding Path=ToolTipText}"/>
+                                        </Image.ToolTip>
+                                    </Image>
+                                    <TextBlock Text="{Binding Path=Comment}" HorizontalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal"></VirtualizingStackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </MyControl:ScrollableListBox>
+               
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Top" >
+                    <Label Content="{Localizer:Translate ResChooseSkin}" HorizontalContentAlignment="Right" Margin="5 0 5 0"/>
+                    <ComboBox x:Name="cmbSkinStyle" HorizontalAlignment="Center"
+                          SelectedIndex="3" Width="120"
+                          SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Bubble Creme" Tag="BubbleCreme.xaml"/>
+                        <ComboBoxItem Content="Bureau Black" Tag="BureauBlack.xaml"/>
+                        <ComboBoxItem Content="Bureau Blue" Tag="BureauBlue.xaml"/>
+                        <ComboBoxItem Content="Whistler Blue" Tag="WhistlerBlue.xaml"/>
+                        <ComboBoxItem Content="Expression Dark" Tag="ExpressionDark.xaml"/>
+                        <ComboBoxItem Content="Expression Light" Tag="ExpressionLight.xaml"/>
+                        <ComboBoxItem Content="Shiny Blue" Tag="ShinyBlue.xaml"/>
+                        <ComboBoxItem Content="Shiny Red" Tag="ShinyRed.xaml"/>
+                        <ComboBoxItem Content="Twilight Blue" Tag="TwilightBlue.xaml"/>
+                    </ComboBox>
+                    <Label Margin="5 0 0 0" HorizontalContentAlignment="Right"
+                           Content="{Localizer:Translate ResChooseLanguage}"/>
+                    <ComboBox x:Name="cmbLanguages" Width="120" SelectedIndex="0" 
+                              SelectionChanged="cmbLanguages_SelectionChanged">
+                    </ComboBox>
+                    
+                    <Button  x:Name="butExchnageData" Width="80" Margin="5 0 5 0" Content="{Localizer:Translate DataExchangeButtonContent}" Click="butExchnageData_Click"/>
+                    <Button  x:Name="butDocumentDb" Width="80" Margin="5 0 5 0" Content="{Localizer:Translate DocumentingDbButtonContent}" Click="butDocumentDb_Click"/>
+                    <Button  x:Name="butGetStart" Width="80"  Margin="5 0 0 0" Content="{Localizer:Translate GettingStartButtonContent}" Click="butGetStart_Click" />
+                    <Button x:Name="butAboutUs" Width="80" Margin="5 0 5 0" Content="{Localizer:Translate CmdAboutUs}" Click="butAboutUs_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="5">
+                    <Button x:Name="butEmergencyMode" Visibility="Collapsed" Width="100" Margin="5 0 5 0"
+                            ToolTip=""
+                            Content="{Localizer:Translate EmergencyMode}" Click="butEmergenceMode_Click"/>
+                    <Label Content="{Localizer:Translate TitleQuickLink}" Margin="5 0 5 0"/>
+                    <ComboBox Width="100" Visibility="Visible" SelectionChanged="simpleDbCollectionControl_SelectionChanged" x:Name="simpleDbCollectionControl">
+                        <ComboBoxItem Content="SqlCE" Tag="SqlCE\CeEntry.xaml"/>
+                        <ComboBoxItem Content="Sql Server" Tag="SqlServer\SqlServerEntry.xaml"/>
+                        <ComboBoxItem Content="Effiproz" Tag="Effiproz\EffiprozEntry.xaml"/>
+                        <ComboBoxItem Content="Oracle" Tag="Oracle\OracleEntry.xaml"/>
+                        <ComboBoxItem Content="MySql" Tag="MySql\MySqlEntry.xaml"/>
+                        <ComboBoxItem Content="OleDb" Tag="OleDb\OleDbMain.xaml"/>
+                        <ComboBoxItem Content="Excel" Tag="Excel\ExcelEntry.xaml"/>
+                        <ComboBoxItem Content="CSV" Tag="CSV\CSVEntry.xaml"/>
+                        <ComboBoxItem Content="Sqlite" Tag="Sqlite\SqliteEntry.xaml"/>
+                        <ComboBoxItem Content="Firebird" Tag="FireBird\FireBirdEntry.xaml"/>
+                    </ComboBox>
+                </StackPanel>
+
+            </DockPanel>
+            <StackPanel Background="SkyBlue" Opacity="0.95" HorizontalAlignment="Stretch"
+                    Visibility="Hidden" x:Name="maskLayer" 
+                    MouseLeftButtonDown="maskLayer_MouseLeftButtonDown"
+                    Panel.ZIndex="2" />
+        </Grid>
+    </Grid>
+</Window>

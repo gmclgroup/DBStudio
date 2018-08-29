@@ -1,0 +1,9 @@
+﻿<MyBase:CreateTableSchemaBaseWin x:Class="DBStudio.CreateTableSchemaFactory.CreateTableSchema_SqlServer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MyBase="clr-namespace:DBStudio.CreateTableSchemaFactory"
+    Title="CreateTableSchema_SqlServer" Height="300" Width="300">
+    <Grid>
+        <Ellipse Fill="Red"/>
+    </Grid>
+</MyBase:CreateTableSchemaBaseWin>

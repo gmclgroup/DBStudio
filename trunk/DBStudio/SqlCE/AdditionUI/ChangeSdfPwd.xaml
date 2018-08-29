@@ -1,0 +1,16 @@
+﻿<cx:BaseFadeDialog  x:Class="DBStudio.SqlCE.AdditionUI.ChangeSdfPwd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="Change Password" Height="235" Width="524" ShowInTaskbar="True"
+                    WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <PasswordBox Height="23" Margin="168,18,97,0" Name="txtOldPwd" VerticalAlignment="Top" TabIndex="1" />
+        <Button Height="23" HorizontalAlignment="Left" Margin="168,0,0,48" Name="butChange" VerticalAlignment="Bottom" Width="75" Click="butChange_Click" OverridesDefaultStyle="False" SnapsToDevicePixels="False" TabIndex="4">Change</Button>
+        <Label Height="28" HorizontalAlignment="Left" Margin="32,18,0,0" Name="label1" VerticalAlignment="Top" Width="120">Old password</Label>
+        <PasswordBox Height="23" Margin="168,53,97,0" Name="txtNewPwd1" VerticalAlignment="Top" TabIndex="2" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="32,53,0,0" Name="label2" VerticalAlignment="Top" Width="120">New Password</Label>
+        <PasswordBox Margin="168,87,97,87" Name="txtNewConfirmPwd" TabIndex="3" />
+        <Label HorizontalAlignment="Left" Margin="32,87,0,82" Name="label3" Width="120">Confirm New Pwd</Label>
+    </Grid>
+</cx:BaseFadeDialog >

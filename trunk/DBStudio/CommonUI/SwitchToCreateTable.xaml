@@ -1,0 +1,13 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.CommonUI.SwitchToCreateTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                              xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="" Height="261" Width="335">
+    <Grid>
+        <Button Click="butCreate_Click" Margin="77,50,95,0" Name="butCreate" VerticalAlignment="Top"
+          Content="{Localizer:Translate ButtonCreateSimpleTable}"      />
+        <Button Click="butCreateDetail_Click" Margin="77,107,95,78" Name="butCreateDetail"
+                Content="{Localizer:Translate ButtonCreateTableWithUI}"/>
+	</Grid>
+</cx:BaseFadeDialog>

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="DBStudio.Effiproz.EffiprozEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             >
+    <Grid Margin="5">
+        <DockPanel LastChildFill="True" Margin="5">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelDatabaseType}" Width="100"/>
+                <ComboBox x:Name="cmbDbType" SelectedIndex="0" Width="150" SelectionChanged="cmbDbType_SelectionChanged">
+                    <ComboBoxItem Content="File"/>
+                    <ComboBoxItem Content="Memory"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="panel1" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelDatabaseFullPath}" Width="100"/>
+                <TextBox x:Name="txtDbLocation" Width="300"/>
+                <Button Content="..." Width="30" x:Name="butSelectPath" Click="butSelectPath_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" x:Name="panel2" Visibility="Collapsed" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate TextDbName}" Width="100"/>
+                <TextBox x:Name="txtDBName" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelUsername}" Width="100"/>
+                <ComboBox SelectedIndex="0" IsEditable="True" IsReadOnly="False" x:Name="txtUserName" Width="200">
+                    <ComboBoxItem Content="SA"/>
+                    <ComboBoxItem Content="PUBLIC"/>
+                    <ComboBoxItem Content="_SYSTEM"/>
+                    <ComboBoxItem Content="DBA"/>
+                    <ComboBoxItem Content="CREATE_SCHEMA"/>
+                    <ComboBoxItem Content="CHANGE_AUTHORIZATION"/>
+                </ComboBox> 
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="4">
+                <TextBlock Text="{Localizer:Translate LabelPassword}" Width="100"/>
+                <PasswordBox x:Name="txtPwd" Width="200"/>
+            </StackPanel>
+            <CheckBox IsChecked="True" x:Name="chkIsAutoCommit" Content="{Localizer:Translate ChkIsAutoCommit}" DockPanel.Dock="Top" Margin="100 4 0 0"/>
+            <CheckBox IsChecked="False" x:Name="chkIsAutoShutdown" Content="{Localizer:Translate ChkIsAutoShutdown}" DockPanel.Dock="Top" Margin="100 4 0 0"/>
+            <CheckBox IsChecked="False" x:Name="chkIsReadonly" Content="{Localizer:Translate ChkIsReadonly}" DockPanel.Dock="Top" Margin="100 4 0 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <Button x:Name="butOpenExampleData" Content="{Localizer:Translate ButtonOpenExample}"
+                        HorizontalAlignment="Left" Height="20" Width="120" Margin="2" Click="butOpenExampleData_Click"/>
+                <Button x:Name="butOpen" Content="{Localizer:Translate ButtonOpen}" Width="80" Margin="2" Click="butOpen_Click" Height="40" />
+                <Button x:Name="butCreate" Content="{Localizer:Translate ButtonCreate}" Width="80" Margin="2" Click="butCreate_Click" Height="30" />
+            </StackPanel>
+            
+        </DockPanel>
+        
+    </Grid>
+</UserControl>

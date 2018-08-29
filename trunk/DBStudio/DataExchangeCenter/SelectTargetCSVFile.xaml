@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="DBStudio.DataExchangeCenter.SelectTargetCSVFile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+    <Grid>
+        <StackPanel>
+            <Label Content="Please input or select a CSV Folder,your CSV file will create under this folder."></Label>
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+                <TextBox x:Name="txtFolder" Width="400"></TextBox>
+                <Button Click="butSelectCSVFolder_Click" x:Name="butSelectCSVFolder" Width="20" Height="20" Content="..."></Button>
+            </StackPanel>
+            <CheckBox Content="{Localizer:Translate TitleFirstRowIsColumnName}" x:Name="chkFirstRowIsColumnName" IsChecked="True" Margin="10 0 0 0 "/>
+            <Label Foreground="Red" Content="Please Select Folder" Visibility="Collapsed" x:Name="labelWarning"></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

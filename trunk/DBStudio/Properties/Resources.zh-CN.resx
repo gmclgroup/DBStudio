@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CurDbMode" xml:space="preserve">
+    <value>你正在使用 {0} 数据库</value>
+  </data>
+  <data name="Entry_Friebird_Tooltip" xml:space="preserve">
+    <value>Firebird /Interbase 请点击这里</value>
+  </data>
+  <data name="Entry_MySql_Tooltip" xml:space="preserve">
+    <value>MySql 5.0  或以上 ,  请点击这里</value>
+  </data>
+  <data name="Entry_Oledb_Tooltip" xml:space="preserve">
+    <value>OleDB database : Access 请点击这里</value>
+  </data>
+  <data name="Entry_Oracle_Tooltip" xml:space="preserve">
+    <value>Oracle 9  或以上 ,  请点击这里</value>
+  </data>
+  <data name="Entry_Sqlite_Tooltip" xml:space="preserve">
+    <value>Sqlite ,  请点击这里</value>
+  </data>
+  <data name="Entry_SqlServer_Tooltip" xml:space="preserve">
+    <value>Sql Server 2000 或以上  请点击这里</value>
+  </data>
+  <data name="Entry_SSCE_Tooltip" xml:space="preserve">
+    <value>Microsoft SQL Server 2005 Compact Edition 是一种紧凑型数据库，适用于在本机或托管环境中快速部署应用程序，它将企业数据管理功能扩展到桌面应用程序</value>
+  </data>
+  <data name="NotCompletedFeatureNotifyMsg" xml:space="preserve">
+    <value>该功能没有完成,请等待下一个版本</value>
+  </data>
+  <data name="DataExchangeButtonContent" xml:space="preserve">
+    <value>数据交换</value>
+  </data>
+  <data name="CannotCloseTabItemNotifyMsg" xml:space="preserve">
+    <value>这是最后一页，不能关闭</value>
+  </data>
+  <data name="CannotParseSqlCmdNotifyMsg" xml:space="preserve">
+    <value>无法解析这个SQL命令</value>
+  </data>
+  <data name="ChangePwdOK" xml:space="preserve">
+    <value>修改密码成功</value>
+  </data>
+  <data name="ColumnItemUsage" xml:space="preserve">
+    <value>这是列对象，你可以右击以执行更多方法，如[插入列]，[修改列]</value>
+  </data>
+  <data name="ColumnsName" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="CreateTableSchmea_CreateTableOkMsg" xml:space="preserve">
+    <value>创建表成功</value>
+  </data>
+  <data name="CreatTableDialogTitle" xml:space="preserve">
+    <value>创建表</value>
+  </data>
+  <data name="CreatTableSchema_NeedTableName" xml:space="preserve">
+    <value>请输入表名</value>
+  </data>
+  <data name="DataTransferConfrimMsg" xml:space="preserve">
+    <value>你确定要执行数据转移么？这个操作会需要一定时间，这个根据你的数据量</value>
+  </data>
+  <data name="DataTransferNoTableMsg" xml:space="preserve">
+    <value>没有表可以处理</value>
+  </data>
+  <data name="DataTransferSelectTableMsg" xml:space="preserve">
+    <value>请至少选择一个表</value>
+  </data>
+  <data name="DataTransfer_ConfirmViewReport" xml:space="preserve">
+    <value>你想要查看数据转换的结果报告么？</value>
+  </data>
+  <data name="DataTransfer_NotSupportDBType" xml:space="preserve">
+    <value>目前这个类型没有支持</value>
+  </data>
+  <data name="ErrorInfo_CreateTableSchemaDialog" xml:space="preserve">
+    <value>在列{0}，Index {1}索引处错误</value>
+  </data>
+  <data name="ErrorMsg_CannotConnectToSource" xml:space="preserve">
+    <value>无法连接到源数据库</value>
+  </data>
+  <data name="ErrorMsg_CannotConnectToTarget" xml:space="preserve">
+    <value>无法连接到目标数据库</value>
+  </data>
+  <data name="ErrorMsg_CannotParseSqlCmd" xml:space="preserve">
+    <value>无法解析你的SQL命令，清检查</value>
+  </data>
+  <data name="ErrorMsg_InvalidType" xml:space="preserve">
+    <value>非法对象</value>
+  </data>
+  <data name="ErrorMsg_InvalidTypeOfTreeItem" xml:space="preserve">
+    <value>非法树对象</value>
+  </data>
+  <data name="ExeCmdOKNotifyMsg" xml:space="preserve">
+    <value>执行命令成功</value>
+  </data>
+  <data name="ExitAppConfirmMsg" xml:space="preserve">
+    <value>你确信要退出当前应用程序么？</value>
+  </data>
+  <data name="GenerateCoreEAError" xml:space="preserve">
+    <value>请关闭先前的数据管理页面，然后重试。</value>
+  </data>
+  <data name="GenerateLinqFileConfrimMsg_ForCurrent" xml:space="preserve">
+    <value>你确定要为当前的数据库生成LINQ对象么？</value>
+  </data>
+  <data name="GenerateTableSchemaOK" xml:space="preserve">
+    <value>生成表结构成功</value>
+  </data>
+  <data name="ImportAccess_DoOK" xml:space="preserve">
+    <value>导入数据从 \r\n{0} \r\n到 \r\n{1} \r\n成功</value>
+  </data>
+  <data name="ImportAccess_SelectFile" xml:space="preserve">
+    <value>请同时选择源文件和目标文件</value>
+  </data>
+  <data name="ImportData_CreateSSCEFileFailure" xml:space="preserve">
+    <value>创建SQLCE数据库失败，过程将返回</value>
+  </data>
+  <data name="ImportData_FileNotFound" xml:space="preserve">
+    <value>目标文件不存在，过程将返回</value>
+  </data>
+  <data name="ImportData_NoTable" xml:space="preserve">
+    <value>ACCESS数据库没有任何表，过程将返回</value>
+  </data>
+  <data name="ImportData_ReadError" xml:space="preserve">
+    <value>读取ACCESS数据库失败，过程将返回</value>
+  </data>
+  <data name="ImportEachElement" xml:space="preserve">
+    <value>清输入每个元素</value>
+  </data>
+  <data name="ImportNeedSelectTables" xml:space="preserve">
+    <value>请查询表，然后选择</value>
+  </data>
+  <data name="IndexesName" xml:space="preserve">
+    <value>索引</value>
+  </data>
+  <data name="IndexItemUsage" xml:space="preserve">
+    <value>这个是索引对象，你可以通过右击菜单调用更多方法，比如[插入索]等。</value>
+  </data>
+  <data name="InputSqlCommandNotifyMsg" xml:space="preserve">
+    <value>请输入SQL命令</value>
+  </data>
+  <data name="InvalidSqlCmdNotifyMsg" xml:space="preserve">
+    <value>不正确的命令</value>
+  </data>
+  <data name="LanguageSelection_AutoDetect" xml:space="preserve">
+    <value>Auto Detect</value>
+  </data>
+  <data name="ModifyTableDialogTitle" xml:space="preserve">
+    <value>修改表</value>
+  </data>
+  <data name="NewTabItemHeader" xml:space="preserve">
+    <value>新查询结果图</value>
+  </data>
+  <data name="OnlineRequestMsg_ForSqlServer" xml:space="preserve">
+    <value>你确定要访问SQL Server的官网么？</value>
+  </data>
+  <data name="OnlineRequestMsg_MySql" xml:space="preserve">
+    <value>你确定要访问MySql的官网么？</value>
+  </data>
+  <data name="OnlineRequestMsg_Sqlite" xml:space="preserve">
+    <value>你确定要访问Sqlite的官网么？</value>
+  </data>
+  <data name="OnlineRequestMsg_SSCE" xml:space="preserve">
+    <value>你确定要访问SQLCE的官网么？</value>
+  </data>
+  <data name="OverrideFileConfrmMsg" xml:space="preserve">
+    <value>输出文件已存在 {0} \r\n，你确认需要删除它然后继续生产么？</value>
+  </data>
+  <data name="PwdNotEqual" xml:space="preserve">
+    <value>你两次输入的密码不匹配，请检查</value>
+  </data>
+  <data name="QueryWithNoDataResultNotifyMsg" xml:space="preserve">
+    <value>没有数据</value>
+  </data>
+  <data name="ResetDataConfrimMsg" xml:space="preserve">
+    <value>你确定要[重置]（意味着删除所有的数据）当前的数据库么？\r\n这个行为有很高的风险，你确定要做么？</value>
+  </data>
+  <data name="ResetDataCurrentFileConfrimMsg" xml:space="preserve">
+    <value>你确定要[重置]（意味着删除所有的数据）当前的数据库么？\r\n这个行为有很高的风险，你确定要做么？</value>
+  </data>
+  <data name="ResetDataOK" xml:space="preserve">
+    <value>重置文件成功</value>
+  </data>
+  <data name="SchemaResultInfoHeader" xml:space="preserve">
+    <value>表结构信息</value>
+  </data>
+  <data name="SelectSSCEFileMsg" xml:space="preserve">
+    <value>请选择正确的SQLCE文件</value>
+  </data>
+  <data name="SelectTargetMsg" xml:space="preserve">
+    <value>请为目标文件选定路径</value>
+  </data>
+  <data name="SelectToaDirConfirmMsg" xml:space="preserve">
+    <value>请确认目标路径是个目录并且存在</value>
+  </data>
+  <data name="SpName" xml:space="preserve">
+    <value>存储过程</value>
+  </data>
+  <data name="SqlMetalFileLost" xml:space="preserve">
+    <value>执行引擎丢失，请重新安装</value>
+  </data>
+  <data name="SysSchemaViews" xml:space="preserve">
+    <value>系统视图</value>
+  </data>
+  <data name="TableItemUsage" xml:space="preserve">
+    <value>这个是表对象，你可以通过右击菜单来调用更多方法，比如[插入列]，[创建表]等。</value>
+  </data>
+  <data name="TriggerName" xml:space="preserve">
+    <value>觸發器</value>
+  </data>
+  <data name="ConnectionStringHelperButtonContent" xml:space="preserve">
+    <value>数据库联接字符</value>
+  </data>
+  <data name="DocumentingDbButtonContent" xml:space="preserve">
+    <value>文档化数据库</value>
+  </data>
+  <data name="ExecuteCmdWithResultOK" xml:space="preserve">
+    <value>执行命令成功</value>
+  </data>
+  <data name="ExecuteCmdWithNoResult" xml:space="preserve">
+    <value>执行命令没有结果返回。</value>
+  </data>
+  <data name="NewSqlCommandTabHeader" xml:space="preserve">
+    <value>新命令</value>
+  </data>
+  <data name="OpenLatestSqlCEDb" xml:space="preserve">
+    <value>打开最后打开的文件</value>
+  </data>
+  <data name="GenerateLinqFileConfrimMsg" xml:space="preserve">
+    <value>你确定要生成LINQ对象么？</value>
+  </data>
+  <data name="GettingStartButtonContent" xml:space="preserve">
+    <value>教程</value>
+  </data>
+  <data name="VisitOnlineWebsiteButtonContent" xml:space="preserve">
+    <value>訪問在線網頁</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>DBStudio</value>
+  </data>
+  <data name="NotifyWhenExitMode" xml:space="preserve">
+    <value>你确定要退出当前的数据库管理环境么？</value>
+  </data>
+  <data name="NotifyWhenThisFeatureNotCompleted" xml:space="preserve">
+    <value>此项功能还没有完成，请提交您的请求或者等待新版本。</value>
+  </data>
+  <data name="ResChooseLanguage" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="ResChooseSkin" xml:space="preserve">
+    <value>皮肤</value>
+  </data>
+  <data name="ResChooseQuickFuncation" xml:space="preserve">
+    <value>快捷功能</value>
+  </data>
+  <data name="ClearedOpendHistoryInfo" xml:space="preserve">
+    <value>清空历史数据成功</value>
+  </data>
+  <data name="BackButtonText" xml:space="preserve">
+    <value>后退</value>
+  </data>
+  <data name="CreateDatabaseNotifyMsg" xml:space="preserve">
+    <value>你確定要創建該數據庫么？</value>
+  </data>
+  <data name="DeleteDatabaseNofityMsg" xml:space="preserve">
+    <value>你確定要刪除該數據庫么？</value>
+  </data>
+  <data name="CreateDatabaseOkMsg" xml:space="preserve">
+    <value>創建數據庫成功</value>
+  </data>
+  <data name="DeleteDatabaseOkMsg" xml:space="preserve">
+    <value>刪除數據庫成功</value>
+  </data>
+  <data name="Entry_Elliproz_Tooltip" xml:space="preserve">
+    <value>EffiProz is a lightweight embedded database written entirely in C#. EffiProz is available for .NET,  Silverlight, .NET Compact and Windows Phone 7 frameworks. Database engine features include ACID compliant transactions, In-Memory mode, SQL/PSM stored procedures, Isolated Storage support for Silverlight and Persistent In-Memory storage layer.</value>
+  </data>
+  <data name="SubmitChangesOK" xml:space="preserve">
+    <value>提交修改成功</value>
+  </data>
+  <data name="NotifyMsgBeforeExit" xml:space="preserve">
+    <value>Do you confirm exit without submit changes ?
+Effiproz need to call submit change to save the data which you have changed.</value>
+  </data>
+  <data name="EmergencyMode" xml:space="preserve">
+    <value>緊急模式</value>
+  </data>
+  <data name="CSVTooltip" xml:space="preserve">
+    <value>CSV or Text File,請點擊這里</value>
+  </data>
+  <data name="ExcelTooltip" xml:space="preserve">
+    <value>Excel,請點擊這里</value>
+  </data>
+  <data name="FirebirdTooltip" xml:space="preserve">
+    <value>Firebird is a relational database offering many ANSI SQL standard features that runs on Linux, Windows, and a variety of Unix platforms. Firebird offers excellent concurrency, high performance, and powerful language support for stored procedures and triggers. It has been used in production systems, under a variety of names, since 1981.</value>
+  </data>
+  <data name="MySqlTooltip" xml:space="preserve">
+    <value>MySql 5.0 or up ,請點擊這里</value>
+  </data>
+  <data name="OracleTooltip" xml:space="preserve">
+    <value>Oracle 9 or up,請點擊這里</value>
+  </data>
+  <data name="SqliteTooltip" xml:space="preserve">
+    <value>SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world</value>
+  </data>
+  <data name="SqlServerTooltip" xml:space="preserve">
+    <value>Sql Server 2000 or up,請點擊這里</value>
+  </data>
+  <data name="ButtonChangePassword" xml:space="preserve">
+    <value>修改密碼</value>
+  </data>
+  <data name="ButtonCreate" xml:space="preserve">
+    <value>創建</value>
+  </data>
+  <data name="ButtonOpen" xml:space="preserve">
+    <value>打開</value>
+  </data>
+  <data name="ButtonOpenExample" xml:space="preserve">
+    <value>打開樣板數據</value>
+  </data>
+  <data name="ButtonOpenHistory" xml:space="preserve">
+    <value>打開歷史</value>
+  </data>
+  <data name="ButtonSync" xml:space="preserve">
+    <value>同步</value>
+  </data>
+  <data name="CheckBoxConnectReadOnly" xml:space="preserve">
+    <value>只讀鏈接</value>
+  </data>
+  <data name="CheckBoxEncrypt" xml:space="preserve">
+    <value>是否加密</value>
+  </data>
+  <data name="LabelDatabase" xml:space="preserve">
+    <value>數據庫</value>
+  </data>
+  <data name="LabelEncrypt" xml:space="preserve">
+    <value>加密</value>
+  </data>
+  <data name="LabelOpenMode" xml:space="preserve">
+    <value>打開模式</value>
+  </data>
+  <data name="LabelOpenSqliteFile" xml:space="preserve">
+    <value>選擇Sqlite文件</value>
+  </data>
+  <data name="LabelPassword" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="OleDBTooltip" xml:space="preserve">
+    <value>OleDB based type ,such as Access,Excel c,請點擊這里</value>
+  </data>
+  <data name="TooltipDetectVersion" xml:space="preserve">
+    <value>判斷該數據庫文件的版本</value>
+  </data>
+  <data name="TooltipDragFile" xml:space="preserve">
+    <value>你可以直接拖拽文件到這里</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="LabelCharset" xml:space="preserve">
+    <value>字符集</value>
+  </data>
+  <data name="LabelOpenCSVFile" xml:space="preserve">
+    <value>打開CSV文件</value>
+  </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>端口</value>
+  </data>
+  <data name="LabelSelectAccessFile" xml:space="preserve">
+    <value>打開Access文件</value>
+  </data>
+  <data name="LabelServerAddress" xml:space="preserve">
+    <value>服務器地址</value>
+  </data>
+  <data name="LabelServerIpOrHost" xml:space="preserve">
+    <value>IP (主機名)</value>
+  </data>
+  <data name="LabelSID" xml:space="preserve">
+    <value>SID</value>
+  </data>
+  <data name="LabelUsername" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="LabelAccessFile" xml:space="preserve">
+    <value>選擇Access文件</value>
+  </data>
+  <data name="LabelConnectionString" xml:space="preserve">
+    <value>鏈接字符串</value>
+  </data>
+  <data name="LabelDatabaseFullPath" xml:space="preserve">
+    <value>數據庫全路徑</value>
+  </data>
+  <data name="LabelDatabaseType" xml:space="preserve">
+    <value>數據庫類型</value>
+  </data>
+  <data name="LabelSelectExcelFile" xml:space="preserve">
+    <value>打開Excel文件</value>
+  </data>
+  <data name="LabelUseConnectionStringDirectly" xml:space="preserve">
+    <value>直接使用鏈接字符串鏈接</value>
+  </data>
+  <data name="CmdHelpDocument" xml:space="preserve">
+    <value>幫助文檔</value>
+  </data>
+  <data name="CmdOnlineSqliteForum" xml:space="preserve">
+    <value>Sqlite 官方論壇</value>
+  </data>
+  <data name="CmdOnlinMySqlForum" xml:space="preserve">
+    <value>MySql 官方論壇</value>
+  </data>
+  <data name="CmdOnlinSSCEForum" xml:space="preserve">
+    <value>Sqlce官方論壇</value>
+  </data>
+  <data name="TextQueryCostTime" xml:space="preserve">
+    <value>查詢花費時間 : </value>
+  </data>
+  <data name="TooltipDataPreviewRegion" xml:space="preserve">
+    <value>查詢數據結果顯示區域</value>
+  </data>
+  <data name="CmdAboutUs" xml:space="preserve">
+    <value>關于我們</value>
+  </data>
+  <data name="CmdChangeDbPwd" xml:space="preserve">
+    <value>修改數據庫密碼</value>
+  </data>
+  <data name="CmdClose" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="CmdConvertExcel2Access" xml:space="preserve">
+    <value>轉換Excel文件為Access文件</value>
+  </data>
+  <data name="CmdDownloadDbFile" xml:space="preserve">
+    <value>從互聯網下載數據庫文件</value>
+  </data>
+  <data name="CmdEffiprozHomepage" xml:space="preserve">
+    <value>去Effiproz官方首頁</value>
+  </data>
+  <data name="CmdExecute" xml:space="preserve">
+    <value>執行</value>
+  </data>
+  <data name="CmdExportSelectedTableSchema" xml:space="preserve">
+    <value>導出當前的表結構</value>
+  </data>
+  <data name="CmdGenerateBusinessEntity" xml:space="preserve">
+    <value>生成商業實體對象</value>
+  </data>
+  <data name="CmdGenerateColumnSchema" xml:space="preserve">
+    <value>獲取列結構</value>
+  </data>
+  <data name="CmdGenerateLinqOrMap" xml:space="preserve">
+    <value>生成Linq to Sql的商業實體對象</value>
+  </data>
+  <data name="CmdGetCurrentDbInfo" xml:space="preserve">
+    <value>獲取當前數據庫信息</value>
+  </data>
+  <data name="CmdGetServerInformation" xml:space="preserve">
+    <value>獲取當前服務器信息</value>
+  </data>
+  <data name="CmdLastCommand" xml:space="preserve">
+    <value>上一个命令</value>
+  </data>
+  <data name="CmdNextCommand" xml:space="preserve">
+    <value>下一個命令</value>
+  </data>
+  <data name="CmdOpenScript" xml:space="preserve">
+    <value>打開腳本文件</value>
+  </data>
+  <data name="CmdOption" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="CmdResetDb" xml:space="preserve">
+    <value>重置數據庫</value>
+  </data>
+  <data name="CmdSaveResult" xml:space="preserve">
+    <value>保存執行結果</value>
+  </data>
+  <data name="CmdSaveScript" xml:space="preserve">
+    <value>保存到腳本文件</value>
+  </data>
+  <data name="CmdSqlServerForum" xml:space="preserve">
+    <value>Sql Server 官方論壇</value>
+  </data>
+  <data name="CmdSubmitChanges" xml:space="preserve">
+    <value>提交更改</value>
+  </data>
+  <data name="CmdTransferDataFromAccess" xml:space="preserve">
+    <value>從Access文件中導入數據</value>
+  </data>
+  <data name="CmdTransferDataFromCSV" xml:space="preserve">
+    <value>從CSV文件中導入數據</value>
+  </data>
+  <data name="CmdTransferDataFromExcel" xml:space="preserve">
+    <value>從Excel文件中導入數據</value>
+  </data>
+  <data name="CmdTransferDataFromMysql" xml:space="preserve">
+    <value>從Mysql數據庫中導入數據</value>
+  </data>
+  <data name="CmdTransferDataFromSqlServer" xml:space="preserve">
+    <value>從Sql Server 數據庫中導入數據</value>
+  </data>
+  <data name="CmdTransferDataFromSSCE2SqlServer" xml:space="preserve">
+    <value>將數據從 SqlCe 導入到 SqlServer</value>
+  </data>
+  <data name="ErrorInfo_GetSPListError" xml:space="preserve">
+    <value>獲取存儲過程列表失敗 : </value>
+  </data>
+  <data name="ErrorInfo_GetTriggerListError" xml:space="preserve">
+    <value>獲取觸發器列表失敗 : </value>
+  </data>
+  <data name="ErrorInfo_GetViewListError" xml:space="preserve">
+    <value>獲取視圖列表失敗 :</value>
+  </data>
+  <data name="LabelCollapseTreeView" xml:space="preserve">
+    <value>折疊樹控件</value>
+  </data>
+  <data name="LabelDataExchange" xml:space="preserve">
+    <value>數據交換</value>
+  </data>
+  <data name="LabelDefaultView" xml:space="preserve">
+    <value>默認結果區域</value>
+  </data>
+  <data name="LabelExpandTreeView" xml:space="preserve">
+    <value>展開樹控件</value>
+  </data>
+  <data name="LabelGeneral" xml:space="preserve">
+    <value>一般的</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+    <value>幫助</value>
+  </data>
+  <data name="LabelSpecial" xml:space="preserve">
+    <value>特殊的</value>
+  </data>
+  <data name="LabelTool" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="LabelView" xml:space="preserve">
+    <value>視圖</value>
+  </data>
+  <data name="TooltipRightClick" xml:space="preserve">
+    <value>右擊樹控件以獲取更多方法</value>
+  </data>
+  <data name="ButtonCreateSimpleTable" xml:space="preserve">
+    <value>用腳本創建</value>
+  </data>
+  <data name="ButtonCreateTableWithUI" xml:space="preserve">
+    <value>用UI創建</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="DocumentingDbButtonContentDescription" xml:space="preserve">
+    <value>將你的數據庫結構文檔化</value>
+  </data>
+  <data name="EmergencyModeAgain" xml:space="preserve">
+    <value>你已經處于緊急模式</value>
+  </data>
+  <data name="EmergencyModeConfirm" xml:space="preserve">
+    <value>你確信要切換到緊急模式么?</value>
+  </data>
+  <data name="EmergencyModeTooltip" xml:space="preserve">
+    <value>切換到緊急模式，你可以在左側看到導航條</value>
+  </data>
+  <data name="FinishButtonText" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="LabelCoordinator" xml:space="preserve">
+    <value>協調者</value>
+  </data>
+  <data name="LabelDataExchangeWizard" xml:space="preserve">
+    <value>數據交換</value>
+  </data>
+  <data name="LabelDeveloper" xml:space="preserve">
+    <value>開發者</value>
+  </data>
+  <data name="LabelDevTeam" xml:space="preserve">
+    <value>開發團隊</value>
+  </data>
+  <data name="LabelGraphicDesigner" xml:space="preserve">
+    <value>設計者</value>
+  </data>
+  <data name="NextButtonText" xml:space="preserve">
+    <value>下一個</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="TitleSelectAlll" xml:space="preserve">
+    <value>全部選擇</value>
+  </data>
+  <data name="TitleSelectSrcData" xml:space="preserve">
+    <value>請選擇數據庫或數據庫文件</value>
+  </data>
+  <data name="TitleSelectSrcDataType" xml:space="preserve">
+    <value>請選擇源數據庫類型</value>
+  </data>
+  <data name="TitleSelectSrcTabels" xml:space="preserve">
+    <value>請選擇表</value>
+  </data>
+  <data name="TitleSelectTargetDataType" xml:space="preserve">
+    <value>請選擇目標數據庫類型</value>
+  </data>
+  <data name="TitleSrcDataFileIs" xml:space="preserve">
+    <value>源數據庫或文件是</value>
+  </data>
+  <data name="TitleTargetDataFileIs" xml:space="preserve">
+    <value>目標數據庫或文件是</value>
+  </data>
+  <data name="EndButtonText" xml:space="preserve">
+    <value>結束</value>
+  </data>
+  <data name="TextDbLocation" xml:space="preserve">
+    <value>數據庫地址</value>
+  </data>
+  <data name="TextDbName" xml:space="preserve">
+    <value>數據庫名</value>
+  </data>
+  <data name="TilteUpdate" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="TitleAddColumn" xml:space="preserve">
+    <value>增加列</value>
+  </data>
+  <data name="TitleCopyColumnName" xml:space="preserve">
+    <value>復制列名</value>
+  </data>
+  <data name="TitleCopyTableName" xml:space="preserve">
+    <value>復制表名</value>
+  </data>
+  <data name="TitleCreateIndex" xml:space="preserve">
+    <value>創建索引</value>
+  </data>
+  <data name="TitleDelete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="TitleDropColumn" xml:space="preserve">
+    <value>刪除列</value>
+  </data>
+  <data name="TitleDropIndex" xml:space="preserve">
+    <value>刪除索引</value>
+  </data>
+  <data name="TitleDropTable" xml:space="preserve">
+    <value>刪除表</value>
+  </data>
+  <data name="TitleGenerateCreateScript" xml:space="preserve">
+    <value>創建生成當前表的腳本</value>
+  </data>
+  <data name="TitleGenerateCreateScriptAll" xml:space="preserve">
+    <value>創建生成所有表的腳本</value>
+  </data>
+  <data name="TitleGenerateScript" xml:space="preserve">
+    <value>創建腳本</value>
+  </data>
+  <data name="TitleGetColumnInfo" xml:space="preserve">
+    <value>獲取所有列信息</value>
+  </data>
+  <data name="TitleGetIndexesInfo" xml:space="preserve">
+    <value>獲取所有索引信息</value>
+  </data>
+  <data name="TitleGetSupportedType" xml:space="preserve">
+    <value>獲取支持的數據類型</value>
+  </data>
+  <data name="TitleInsert" xml:space="preserve">
+    <value>插入</value>
+  </data>
+  <data name="TitleInsertARow" xml:space="preserve">
+    <value>插入一行</value>
+  </data>
+  <data name="TitleModifyColumn" xml:space="preserve">
+    <value>修改列</value>
+  </data>
+  <data name="TitleModifyTableSchema" xml:space="preserve">
+    <value>修改表結構</value>
+  </data>
+  <data name="TitleRefreshColumn" xml:space="preserve">
+    <value>刷新列</value>
+  </data>
+  <data name="TitleRefreshIndex" xml:space="preserve">
+    <value>刷新索引</value>
+  </data>
+  <data name="TitleRefreshSystemView" xml:space="preserve">
+    <value>刷新系統視圖</value>
+  </data>
+  <data name="TitleRenameColumn" xml:space="preserve">
+    <value>重命名列</value>
+  </data>
+  <data name="TitleRenameTable" xml:space="preserve">
+    <value>更改表名</value>
+  </data>
+  <data name="TitleResetIdentityColumn" xml:space="preserve">
+    <value>重置唯一字段</value>
+  </data>
+  <data name="TitleSelect" xml:space="preserve">
+    <value>選擇...</value>
+  </data>
+  <data name="TitleSelectAll" xml:space="preserve">
+    <value>查詢全部</value>
+  </data>
+  <data name="TitleSelectWithUI" xml:space="preserve">
+    <value>詳細獲取</value>
+  </data>
+  <data name="TitleShowSystemViewData" xml:space="preserve">
+    <value>顯示系統視圖數據</value>
+  </data>
+  <data name="TitleSqlCommand" xml:space="preserve">
+    <value>命令集合</value>
+  </data>
+  <data name="TitleNewPwd" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="TitleChangePasswordFailed" xml:space="preserve">
+    <value>修改密碼失敗</value>
+  </data>
+  <data name="TitleChangePasswordSuccessful" xml:space="preserve">
+    <value>修改密碼成功</value>
+  </data>
+  <data name="TitleInputDbFile" xml:space="preserve">
+    <value>請輸入數據庫信息</value>
+  </data>
+  <data name="ChkIsAutoCommit" xml:space="preserve">
+    <value>是否自動提交修改</value>
+  </data>
+  <data name="ChkIsAutoShutdown" xml:space="preserve">
+    <value>是否自動關閉連接</value>
+  </data>
+  <data name="ChkIsReadonly" xml:space="preserve">
+    <value>是否只讀</value>
+  </data>
+  <data name="TitleCompleteDocDbOK" xml:space="preserve">
+    <value>文檔化數據庫結構處理完全成功</value>
+  </data>
+  <data name="TitleExecuteSP" xml:space="preserve">
+    <value>執行存儲過程</value>
+  </data>
+  <data name="TitleQuickLink" xml:space="preserve">
+    <value>快速入口</value>
+  </data>
+  <data name="ConfirmTextDropColumn" xml:space="preserve">
+    <value>你確定要刪除這列么？</value>
+  </data>
+  <data name="ConfirmTextDropIndex" xml:space="preserve">
+    <value>你確定要刪除這個索引么？</value>
+  </data>
+  <data name="ConfirmTextDropTable" xml:space="preserve">
+    <value>你確定要刪除這個表么？</value>
+  </data>
+  <data name="ConfirmTextDropTableWithCascade" xml:space="preserve">
+    <value>你確定要刪除這個表的關聯項么？</value>
+  </data>
+  <data name="ErrorExampleDataLost" xml:space="preserve">
+    <value>樣例數據文件丟失，請重新安裝或者聯系發行者</value>
+  </data>
+  <data name="ErrorNoIdentityColumnToReset" xml:space="preserve">
+    <value>该表没有可以重置的标识列</value>
+  </data>
+  <data name="TitleViewSP" xml:space="preserve">
+    <value>查看存儲過程代碼</value>
+  </data>
+  <data name="ButtonBackupDatabase" xml:space="preserve">
+    <value>備份數據庫</value>
+  </data>
+  <data name="ButtonCreateDatabase" xml:space="preserve">
+    <value>創建數據庫</value>
+  </data>
+  <data name="TitlePopulateSqlServerInstance" xml:space="preserve">
+    <value>枚舉數據庫實例</value>
+  </data>
+  <data name="TitleCanNotEmptyNewTableName" xml:space="preserve">
+    <value>新表名不能為空</value>
+  </data>
+  <data name="TitleCopyTable" xml:space="preserve">
+    <value>復制表</value>
+  </data>
+  <data name="InfoTableNameExisted" xml:space="preserve">
+    <value>該名稱的表已經存在，請修改后重試</value>
+  </data>
+  <data name="TitleCopyDataSuccessful" xml:space="preserve">
+    <value>復制表及數據成功</value>
+  </data>
+  <data name="InfoBackupDb" xml:space="preserve">
+    <value>你確認要備份該數據庫么？該操作可能會需要一些時間去處理，這取決于數據庫的大小.</value>
+  </data>
+  <data name="InfoBackupSuccesful" xml:space="preserve">
+    <value>備份數據庫成功</value>
+  </data>
+  <data name="TitleFunctionList" xml:space="preserve">
+    <value>功能列表</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>文件不存在</value>
+  </data>
+  <data name="NoDataToProcess" xml:space="preserve">
+    <value>没有自增列可以处理</value>
+  </data>
+  <data name="TitleNewSqliteFile" xml:space="preserve">
+    <value>新的sqlite文件名</value>
+  </data>
+  <data name="TitleFirstRowIsColumnName" xml:space="preserve">
+    <value>第一行是列名</value>
+  </data>
+  <data name="CheckBoxIsUnicode" xml:space="preserve">
+    <value>是Unicode么</value>
+  </data>
+  <data name="ButtonDetect" xml:space="preserve">
+    <value>偵訊...</value>
+  </data>
+  <data name="TitileNoSqlServerInstanceName" xml:space="preserve">
+    <value>沒有找到Sql Server實例名</value>
+  </data>
+  <data name="TitleBkDbAuto" xml:space="preserve">
+    <value>在老數據庫升級前自動備份數據庫(僅針對于SQLCE數據庫)</value>
+  </data>
+  <data name="TiTleOpenSqlServerInstanceWay" xml:space="preserve">
+    <value>你可以用鼠標雙擊下面的sql server實例名以打開它</value>
+  </data>
+  <data name="TitleRemoteAddressOrName" xml:space="preserve">
+    <value>請輸入IP地址或者計算機名</value>
+  </data>
+  <data name="TitleSearchSqlServerInstance" xml:space="preserve">
+    <value>偵訊Sql Server實例名</value>
+  </data>
+  <data name="TitleSqlTextFontSize" xml:space="preserve">
+    <value>Sql命令的字體大小</value>
+  </data>
+  <data name="TitleUseVoiceToNotify" xml:space="preserve">
+    <value>使用語音代替顯示消息來提示用戶</value>
+  </data>
+  <data name="TitleOleDBVersion" xml:space="preserve">
+    <value>Office2007格式</value>
+  </data>
+  <data name="TitleClearDBOpendHistoryInfo" xml:space="preserve">
+    <value>清除打開數據庫歷史信息</value>
+  </data>
+  <data name="TitleReset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Language_AutoDetect" xml:space="preserve">
+    <value>自動檢測</value>
+  </data>
+  <data name="Language_Chinese" xml:space="preserve">
+    <value>中文</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="Language_German" xml:space="preserve">
+    <value>德語</value>
+  </data>
+  <data name="TitleColumnTab" xml:space="preserve">
+    <value>列功能</value>
+  </data>
+  <data name="TitleIndexTab" xml:space="preserve">
+    <value>索引功能</value>
+  </data>
+  <data name="TitleSpTab" xml:space="preserve">
+    <value>存儲過程功能</value>
+  </data>
+  <data name="TitleTableTab" xml:space="preserve">
+    <value>表功能</value>
+  </data>
+  <data name="Language_Dutch" xml:space="preserve">
+    <value>荷蘭</value>
+  </data>
+  <data name="Language_French" xml:space="preserve">
+    <value>法國</value>
+  </data>
+  <data name="Language_Italy" xml:space="preserve">
+    <value>意大利</value>
+  </data>
+  <data name="Language_Japanese" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="Language_Russian" xml:space="preserve">
+    <value>俄國</value>
+  </data>
+  <data name="Language_Spanish" xml:space="preserve">
+    <value>西班牙</value>
+  </data>
+  <data name="LabelMaxDbSize" xml:space="preserve">
+    <value>最大資料庫尺寸</value>
+  </data>
+  <data name="LabelCompactDB" xml:space="preserve">
+    <value>精簡DB</value>
+  </data>
+</root>

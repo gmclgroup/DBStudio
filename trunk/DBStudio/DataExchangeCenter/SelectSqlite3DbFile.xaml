@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="DBStudio.DataExchangeCenter.SelectSqlite3DbFile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="txtSqlFile" TextWrapping="Wrap" Height="29" Width="320"  />
+                <Button Height="29" Click="Select" Name="butSelectSource" Width="93">Select Source</Button>
+            </StackPanel>
+            <Label Foreground="Red" Content="Please select file" Visibility="Collapsed" x:Name="labelWarning"></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

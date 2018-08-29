@@ -1,0 +1,30 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.SqlCE.Sync.Excel2SDF" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="Import Excel to SSCE" Height="301" Width="524">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                    <Button Height="29" Click="Select" HorizontalAlignment="Left" Margin="10,10,0,0"
+                            Name="butSelectSource" VerticalAlignment="Top" Width="93" Content="Select Source">
+                    </Button>
+                <TextBox Margin="10,10,10,0" Name="txtSrcFile" TextWrapping="Wrap" Width="368" Height="29" VerticalAlignment="Top" />
+            </StackPanel>
+            <CheckBox Height="23" IsChecked="False" Margin="100,10,0,0" Name="checkBox2" VerticalAlignment="Top">Source is a folder</CheckBox>
+            <CheckBox Height="23" Margin="100,10,0,0" Name="chkIsFirstNameisColumeName" VerticalAlignment="Bottom" IsChecked="True" Content="First Row is Column Name">
+            </CheckBox>
+            <StackPanel Orientation="Horizontal">
+        <Button Height="29" HorizontalAlignment="Left" Margin="10,10,0,0" Name="button1"
+                VerticalAlignment="Top" Width="93" Click="button1_Click">Target File</Button>
+                <TextBox Margin="10,10,0,0" Width="368" Name="txtTargetFile" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Bottom" Width="93">password</Label>
+                <PasswordBox Height="23" Margin="10,10,0,0" Width="100" Name="txtPwd" VerticalAlignment="Bottom" />
+            </StackPanel>
+            <CheckBox Height="23" Margin="100,10,0,0" Name="checkBox1" VerticalAlignment="Bottom" IsChecked="True">Also sync with data</CheckBox>
+            <Button Height="35" Click="SyncExcel2SSCE" Margin="104,0,164,10" Name="butSync" VerticalAlignment="Bottom">Sync</Button>
+        </StackPanel>
+    </Grid>
+</cx:BaseFadeDialog>

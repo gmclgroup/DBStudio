@@ -1,0 +1,16 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.SqlCE.Sync.Access2SDF" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="Import Access to SSCE" Height="274" Width="462">
+    <Grid>
+		<Button Height="35" Click="Select" HorizontalAlignment="Left" Margin="6,10,0,0" Name="butSelectSource" VerticalAlignment="Top" Width="93">Select Source</Button>
+		<TextBox Margin="104,12,10,0" Name="txtSrcFile" TextWrapping="Wrap" Height="55" VerticalAlignment="Top" />
+		<Button Height="35" Click="SyncOledb2SSCE" Margin="104,0,164,10" Name="butSync" VerticalAlignment="Bottom">Sync</Button>
+		<CheckBox Height="23" Margin="104,0,145,54" Name="checkBox1" VerticalAlignment="Bottom" IsChecked="True">Also sync with data</CheckBox>
+        <Button Height="35" HorizontalAlignment="Left" Margin="6,74,0,0" Name="button1" VerticalAlignment="Top" Width="93" Click="button1_Click">Target File</Button>
+        <TextBox Margin="104,74,10,112" Name="txtTargetFile" TextWrapping="Wrap" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="10,0,0,76" Name="label1" VerticalAlignment="Bottom" Width="77">password</Label>
+        <PasswordBox Height="23" Margin="104,0,94,81" Name="txtPwd" VerticalAlignment="Bottom" />
+    </Grid>
+</cx:BaseFadeDialog>

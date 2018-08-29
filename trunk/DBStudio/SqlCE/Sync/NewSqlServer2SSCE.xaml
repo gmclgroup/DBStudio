@@ -1,0 +1,49 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.SqlCE.Sync.NewSqlServer2SSCE"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="NewSqlServer2SSCE" Height="432" Width="798" xmlns:my="clr-namespace:WPFCommonControl;assembly=WPFCommonControl">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <my:SqlServerLoginControl Name="sqlServerLoginControl1" Width="368" Margin="50,0,0,0" />
+                <Button Margin="0,200,0,0" Content="Get Tables" Width="80" Height="26" x:Name="butGetTableList" Click="butGetTableList_Click" />
+                <StackPanel Margin="10,5,0,0">
+                    <TextBlock Text="Please select table to sync" Width="130" Margin="40,0,0,0"/>
+                    <ListBox x:Name="tableList"
+                             SelectionMode="Multiple"
+                             Width="253" MinHeight="100" MaxHeight="200" >
+                        <ListBox.ToolTip>
+                            <StackPanel>
+                                <TextBlock Text="You can select multply tables to sync"/>
+                            </StackPanel>
+                        </ListBox.ToolTip>
+                    </ListBox>
+                    <CheckBox x:Name="chkSelectAll" IsChecked="False" Checked="chkSelectAll_Checked"></CheckBox>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Target File" Width="130" Margin="40,0,0,0"/>
+                <TextBox x:Name="txtTargetFile" Width="253" MinHeight="30" MaxHeight="100" 
+                         ToolTip="You can input the target SSCE file with full path directly .If this db file not existed, we will create it"
+                         >
+                </TextBox>
+                <Button x:Name="butSelectTargetFile" Width="30" Height="30" Content="..." Click="butSelectTargetFile_Click" /> 
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                <TextBlock Text="Password" Width="130" Margin="40,0,0,0"/>
+                <PasswordBox x:Name="txtPwd" Width="100" MinHeight="30" MaxHeight="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                <CheckBox x:Name="chkIsNeedCopyData"
+                          IsChecked="True"
+                          Content="Is Also Sync Data" Margin="170,2,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                <Button x:Name="butSycn" Content="Sync" Width="80" Height="28" Margin="170,5,0,0" Click="SyncSqlServer2SSCE" />
+                <Button x:Name="butCancel" Content="Cancel" Width="80" Height="28" Margin="5,5,0,0" Click="butCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</cx:BaseFadeDialog>

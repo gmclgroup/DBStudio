@@ -1,0 +1,9 @@
+﻿<Window x:Class="DBStudio.SplashWindows"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="SplashWindows" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" 
+        ShowInTaskbar="False" AllowsTransparency="True" Background="Transparent" Height="120" Width="556">
+    <Grid>
+        <Image Source="LoadingImage.png"/>
+    </Grid>
+</Window>

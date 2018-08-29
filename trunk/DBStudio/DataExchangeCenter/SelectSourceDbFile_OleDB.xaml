@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="DBStudio.DataExchangeCenter.SelectSourceDbFile_OleDB"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="txtSrcFile" TextWrapping="Wrap" Height="29" Width="320"  />
+                <Button Height="29" Click="Select" Name="butSelectSource" Width="93">Select Source</Button>
+            </StackPanel>
+
+            <Label Foreground="Red" Content="Please select file" Visibility="Collapsed" x:Name="labelWarning"></Label>
+
+
+            <StackPanel Margin="50,5,0,0">
+                <RadioButton x:Name="radAccess" IsChecked="True" Content="Access" Margin="0,5,0,0" GroupName="1"></RadioButton>
+                <RadioButton x:Name="radExcel" Content="Excel" Margin="0,5,0,0" GroupName="1"></RadioButton>
+                <RadioButton x:Name="radCVS" Content="CVS" Margin="0,5,0,0" GroupName="1"></RadioButton>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="50,5">
+                <TextBlock Text="Password : " />
+                <PasswordBox x:Name="pwd"  Width="100" />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

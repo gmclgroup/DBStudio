@@ -1,0 +1,35 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.SqlCE.UI.CreateEmptyCEDB"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    xmlns:MyControls="clr-namespace:MPL.MyControls;assembly=MPL"
+    xmlns:MyValidationRules="clr-namespace:MPL.InvalidRulues;assembly=MPL"
+    Title="Create Empty SqlCE database" Height="280" Width="602" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <Label Width="120" Content="Please select db file"/>
+                <MyControls:MaskTextBox MinWidth="380" x:Name="txtDbName"/>
+                <Button Content="..." x:Name="butSelectCeDBFile" Click="butSelectCeDBFile_Click" Width="28"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <Label Content="password" Width="120"></Label>
+                <PasswordBox x:Name="txtPwd" Width="220"></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <Label Content="confirm password" Width="120"></Label>
+                <PasswordBox x:Name="txtConfirmPwd" Width="220"></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <CheckBox x:Name="chkIsEncrypted" Margin="10,0,0,0" Content="Is use encrypt"></CheckBox>
+                <CheckBox x:Name="chkIsCaseSensitive" Margin="10,0,0,0" Content="Is case sensitive"></CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" HorizontalAlignment="Center">
+                <Button x:Name="butCreate" Click="butCreate_Click"
+                        IsEnabled="{Binding ElementName=txtDbName ,Path=X_HasText}"
+                        Content="Create" Width="100" Height="40"></Button>
+            </StackPanel>
+                        
+        </StackPanel>
+    </Grid>
+</cx:BaseFadeDialog>

@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="DBStudio.SqlCE.CEEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Translator="clr-namespace:DBStudio.Bases"
+    xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:MyCustomControl="clr-namespace:MPL.CustomControls;assembly=MPL"
+    xmlns:MyMPLControls="clr-namespace:MPL.MyControls;assembly=MPL">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <Label Width="120" Content="{Localizer:Translate LabelDatabase}"></Label>
+                <MyMPLControls:MaskTextBox x:Name="txtDbPath" Drop="txtDbPath_Drop" Height="20" BorderBrush="Black" BorderThickness="0 0 0 1"
+                                           Width="350">
+                    <MyMPLControls:MaskTextBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="{Localizer:Translate TooltipDragFile}"/>
+                        </StackPanel>
+                    </MyMPLControls:MaskTextBox.ToolTip>
+                </MyMPLControls:MaskTextBox>
+                <Button Content="..." MinWidth="40" Height="20" x:Name="butSelectFile" Click="butSelectFile_Click"></Button>
+                <Button Content="V" MinWidth="40" x:Name="butDetectVersion"
+                        IsEnabled="{Binding ElementName=txtDbPath,Path=X_HasText}"
+                        Height="20" Click="butDetectFileVersion_Click">
+                    <Button.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="{Localizer:Translate TooltipDetectVersion}"/>
+                        </StackPanel>
+                    </Button.ToolTip>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
+                <Label Width="120" Content="{Localizer:Translate LabelPassword}"/>
+                <PasswordBox x:Name="txtPwd" Width="300" PreviewKeyDown="txtPwd_PreviewKeyDown"
+                             BorderBrush="Black" BorderThickness="0 0 0 1"></PasswordBox>
+                <Button x:Name="butChangePwd" Click="butChangePwd_Click"
+                        IsEnabled="{Binding ElementName=txtDbPath,Path=X_HasText}"
+                        Content="{Localizer:Translate ButtonChangePassword}"></Button>
+                <Button x:Name="butCompact" IsEnabled="{Binding ElementName=txtDbPath,Path=X_HasText}"
+                        Content="{Localizer:Translate LabelCompactDB}"
+                        Click="butCompact_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
+                <Label Content="{Localizer:Translate LabelEncrypt}" Width="120"></Label>
+                <CheckBox x:Name="chkIsEncrypted" Content="{Localizer:Translate CheckBoxEncrypt}" IsChecked="True" Width="120"></CheckBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
+                <Label Content="{Localizer:Translate LabelMaxDbSize}" Width="120"></Label>
+                <MyCustomControl:SpinEditor Value="512" Maximum="4000" Minimum="0" x:Name="txtMaxDBSize"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,10,0,0">
+                <Label Content="{Localizer:Translate LabelOpenMode}" Width="120"></Label>
+                <ComboBox x:Name="cmbOpenMode" Width="120"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,2,0,0" HorizontalAlignment="Center">
+                <Button x:Name="butOpen" Height="40"  Margin="3"
+                        IsEnabled="{Binding ElementName=txtDbPath, Path=X_HasText}"
+                        Width="80"   Content="{Localizer:Translate ButtonOpen}" Click="butOpen_Click"></Button>
+                <Expander Header="Others">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="butOpenLatest" Height="25" Margin="3" 
+                        Content="{Localizer:Translate OpenLatestSqlCEDb}" Click="butOpenLatest_Click"></Button>
+                        <Button x:Name="butOpenExampleData" Height="25" Width="100" Margin="3"
+                        Content="{Localizer:Translate ButtonOpenExample}"
+                        Click="butOpenExampleData_Click"></Button>
+                        <Button x:Name="butViewOpened" Height="25"  Width="100" Margin="3" 
+                        Content="{Localizer:Translate ButtonOpenHistory}" Click="butViewOpened_Click"></Button>
+
+                        <Button x:Name="butCreate" Height="30" Width="80" Margin="3" Content="{Localizer:Translate ButtonCreate}" Click="butCreate_Click"></Button>
+                        <Button x:Name="butSync" Width="80" Height="25" Margin="3" Content="{Localizer:Translate ButtonSync}" Click="butSync_Click"></Button>
+
+                    </StackPanel>
+                </Expander>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

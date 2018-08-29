@@ -1,0 +1,63 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.DocumentingDB.DocumentingDBWizard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    xmlns:CMD="clr-namespace:DBStudio.GlobalDefine"
+                                  xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"  
+    Title="{Localizer:Translate DocumentingDbButtonContent}" Height="600" Width="800">
+    <cx:BaseFadeDialog.CommandBindings>
+        <CommandBinding Command="CMD:RoutedUICommands.BackCmd" CanExecute="backCmd_CanExecute" Executed="backCmd_Executed"/>
+        <CommandBinding Command="CMD:RoutedUICommands.NextCmd" CanExecute="nextCmd_CanExecute" Executed="nextCmd_Executed"/>
+    </cx:BaseFadeDialog.CommandBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="65"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Name="buttonBorder" Grid.Row="2" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Button Height="23" Name="HelpButton" Width="72" Margin="5,5,5,5"  Command="ApplicationCommands.Help"
+                    Content="{Localizer:Translate HelpButtonText}" Visibility="Hidden"/>
+                <Button Height="23" Name="cancelButton" Width="72" Margin="30,5,5,5" Click="cancelButton_Click"
+                            Content="{Localizer:Translate CancelButtonText}"/>
+                <Button Height="23" Name="nextButton" Width="72" Margin="5,5,5,5" Command="CMD:RoutedUICommands.NextCmd"
+                        Content="{Localizer:Translate NextButtonText}"/>
+                <Button Height="23" Name="backButton" Width="72" Margin="5,5,5,5" Command="CMD:RoutedUICommands.BackCmd"
+                        Content="{Localizer:Translate BackButtonText}"/>
+            </StackPanel>
+        </Border>
+        <Border Name="contentBorder" Grid.Row="1" Grid.Column="1" Margin="2">
+            <Grid Name="contentGrid" Width="700" Margin="4" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+            </Grid>
+        </Border>
+        <Grid Name="headerGrid" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition />
+                <RowDefinition Height="2"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Name="imageIcon" Source="../Images/WizardImages/magic-wand.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Left" Stretch="Fill" Margin="24,2,2,0" Width="92" Height="78" />
+            <Label Grid.Row="0" Grid.Column="1" FontSize="26" Name="headingLabel" FontWeight="Bold" Margin="48,0,0,0"
+                   Content="{Localizer:Translate DocumentingDbButtonContent}"/>
+            <Label Grid.Row="1" Grid.Column="1" Name="headerDescription" Margin="64,0,0,0" VerticalAlignment="Top"
+                   Content="{Localizer:Translate DocumentingDbButtonContentDescription}"/>
+            <Rectangle Grid.Row="2" Grid.ColumnSpan="2" Height="2" ></Rectangle>
+        </Grid>
+
+        <Border Name="keyBorder" Grid.Row="1" Grid.Column="0" Margin="2">
+            <StackPanel Name="WizardStepStack" Orientation="Vertical" Margin="4,10,8,4">
+            </StackPanel>
+        </Border>
+    </Grid>
+</cx:BaseFadeDialog>

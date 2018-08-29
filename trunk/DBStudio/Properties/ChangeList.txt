@@ -1,0 +1,365 @@
+﻿Version 1.1.0.0
+1)Rename to DBStudio
+2)Update Company to Ramendeus
+
+Version 0.8.5.0
+1)Fix change password of sqlce3.5
+2)Fix UI tab order of change password UI
+
+Version 0.8.4.8
+1)Fix [select tab] UI when documenting db
+2)Fix data transfer from Access to Sqlce
+
+Version 0.8.4.6
+1)Fix Transfer data from sqlce to sql server 
+2)Update Some UI 
+
+Version 0.8.4.5
+1)Update Effirpoz database engine
+2)Fix images url errors 
+3)Fix Russian translation
+
+Version 0.8.4.4
+1)Add compact method to SSCE
+2)Refact SSCE Entry UI
+
+Version 0.8.4.3
+1)Fix code error in data exchange from access database
+2)Add Max database size and max buffer size property in LoginInfo_SSCE 
+
+Version 0.8.4.2
+1)Update Icons in RibbonMenu
+2)Update Effiproz example databases
+3)Fix -->not completed string in code 
+4)Add try/catch block when processing table functions which are not competed or implemented.
+5)Refactor most UT methods(more strong and stable now)
+
+
+Version 0.8.4.1
+1)Support Dutch ,French, Italy,Russian , Spanish,Japanese
+2)Refactor NewPortal to fix width 
+3)Fix data transfer to CSV file
+
+Version 0.8.4.0
+1)Fix German issues
+2)Fix Sqlite UI resource
+3)Notify PagedDataGrid error in MainIDE status panel
+4)Fix PageDataGrid bugs .(Page functions)
+
+Version 0.8.3.9
+1)Remove all strong named sign
+2)Add DetailView when select datagird celll 
+3)Fix some UI bugs when data transfer
+4)Refactor PagedDataGird view.Now support read image from data
+5)Sumit German Version
+
+Version 0.8.3.8
+1)Fix CSV type , it's table schema info is very speical 
+2)Refactor Option.xaml UI
+3)Fix some bugs , relayout the new entry ui.
+4)fix some resources when use english
+
+
+Version 0.8.3.7
+1)Support backup sql server database
+2)Support copy data (both schema and data) ,currently completed in ssce,sql server.
+3)Update the Application Icon
+4)Update the resource.resx from Florian Haag
+5)Add Example Data for Excel
+6)Fix some UI layout in English version on Windows7 64 bit
+7)Update Datagrid with customized PagedDataGrid(own control)
+
+Version 0.8.3.6
+1)Add drop table cascade
+2)Refactor basemenu ,remove all unnecessary child menu,all detail functions move to CoreEA->CommandTextBase
+3)Fix Excel bugs
+4)Refactor GetPrimaryKey 
+5)Support backup sql server database
+6)Support copy data (both schema and data) ,currently completed in ssce,sql server.
+
+
+Version 0.8.3.5
+1)Support Effiproz database type
+2)Fix a lot of bugs
+3)Refactor the status bar in main IDE
+4)Refactor the closing mode both close/exit application
+5)Refactor MainRibbon Menu action when Effiproz type
+6)Enhanced the UI (including add EmergencyMode in MainLogin) 
+7)Support run .net 2.0 library in .net 4.0 environment (add config in app.config file)
+8)Replace the GetColumnInfo in MainRibbonIDE.cs by GetTableSchemaInfo info when loaded
+9)Support Get View
+10)Support Get SPs
+11)Support Get Triggers 
+12)Manage the Chinese and English resouce ,prepare for German resouce 
+13)Fix some bugs in documenting database
+14)Allow editable before generate the doc when documenting database.
+15)Support Effiproz database type to document database
+16)Support Data Transfer from Effiproz
+
+Version 0.8.3.4
+1)Add Multi Thread when execute sql 
+2)Modify SqlServer Login Control 
+3)Refactor CoreEA for adding one type of sqlserver 2005(which support MAR)
+4)Refactor BibbionUI  ,add progressbar and processed time when execute a big sql
+
+Version 0.8.3.3
+1)Fix performance issue when the opened sql script file larger than 100K
+2)Refactor the interface and implementations (both folder place and namespace)
+3)Support Create/Delete database in mysql (with charset support)
+
+Version 0.8.3.2
+1)Change theme
+2)Update libraries to .net framework4.0
+3)Refactor Mysql connection mode
+4)Support Oracle Database now (only sql query and partial menu funtion)
+5)Fix TreeView Bugs and Layout Issues
+
+Version 0.8.1.3
+1)Upgrade to vs2010 and .net framework 4.0
+2)Fix bugs
+3)Remove WPFToolkit
+
+Version 0.8.0.3
+1)Remove Office Com dependency
+2)Add Port Property in mysql portal
+3)Remove old UI portal
+4)Fix some bugs
+5)support connect remote mysql 
+6)refactor code to save database opened history
+
+Version 0.6.0.2
+1)List column and index info later
+2)disable shutdown application in menu
+3)Fix Context Menu Issue
+
+Version 0.5.11.1030
+1)Add Emulate MySql database list in MySql entryway
+2)Test on Window 7 32 bit
+
+Version 0.5.10.1030
+1)Fix UI bugs in documenting db
+
+Version 0.5.10.1028
+1)Add New Entry UI
+2)Add Log4net recording
+3)Fix some UI Bugs
+4)Update WPF Themes
+5)Add data transfer from sqlce to sqlserver
+6)Update Unittest
+
+
+Version 0.4.10.1028
+1)Fix UI Bugs in MainIDE Window
+2)Refactor some UnitTest about DataTransfer
+3)Refactor CoreEA about Get/Create Table Schema (Both Index and Data Transfer)
+
+
+Version 0.4.10.1024
+1)Fix bug when read global resource 
+2)Add data transfer from sqlce to sql server
+3)Add generate sql script 
+
+
+Version 0.4.0.3==>Map to Version 0.4.09.0916
+0.4.09.0916 means 0.4 version from 09 year 09 month 16 day
+1)Allow user select table to generate document
+2)Fix some UI bugs
+
+Version 0.4.0.2
+1)Revert to vs2008 3.5 sp1
+2)Clean 
+
+Version 0.4.0.1
+1)Upgrade to .net 4.0 
+2)Add resource when generate linq context
+3)Use .net 4.0 new featuer (optional parameters)
+4)Fix Detect SSCE Version method
+
+Version 0.3.0.9
+1)Fix bugs
+2)Fix the output message foreground color from dynamic resources
+
+
+Version 0.3.0.8
+1)Refactor NewEntry
+2)Refactor Each Db Entry UI 
+3)Refactor SubDialog
+4)Add Performace Utility Spyer
+5)Fix UI MisSpell and Theme Bugs
+
+Version 0.3.0.6
+1)Refactor TabControl
+2)Fix Theme Bugs
+3)Add Documenting DB Element
+4)Fix some UI Bugs
+
+Version 0.3.0.5
+1)Refactor UI
+2)Complete Add ContextMenu Functions to RibbonMenu
+3)Fix Theme bugs
+4)Refactro XLAG.Themes
+
+
+Version 0.3.0.4
+1)Add Getting Start Doc 
+2)Refactor UI
+3)Add TestPerformace of SqlCE
+4)Add Support Oracle(Pending)
+5)Add SqlCommand RibbonMenu(adding)
+6)Add AddColumn UI
+7)Refactor Sql Command Result with With Panel
+
+Version 0.3.0.3
+1)Fix back button status in DocDb Wizard
+2)Fix some other bugs 
+3)Add Config File For Global Settings
+4)Add Team Member in About US
+5)Pass Test on Windows7
+6)Refactor Main UI
+
+
+Version 0.3.0.2
+1)Update Application.ico
+2)Add Documenting DB XmlExportor
+3)Fix some bugs
+4)Add ordinaryPosition property of CoreEA
+5)Complete Documenting DB
+
+Version 0.3.0.1
+1)Add GettingStart Document
+2)Add Register Com Bat file in Setup MSI
+3)Fix some bugs
+4)Upgrade the Main UI with BitmapEffect
+
+Version 0.3.0.0
+1)Localize Code File
+2)Support highlight sql query 
+3)Support Partial Execute sql query in sql query command textcontrol
+4)Compete Chinese Resource
+5)Add Com Registration
+6)Support Export to CSV
+
+Version 0.2.9.9
+1)Add Animation
+2)Full test data transform
+3)Add RoutedUIComamnd ,Storyboard, Trigger.
+4)update 3rd libraries
+5)Add 3D Entry
+6)Refactor CreateTableSchema Window
+
+Version 0.2.9.8
+1)Refactor DataExchange
+2)Update UI 
+3)Implement the CreateTable in each db
+
+Version 0.2.9.7
+1)Add WPF Animation 
+2)Add Customized Skin File
+3)Add RoutedUIcommand for UI Validation
+4)fix bugs fo MaksNameTable Of CoreEA
+
+Version 0.2.9.6
+1)Add Generate DBML File 
+2)Refactor MPL 
+3)Update WPFTheme
+4)Update FadeOutBase Dialog
+5)Refactor Redo/Undo
+6)Add Some Controls
+
+Version 0.2.9.5
+1)Add Firebird Support
+2)Refactor CORE
+3)Fix bugs when export schema info in sqlserver
+
+Version 0.2.9.4
+1)Support Generate LInq based code for vb
+2)Fix some bugs
+3)Add additional theme of Luna
+
+Version 0.2.9.3
+1)Fix CoreEA
+2)Refactor Data Exchange
+3)Fix some bugs
+
+Version 0.2.9.2
+1)Add Language resources
+2)Refactor Data Exchange (All Refactor CoreEA)
+3)Add OleDB Entry and Ribbion
+
+Version 0.2.9.1
+1)Add localization string (Both Support English and Chinese)
+2)Support export the SqlCe schema
+3)Update the Libraries
+
+Version 0.2.9.0
+1)Fix some UI bugs
+2)Support change pwd after open
+3)Support Upgrade SqlCe file
+4)Full Simple Tested the sqlite method
+
+Version 0.2.8.9
+1)Add ErrorInfo Dialog and Input Value Dialog
+2)Fix Some UI
+3)Add UT For Sqlite
+
+Version 0.2.8.8
+1)Refacotr Sql Command
+2)Refactor ContextMenu
+3)Refactor Sync method
+4)Refactor Warning/Error Dialog
+
+Version 0.2.8.7
+1)Big refactor on CoreEA
+2)Merge the DbEngine with CoreEA
+3)Add Some UT
+4)Add The Sqlite Support
+5)Support Multi Query Editor
+
+Version 0.2.8.6
+1)Refactor SqlCe ContextMenu
+2)Support MySql
+3)Update Server Based Page UI
+4)Refacotr Sql Query Editor
+
+Version 0.2.8.5
+1)All SubDialog Obey the rules for position
+2)Support Sql Server Now 
+3)Fix more bugs 
+4)refactor ui
+5)refactor sync method
+
+Version 0.2.8.3
+1)A lot of UI refactor
+2)A lot of DBEnginer refacotr
+3)Remove unnecessary UI 
+
+Version 0.2.8.2
+1)Fix Case Sensitive bugs
+2)Refactor sqlserver Main Page 
+3)Refactor EE library
+4)Upgrade the sqlce 3.5 sp1 with the dlls . (Before version is not actually)
+5)Update UI 
+
+
+Version 0.2.8.1
+1)Change App Name and Solution Name
+2)Managed Solution Files 
+3)Refactor UI 
+4)Fix some bugs 
+5)Use some new feature in .net 3.5 sp1 (more)
+6)Refactor the Main UI of Ce 
+7)Add More UI and More theme 
+
+Version 0.2.8.0
+Change list
+1)Add WPF Toolkit 
+2)Add WPF new thmee
+3)Add Ribbion WPF Control
+4)Use Lamba Expression and extension method which new features in the .net 3.5 or up 
+5)Use Linq to xml and Linq relevant skill
+6)Enhance the data binding feature and UI
+7)Upgrade to sql ce 3.5 sp1 (notice some new feature in this edition)
+8)Add Speech Support with new .net framework feature
+9)Remove some non useful and bad performance 3rd control library
+
+

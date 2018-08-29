@@ -1,0 +1,54 @@
+﻿
+Current Feature :
+1)Data Preview from sqlce 
+2)Data Modification in sqlce
+3)Sync data between many databases ,such as mysql,access,sqlserver
+4)Setting user options
+5)Get sql help document 
+
+Version 0.0.1.2
+1)Fixed lisence key by using xceed grid control
+2)Refactor help file path and DbEngine placement.
+3)Add Log file
+
+Version 0.0.1.3
+1)Fixed Sync (when table name has space)
+2)Refactor UI
+3)Refactor SqlDbEnginer
+
+Version 0.0.1.4
+1)Fixed Some bugs
+2)Add BaseFadeDialog 
+3)Add Inheritence with UI Class
+
+Version 0.0.1.5
+1)Create and Modify table Sehame 
+2)Command History
+3)UI Enhancement
+
+Version 0.0.1.6
+1)Add Test Performance 
+2)Fix CommandHistory and other bugs
+3)Fix sqlserver sync
+4)Add Notify message when attempt to open db from network (Because sqlce don't support remote access)
+5)Add SqlCE open mode
+
+Version 0.0.1.7
+1)Complete fix open mode
+2)Add Test for SqlServer Relevant and CoreEA (also fix sql server sync)
+
+Version 0.0.1.8
+1)Fix Create Table detail
+2)Add Modify Schema
+3)Add stable version 0.0.1.8 branch
+
+Version 0.0.1.9
+1)Add Sync with Excel(But not completed)
+2)Fix Create and select from (Modify mark)
+3)This version is Created From Standalone Run files(Because current setup file looks like run error)
+
+Version 0.0.2.0
+1)Add Live Update
+2)Refactor Main UI 
+3)Update CoreEA
+4)Update File Struct

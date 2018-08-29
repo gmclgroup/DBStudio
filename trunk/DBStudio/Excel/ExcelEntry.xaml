@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DBStudio.Excel.ExcelEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                         xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
+                <TextBlock Text="{Localizer:Translate LabelSelectExcelFile}" Margin="0,0,10,0"  />
+                <TextBox Name="txtSrcFile" TextWrapping="Wrap" Width="320"  />
+                <Button  Click="butSelectSource_Click" Name="butSelectSource" Content=" ... "/>
+            </StackPanel>
+            <CheckBox x:Name="chkIsFirstRowIsColumnName" Content="{Localizer:Translate TitleFirstRowIsColumnName}" HorizontalAlignment="Left" Margin="100 0 0 0"/>
+            <CheckBox x:Name="checkBoxVersion" Content="{Localizer:Translate TitleOleDBVersion}" HorizontalAlignment="Left" Margin="100 0 0 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+
+                <Button  Name="butExample2003" MinWidth="20" Width="100" Height="20"  Margin="10" Content="{Localizer:Translate ButtonOpenExample}" Click="butExample2003_Click" />
+                <Button  Name="butExample2007" MinWidth="20" Width="100" Height="20"  Margin="10" Content="{Localizer:Translate ButtonOpenExample}" Click="butExample2007_Click" />
+                <Button  Name="butGo" MinWidth="20" Width="100" Height="30"  Margin="10" Content="{Localizer:Translate ButtonOpen}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

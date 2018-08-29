@@ -1,0 +1,18 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.AdditionUI.TestPerformance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="Test" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <Button x:Name="test" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test1" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test2" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test3" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test4" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test5" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test6" Margin="5" Content="Test Performance" Click="button1_Click"/>
+            <Button x:Name="test7" Margin="5" Content="Test Performance" Click="button1_Click"/>
+        </StackPanel>
+    </Grid>
+</cx:BaseFadeDialog>

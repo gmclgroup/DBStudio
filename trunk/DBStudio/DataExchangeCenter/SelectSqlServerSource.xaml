@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="DBStudio.DataExchangeCenter.SelectSqlServerSource"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:WPFCommonControl;assembly=WPFCommonControl">
+    <Grid>
+        <StackPanel >
+        <my:SqlServerLoginControl Name="sqlServerLoginControl1" />
+            <Label Foreground="Red" Content="Please input the necessary value" Visibility="Collapsed" x:Name="labelWarning"></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.AdditionUI.Help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="Help" Height="366" Width="581" 
+                   WindowStyle="ToolWindow">
+    <Grid>
+		<Button Height="47" HorizontalAlignment="Left" Margin="53,15,0,0" Name="button1" VerticalAlignment="Top" Width="167" Click="button1_Click">Call Test Instance</Button>
+	</Grid>
+</cx:BaseFadeDialog>

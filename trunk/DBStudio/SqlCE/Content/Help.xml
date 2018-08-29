@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Root>
+<Data>
+<Name>
+Sehema Info
+</Name>
+<Detail>
+COLUMNS 
+ Columns accessible to the current user in the current database.
+ 
+INDEXES 
+ Indexes in the current database.
+ 
+KEY_COLUMN_USAGE 
+ Keys in the current database.
+ 
+PROVIDER_TYPES 
+ Data types supported in SQL Server Compact 3.5.
+ 
+TABLES 
+ Tables accessible to the current user in the current database.
+ 
+TABLE_CONSTRAINTS 
+ Table constraints in the current database.
+ 
+REFERENTIAL_CONSTRAINTS
+ Foreign constraint in the current database
+ 
+
+</Detail>
+</Data>
+<Data>
+<Name>
+Test
+</Name>
+<Detail>
+TestDetail
+</Detail>
+</Data>
+</Root>

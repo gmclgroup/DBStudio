@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="DBStudio.FireBird.FireBirdEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                         xmlns:Translator="clr-namespace:DBStudio.Bases"
+                 xmlns:Localizer="clr-namespace:DBStudio.Bases"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="169" Width="600">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Localizer:Translate LabelDatabaseType}" Width="80"></Label>
+                <ComboBox x:Name="cmbServerType" SelectedIndex="0" SelectionChanged="cmbServerType_SelectionChanged"
+                          Width="100">
+                    <ComboBoxItem Content="Local"></ComboBoxItem>
+                    <ComboBoxItem Content="Remote"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel x:Name="ServerPanel" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="{Localizer:Translate LabelServerAddress}" Width="80"></Label>
+                    <TextBox x:Name="txtServer" Width="100"></TextBox>
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="{Localizer:Translate LabelServerAddress}" Width="80"></Label>
+                <TextBox x:Name="txtFile" Width="300"></TextBox>
+                <Button x:Name="butSelectFDBFile" Content="..." Click="butSelectFDBFile_Click" ></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+
+                <Label Content="{Localizer:Translate LabelUsername}" Width="80"></Label>
+                <TextBox x:Name="txtUsername" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="{Localizer:Translate LabelPassword}" Width="80"></Label>
+                <PasswordBox x:Name="txtPwd" Width="100"></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
+                <Button x:Name="butLoginIn" Width="80" Content="{Localizer:Translate ButtonOpen}" Click="butLoginIn_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

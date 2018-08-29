@@ -1,0 +1,39 @@
+﻿<cx:BaseFadeDialog x:Class="DBStudio.DynaControls.DbOpenedHistory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cx="clr-namespace:DBStudio.BaseUI"
+    Title="History" Height="480" Width="700" 
+    xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit">
+    <Grid>
+        <DockPanel>
+            
+            <TextBlock Text="You can double click the item to open it directly" Foreground="Red"
+                       DockPanel.Dock="Bottom"/>
+        <DataGrid  ItemsSource="{Binding}" x:Name="myHistoryGrid"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                           KeyDown="myHistoryGrid_KeyDown" 
+                       MouseDoubleClick="myHistoryGrid_MouseDoubleClick"
+                                           >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="File Full Path"
+                                                             IsReadOnly="True"
+                                                             Binding="{Binding DbFileFullPath}"
+                                                             SortMemberPath="Name"
+                                                             MinWidth="350"/>
+                <DataGridCheckBoxColumn Header="Is Existed"
+                                                             Width="80"
+                                                             IsReadOnly="True"
+                                                             Binding="{Binding IsExisted}"
+                                                             SortMemberPath="IsExisted"/>
+                <DataGridTextColumn Header="Last Access Time"
+                                                             Width="150"
+                                                             IsReadOnly="True"
+                                                             Binding="{Binding LatestVisitTime}"
+                                                             SortMemberPath="LatestVisitTime"/>
+            </DataGrid.Columns>
+            </DataGrid >
+            </DockPanel>
+    </Grid>
+</cx:BaseFadeDialog>

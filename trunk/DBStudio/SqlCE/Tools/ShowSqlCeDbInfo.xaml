@@ -1,0 +1,10 @@
+﻿<cx:BaseFadeDialog xmlns:cx="clr-namespace:DBStudio.BaseUI" x:Class="DBStudio.SqlCE.Tools.ShowSqlCeDbInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Sqlce database information (only ce3.5 sp1 up)" Height="480" Width="600" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit">
+    <Grid>
+        <DockPanel>
+            <DataGrid  x:Name="myGrid" AutoGenerateColumns="True" ItemsSource="{Binding }"/>
+        </DockPanel>
+    </Grid>
+</cx:BaseFadeDialog>

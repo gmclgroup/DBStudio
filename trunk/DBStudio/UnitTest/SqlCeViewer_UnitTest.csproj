@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DAA7095-A6C6-4E98-AC3D-C797AD7DE555}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSCEViewer_UnitTest</RootNamespace>
+    <AssemblyName>SSCEViewer_UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <PublishUrl>http://localhost/SSCEViewer_UnitTest/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="3DTools, Version=1.0.3364.31831, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\WPF3D\3DTools.dll</HintPath>
+    </Reference>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CustomControl, Version=0.3.2.0, Culture=neutral, PublicKeyToken=f8b33ecdc0b26762, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\CustomControl.dll</HintPath>
+    </Reference>
+    <Reference Include="dao, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC\dao\10.0.4504.0__31bf3856ad364e35\dao.dll</HintPath>
+    </Reference>
+    <Reference Include="EffiProz">
+      <HintPath>..\..\..\SVNRoot_Library\CoreEA\EffiProz.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelExportLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\ExcelExportLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.TextEditor, Version=3.0.0.3683, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\SharpDlls\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\obj\Debug\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADOX, Version=2.8.0.0, Culture=neutral, PublicKeyToken=da07573572d0de34, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\Interop.ADOX.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DAO, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\Interop.DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.0.30714, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC\Microsoft.Office.Interop.Access\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC\Microsoft.Vbe.Interop\12.0.0.0__71e9bce111e9429c\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC\Office\11.0.0.0__71e9bce111e9429c\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ReachFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="RibbonControlsLibrary, Version=3.5.31016.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\WPFTools\RibbonControlsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependiences\Sqlite\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\CoreEA\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPF.Themes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\WPFTools\WPF.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\WPFTools\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\WPFTools\WPFToolkit.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.VisualStudio.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVNRoot_Library\WPFTools\WPFToolkit.VisualStudio.Design.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CEEntryTest.cs" />
+    <Compile Include="DataExchangeWizardTest.cs" />
+    <Compile Include="EffiprozRobotTest.cs" />
+    <Compile Include="GlobalIndo.cs" />
+    <Compile Include="MenuBaseTest.cs" />
+    <Compile Include="SyncDataToSqlCE.cs" />
+    <Compile Include="MySqlEntryTest.cs" />
+    <Compile Include="NewSqlServerMainTest.cs" />
+    <Compile Include="OracleEntryTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqliteEntryTest.cs" />
+    <Compile Include="TestGlobalExtension.cs" />
+    <Compile Include="DocumentingDBWizardManagerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\CoreEA\CoreEA.csproj">
+      <Project>{73649320-195D-44FD-92EB-624F40FF3887}</Project>
+      <Name>CoreEA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\DigitalTextBox\DigitalTextBox.csproj">
+      <Project>{84BB5344-4D78-437A-ACFC-B6B981A51D46}</Project>
+      <Name>DigitalTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\ETL\ETL.csproj">
+      <Project>{0BC7B808-A69F-44CF-B9B3-A8284A91E160}</Project>
+      <Name>ETL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\LinqHelper\LinqHelper.csproj">
+      <Project>{AE9740AD-F7D1-456A-B93E-D16A95218B13}</Project>
+      <Name>LinqHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\MPL\MPL.csproj">
+      <Project>{03BA14A1-53A7-4289-9E28-DEBDCDC03A6B}</Project>
+      <Name>MPL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\TabControl\Wpf.TabControl.csproj">
+      <Project>{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}</Project>
+      <Name>Wpf.TabControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\WPFThemes\XLAG.WPFThemes.csproj">
+      <Project>{CD3CD636-D63E-4BD5-9FE9-2B63DA6F0616}</Project>
+      <Name>XLAG.WPFThemes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SVNRoot_Library\XLCS\XLCS.csproj">
+      <Project>{E7D7BED0-CF56-4BCE-A7C9-0BA360427D92}</Project>
+      <Name>XLCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeBoxControl\CodeBoxControl.csproj">
+      <Project>{FAFC1291-82F4-4A3A-B70F-111DBF2EC194}</Project>
+      <Name>CodeBoxControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NativeKeyGate\NativeKeyGate.vcxproj">
+      <Project>{D4F63EBF-47AD-44FC-BDE0-1CC6F8D89CB7}</Project>
+      <Name>NativeKeyGate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBStudio.csproj">
+      <Project>{A7100674-F848-4A30-827D-935668C63F02}</Project>
+      <Name>DBStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFCommonControl\WPFCommonControl.csproj">
+      <Project>{020B2D8B-68CA-4718-852D-CE1E2A432318}</Project>
+      <Name>WPFCommonControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Shadow Include="Test References\SeasonStarDatabaseManagement.accessor" />
+    <Shadow Include="Test References\WPFCommonControl.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /y /s "$(SolutionDir)ExampleData"  "C:\ExampleData\"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
