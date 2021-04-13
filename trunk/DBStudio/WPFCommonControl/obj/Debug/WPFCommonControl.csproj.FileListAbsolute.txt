@@ -27,3 +27,8 @@ H:\DBStudio_Git\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.Prope
 H:\DBStudio_Git\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.csproj.GenerateResource.Cache
 H:\DBStudio_Git\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.dll
 H:\DBStudio_Git\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.pdb
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.csprojAssemblyReference.cache
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\SqlServerLogin.g.cs
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl_MarkupCompile.cache
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl_MarkupCompile.lref
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\WPFCommonControl.pdb
