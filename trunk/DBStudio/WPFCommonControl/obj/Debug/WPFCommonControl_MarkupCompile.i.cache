@@ -4,7 +4,7 @@
 library
 C#
 .cs
-H:\DBStudio_Git\trunk\DBStudio\WPFCommonControl\obj\Debug\
+D:\DBStudio\trunk\DBStudio\WPFCommonControl\obj\Debug\
 WPFCommonControl
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 11158571484
 
-6-945876447
-121650038764
+6658609250
+12-910698384
 SqlServerLogin.xaml;
 
-False
+True
 
